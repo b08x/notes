@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-24T14:12:29-04:00
+
+====== pulse and gang ======
+Created Monday 24 September 2018
+
+so..
+
+getting pulse, alsa and jack to all play nice 
+
+..
+
+{{./screenshot_2018-09-24-141400.png}}
+
+{{./screenshot_2018-09-24-141504.png}}
+
+
+

@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-26T19:08:14-04:00
+
+====== audio ======
+Created Monday 26 August 2019
+
+lltag
+ - cli tagger
+
+http://meterec.sourceforge.net/english.txt
+ - multi track recorder...
+
+https://launchpad.net/rumor/
+ - midi keyboard to lilypond convertor
+
+
+dc offset
+
+DC offset is a mean amplitude displacement from zero. 
+In Audacity it can be seen as an offset of the recorded waveform away from the center zero point. 
+DC offset is a potential source of clicks, distortion and loss of audio volume

@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-11-25T08:45:03-05:00
+
+====== Monday 25 Nov 2019 ======
+
+@compiling
+
+== jackEQ ==
+
+When running `make` the following error occurs, much to my inconvience...
+
+{{{code: lang="sh" linenumbers="True"
+/usr/bin/ld: jackeq-plugin.o: undefined reference to symbol 'dlsym@@GLIBC_2.2.5'
+/usr/bin/ld: //lib/x86_64-linux-gnu/libdl.so.2: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make[2]: *** [Makefile:404: jackeq] Error 1
+make[2]: Leaving directory '/home/b08x/source/jackEQ-0.5.9/src'
+make[1]: *** [Makefile:386: all-recursive] Error 1
+make[1]: Leaving directory '/home/b08x/source/jackEQ-0.5.9'
+make: *** [Makefile:327: all] Error 2
+
+}}}
+
+
+after several minutes glancing over the various files contained in the source directory, I finally decided to just google "undefined reference to symbol 'dlsym@@GLIBC_2.2.5'"
+
+the first result in the search brought me to [[https://stackoverflow.com/a/29563242|the solution]]
+
+executing: 
+{{{code: lang="sh" linenumbers="True"
+./configure LIBS='-ldl' --prefix=/usr
+}}}
+
+
+processed without error. the end.
+
+
+
+--------------------
+
+

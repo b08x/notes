@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-28T01:23:58-04:00
+
+====== linux ======
+Created Wednesday 28 August 2019
+
+
+git@github.com:lupoDharkael/flameshot.git
+ - screencapture util
+
+# error while loading shared libraries
+	- export LD_LIBRARY_PATH=/usr/lib64
+	
+https://bbs.linuxdistrocommunity.com/profile/b08x

@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-20T11:59:31-04:00
+
+====== studio ======
+Created Friday 20 September 2019
+

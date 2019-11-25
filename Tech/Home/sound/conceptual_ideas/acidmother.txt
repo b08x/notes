@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-10-29T00:13:33-04:00
+
+====== acidmother ======
+Created Sunday 29 October 2017
+
+want that guitar effect??...put your reverb and echo pedal before your distortion pedal in the signal chain. traditionally it would be: Distortion, Echo/Delay, Reverb....but do it...Reverb, Echo/Delay, then Distortion.﻿
+
+https://www.youtube.com/watch?v=c7888r_vKX4
+

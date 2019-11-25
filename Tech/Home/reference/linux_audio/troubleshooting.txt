@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-04-30T20:23:12-04:00
+
+====== troubleshooting ======
+Created Monday 30 April 2018
+
+@audio_troubleshooting
+Crackling or pops in audio
+Your CPU or sound card is too weak to handle your settings for JACK. Lower the bitrate, lower the frame size, and raise the frame period in small increments until crackling stops.

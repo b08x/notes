@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-07T13:24:39-04:00
+
+====== repl ======
+Created Thursday 07 September 2017
+
+https://github.com/repl-electric/sonic-pi.el
+
+
+https://rbnrpi.wordpress.com/2017/07/19/sonic-pi-3-0-arrives-get-going-with-its-midi-and-osc-commands/
+
+https://github.com/piotrmurach/tty-command
+
+
+https://github.com/lpil/sonic-pi-tool
+
+/home/b08x/studio/sonic-pi-source/etc/doc/cheatsheets
+
+/home/b08x/studio/sonic-pi-source/app/gui/qt/book/Sonic Pi - Lang.html
+
+
+
+for emacs;
+
+https://groups.google.com/forum/#!topic/sonic-pi/iCMMmoGx1NA
+
+
+client ||= OSC::UDPClient.new('localhost', 8000)
+#client.send("/track/1/clip/1/launch")
+#client.send("/track/2/clip/1/launch")
+client.send("/track/2/clip/stop")
+client.send("/track/1/clip/stop")
+use_bpm 110
+client.send("/tempo/raw", 110)
+live_loop :flibble do
+  with_synth :beep do
+	play scale(:e3, :blues_minor).pick, release: 0.2
+  end
+  sleep 1
+end
+
+
+--------------------
+
+#if we require more tweaking
+
+require "unimidi"
+
+@input = UniMIDI::Input.gets
+on my computer, this results in
+
+Select a MIDI input
+1) IAC Device
+2) Roland UM-2 (1)
+3) Roland UM-2 (2)
+> 
+Note that when the user makes a selection, the device is returned enabled so you don't need to call @input.open on it.
+
+Hard Coded
+There's also been some changes to how hard coded selection can be done. As with the user prompt, now you can select and open a device at one fell swoop. Here's a couple of examples which both open the same output. (Device#use and Device#open are the same)
+
+@output = UniMIDI::Output.open(0)
+@output = UniMIDI::Output.use(:first)
+And of course, you can select and open the device separately if you wish
+@input = UniMIDI::Input.all[0].open
+@input = UniMIDI::Input.first.open
+
+
+--------------------
+
+

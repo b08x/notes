@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-03T23:55:49-04:00
+
+====== Monday 03 Sep 2018 ======
+
+lots of ideas fluttering around, which seems at the moment has me twittling my thumbs...
+
+
+perhaps a tracklist to narrow focus
+
+intro
+swings and roundabouts
+pumpkinspice butter jam
+notes from a notebook
+moonlight
+rules
+doing stuff with time
+
+----
+
+future drugs
+burning in
+colliding scopes
+tales of antique planet from a curiously bizarre heart
+loose change
+
+
+----
+
+
+kit: rumpf01
+vmpk octave: 3
+
+7u7y6
+
+
+-----
+
+@sonic-pi @helm
+https://gist.github.com/rbnpi/eab3842936ecf28d350d72719963440e

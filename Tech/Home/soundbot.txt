@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-27T03:26:42-05:00
+
+====== soundbot ======
+Created Saturday 27 January 2018
+
+====== minimalist modular manipulation of sound ======
+
+* ~~based on fedora 28~~ ?? using latest stable version of rt kernel
+* system tasks managed with ansible
+* lowprint ui, using i3 window manager
+* ~~plugins compiled with maths that lessen cpu usage~~
+* session management with nsm, midilings, bash-functions and aliases
+* various helpful scripts
+* designed to produce audio in a live or studio setting 
+
+
+
+https://wiki.thingsandstuff.org/Audio_setup
+
+
+https://ponderworthy.github.io/the-box-of-no-return/
+https://gentoostudio.org/
+
+
+workflow..
+
+startjack
+
+#osc port is defined as NSM_URL in .profile
+`nsmd --osc-port 10805 --session-root [[~/nsm_sessions]]`
+
+non-session-manager
+	default
+		non-mixer
+			add 4 mono and 4 stereo input strips
+			add master strip with fast lookahead limiter
+			
+duplicate session
+
+jalv.gtk http://plugin.org.uk/swh-plugins/combSplitter
+jalv.gtk http://moddevices.com/plugins/caps/Saturate
+jalv.gtk http://plugin.org.uk/swh-plugins/ringmod_1i1o1l
+jalv.gtk http://plugin.org.uk/swh-plugins/xfade
+jalv.gtk http://plugin.org.uk/swh-plugins/fadDelay
+jalv.gtk http://plugin.org.uk/swh-plugins/xfade
+

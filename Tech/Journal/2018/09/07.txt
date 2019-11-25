@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-07T02:50:52-04:00
+
+====== Friday 07 Sep 2018 ======
+
+
+@ambisonics
+[ ] http://kokkinizita.linuxaudio.org/linuxaudio/tetra-pict.html
+
+
+@jruby @Processing
+[ ] https://gist.githubusercontent.com/Visuelle-Musik/189611/raw/3e0e59ed01a26531c2afbc51d39f1eb7d8ab2a98/jr_midi_io_solresol.rb
+	https://github.com/jashkenas/ruby-processing
+
+#to manipulate text
+https://ruby-processing.github.io/geomerativegem/
+
+@ruby @waveform
+https://github.com/pangdudu/rude/blob/master/lib/waveform_narray_testing.rb
+
+@languages
+https://en.wikipedia.org/wiki/Solresol
+
+[ ] https://pi.processing.org/get-started/

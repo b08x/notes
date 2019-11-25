@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-14T22:11:17-05:00
+
+====== Wednesday 14 Nov 2018 ======
+
+@gnome_keyring
+
+unable to edit connections via nm-applet under i3
+might have something to do with gnome-keyring-daemon
+
+set "autostart" in pam.d/login 
+
+
+-----
+
+@i3 @xfce 
+
+# http://feeblenerd.blogspot.com/2015/11/pretty-i3-with-xfce.html
+
+
+# to compile i3ipc-glib
+sudo apt-get install gtk-doc-tools libjson-glib-dev
+
+# to compile xfce4-i3-workspaces-plugin
+sudo apt-get install xfce4-dev-tools libxfce4ui-1-dev \
+xfce4-panel-dev
+
+
+

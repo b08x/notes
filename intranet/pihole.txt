@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-26T20:38:42-04:00
+
+====== pihole ======
+Created Monday 26 August 2019
+
+
+
+sudo apt install apt-transport-https
+
+
+#!/bin/bash
+
+# https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
+
+docker run -d \
+	--name pihole \
+	-p 53:53/tcp -p 53:53/udp \
+	-p 80:80 \
+	-p 443:443 \
+	-e TZ="America/New_York" \
+	-e ServerIP="192.168.41.102" \
+	-e WEBPASSWORD="password" \
+	-e DNSSEC="True" \
+	--cap-add=NET_ADMIN \
+	-v "/storage02/pihole/etc-pihole/:/etc/pihole/" \
+	-v "/storage02/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
+	--dns=127.0.0.1 --dns=8.8.8.8 \
+	--restart=unless-stopped \
+	pihole/pihole:latest
+
+
+
+dhcp-option=6, 192.168.41.102

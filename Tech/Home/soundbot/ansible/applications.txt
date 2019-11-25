@@ -1,0 +1,49 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T19:00:34-05:00
+
+====== applications ======
+Created Tuesday 20 February 2018
+
+
+sonic
+albert (fix the problem where the process gets launched every time we run a command under it)
+atom(autocomplete was the biggest issue here)
+sonic-pi-tool
+hydrogen
+baudline
+qsampler
+whysynth
+zim
+surf
+surfraw
+zita-dpl1
+njconnect (although i do enjoy the visual aspect of things like carla...)
+	#patchage works ok if we aren't disconnecting and reconnecting a lot of things. plus it seems to have the most issue with hydrogen)
+qtractor - for creation of midis
+non-mixer - for hardcore mastering
+vmpk
+deadbeef
+guitarix
+
+--------------------
+
+===== mastering stuffs.... =====
+
+TODO: @audioeng
+	[ ] refresher in aud eng stuffs (compressor, see what a sidecgain cdoes, etc)
+
+
+
+
+
+
+ultimately, it seems sonic pi will take care of the following;
+
+eq
+reverb and other effts
+
+but if we feel the need to get all graphical on this shit;
+x42-* for eq and meters
+
+

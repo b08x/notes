@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-05T18:28:33-04:00
+
+====== input ======
+Created Wednesday 05 September 2018
+
+@joy2key
+https://ubuntuforums.org/showthread.php?t=646564&highlight=joy2key
+
+e.g. hit arrow button and trigger a sequence of lovely notes

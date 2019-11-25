@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-15T20:40:41-04:00
+
+====== Saturday 15 Sep 2018 ======
+
+[ ] ingen http://drobilla.net/software/ingen
+
+[ ] sunvox
+
+[ ] polyphone
+[ ] https://www.polyphone-soundfonts.com/en/documentation
+
+
+@synths
+whysynth prog 18 - see3po
+
+@sidechain @compressin
+use a sidechain for vocal samples
+
+(feed the vocal into the "sidechain_input"
+
+
+@blog @jekyll
+https://github.com/nathancy/jekyll-embed-video

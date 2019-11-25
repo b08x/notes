@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-28T01:24:08-04:00
+
+====== commandlinfu ======
+Created Wednesday 28 August 2019
+
+unzip -p NOOBS_v3_2_0.zip | sudo dd of=/dev/mmcblk0 bs=4M status=progress conv=fsync
+
+
+for vid in *.mkv; do ffmpeg -i "$vid" -vn -acodec copy "${vid%.mkv}.wav"; done
+

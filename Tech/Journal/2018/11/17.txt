@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-17T10:45:13-05:00
+
+====== Saturday 17 Nov 2018 ======
+
+@x42_stepseq
+
+https://github.com/x42/stepseq.lv2
+"The number of steps and notes can be set at compile time using N_NOTES and N_STEPS make variables. Both should be at least 4. The default is 8x8."
+
+working on commuicating with this via osc...
+
+trying to get a debugging situation happening....
+
+
+
+@osc 
+#jackmidi2osc
+https://github.com/x42/jackmidi2osc/blob/master/cfg/example.cfg
+
+@pedal
+https://github.com/moddevices
+
+
+{{./screenshot_2018-11-17-130352.png}}
+

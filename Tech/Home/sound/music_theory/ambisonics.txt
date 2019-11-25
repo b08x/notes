@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-13T04:59:37-04:00
+
+====== ambisonics ======
+Created Wednesday 13 September 2017
+
+http://non.tuxfamily.org/wiki/AmbisonicsReverb
+
+https://ccrma.stanford.edu/software/openmixer/manual/ambisonics_mode
+
+http://www.ambisonictoolkit.net/documentation/supercollider/
+
+
+http://www.matthiaskronlachner.com/wp-content/uploads/2013/01/kronlachner_aes_studentdesigncompetition_2014.pdf
+
+http://lac.linuxaudio.org/2013/download/kronlachner_ambisonics_plugin_suite_lac2013.pdf
+
+
+http://lac.linuxaudio.org/2013/papers/51.pdf
+
+
+
+http://quicktoots.linux-audio.com/index.php?t=4
+
+@azimuth @ambisonics
+
+https://www.photopills.com/articles/understanding-azimuth-and-elevation

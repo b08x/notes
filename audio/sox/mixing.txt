@@ -1,0 +1,71 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-01T02:56:56-04:00
+
+====== mixing ======
+Created Tuesday 01 October 2019
+
+
+====== mixing mono tracks with panning ======
+
+1 ) https://forum.videohelp.com/threads/348768-sox-audio-mixing-4-channels-down-to-2
+
+2) 
+
+Ok we were able to make it. I leave the solution we used here, in case it helps someone.
+
+Intro:
+- each track has a VOL and a PAN associated, also the PATH where the track file is.
+- VOL: between 0 and 100 (VOL of 50 means that volume is unaffected. VOL of 100 duplicates the volume of the track. VOL of 0 mutes the track).
+- PAN: between 0 and 100 (PAN of 50 means that both tracks are unaffected, PAN of 0 means that the left track is muted while the right track is unaffected, PAN of 100 means that the right track is muted while the left track is unaffected).
+- all input tracks are mono
+- CHANNELS: the number of channels of the output file
+- TRACKS: the number of tracks to mix
+
+The process is as follows:
+- We take into account the four variables that modify the volume when mixing the tracks (CHANNELS, TRACKS, PAN and VOL).
+- We mix each channel separately, applying all volume modifications to each track there.
+- We then mix all channels into one.
+
+To calculate the volume modification of each track, we use the following formula:
+
+VOLMODleft = (1/CHANNELS) * (1/squareroot(TRACKS)) * (VOL/50) * (if (PAN > 50) ? (100 - PAN)/50 : 1)
+
+VOLMODright = (1/CHANNELS) * (1/squareroot(TRACKS)) * (VOL/50) * (if (PAN < 50) ? (PAN/50) : 1)
+
+At the end of this calculation, we'll have VOLMODleft1, VOLMODright1, VOLMODleft2, VOLMODright2 ... VOLMODleftTRACKS, VOLMODrightTRACKS
+(remember that TRACKS is the number of input tracks we're mixing. If we have 3 tracks, then we end up with three VOLMODleft and three VOLMODright).
+
+Let's suppose we have three tracks to mix.
+
+To create the left audio channel:
+
+sox -m -v VOLMODlefttrack1 track1.mp3 -v VOLMODlefttrack2 track2.mp3 -v VOLMODlefttrack3 track3.mp3 -v VOLMODlefttrack4 track4.mp3 leftchannel.mp3
+
+To create the right audio channel:
+
+sox -m -v VOLMODrighttrack1  track1.mp3 -v VOLMODrighttrack2 track2.mp3 -v VOLMODrighttrack3 track3.mp3 -v VOLMODrighttrack4 track4.mp3 rightchannel.mp3
+
+Then, we just mix the left and the right channels into the output file.
+
+sox -M leftchannel.mp3 rightchannel.mp3 output.mp3
+
+
+
+--------------------
+
+his is what I would try reading your description:
+Code:
+sox -M Track1.wav Track2.wav -v -5db Track3.wav -v -5db Track4.wav Output.wav -remix -m 1v0.5,2v0.2,3v0.5 1v0.4,2v0.6,4v0.5
+what this should do:
+-M Track1.wav Track2.wav -v -5db Track3.wav -v -5db Track4.wav
+should mix track 1 to 4 to a single file containing 4 channels (assuming each file is a mono wav) while lowering the volume of track 3 and 4 by 5dB.
+Output.wav
+should set the output file.
+-remix -m 1v0.3,2v0.2,3v0.5 1v0.2,2v0.3,4v0.5
+should remix the 4 input channels to stereo:
+1st channel contains 30% of track 1, 20% of track 2 and 50% of track 3
+2nd channel contains 30% of track 2, 20% of track 1 and 50% of track 4
+while '-m' disables all automatic volume adjustments during the remixing,...
+
+Not sure if this helps, but may be it's a start. 

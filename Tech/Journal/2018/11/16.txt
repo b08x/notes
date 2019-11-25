@@ -1,0 +1,76 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-16T01:26:47-05:00
+
+====== Friday 16 Nov 2018 ======
+
+@vnc
+[[~/Videos/vnc.json|asciinema video of vnc install]]
+
+x11vnc -xkb --geometry 480x640 -noxrecord -noxfixes -noxdamage -display :0 -auth /var/run/slim.auth:0 -usepw
+
+
+--------------------
+
+
+[ ] clean file name
+[ ] add prefix
+
+
+remove existing drumkit and sfz
+
+find . -type f -name '*.xml' -print0 | xargs -0 rm -rdf	
+
+
+@ruby @math
+
+convert 0-10 to -1 - 1
+
+0 = -1
+5 = 0
+10 = 1
+
+4 / 10.0 = 0.4
+
+@bender
+
+opened up 40418 on localip 192.168.0.80
+
+67.149.110.187
+
+@debian
+attempting to get rid of 
+{{{code: lang="sh" linenumbers="True"
+Nov 16 11:38:50 soundbot02 kernel: pcieport 0000:00:1c.0:    [12] Replay Timer Timeout  
+Nov 16 11:38:50 soundbot02 kernel: pcieport 0000:00:1c.0:   device [8086:9d14] error status/mask=00001000/00002000
+Nov 16 11:38:50 soundbot02 kernel: pcieport 0000:00:1c.0: PCIe Bus Error: severity=Corrected, type=Data Link Layer, id=00e0(Transmitter
+Nov 16 11:38:50 soundbot02 kernel: pcieport 0000:00:1c.0: AER: Corrected error received: id=00e0
+Nov 16 11:38:02 soundbot02 sudo[18389]: pam_unix(sudo:session): session closed for user root
+
+}}}
+
+by adding; 
+
+~~GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=off"~~
+
+@sooperlooper
+
+gxtuner -> midi_to_cc -> d2 triggers loop01 record
+
+
+@din @stufftotry	
+
+ams synth plugins..
+
+mixer n trigger3
+
+https://dinisnoise.org/?what=screenshots
+
+flite
+
+@kernel @tablet_input
+might be able to get the walcom tablet to work if we recompile the kernel with
+the drivers set to y
+(look at .config in [[/usr/src/latestkernel]]
+
+

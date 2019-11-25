@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-12-04T14:18:48-05:00
+
+====== Tuesday 04 Dec 2018 ======
+
+Tomorrow I have an interview for a job that seems promising. This is what I'm trying to focus on for today as everything else seems...sort of blah. Right now it's hard to describe how I'm feeling, so I'm just trying to do "stream of consciousness" at the moment. Feelings and words don't come as easy at the moment so I'm struggling with "what to do with myself". Which sort of feels "boring" if that's even a word. 
+
+Remebering this rather lucid dream I had at one point a few months ago where I crashed Ann's car. It was a powerful memory that sort of made my body feel, tense, uneasy. Like I said this was months ago, but parsing fragments of memories; I seem to remember that maybe I was the one driving? A similar detail to what happened recently, was that we(or just me, I don't remember Ann being there in the dream) veered off to the left into a ditch. But then again, as I think about it right now, the car might have veered off to the right. Either way, it was vivid and chilling. This was when I was taking Bacofil. 
+
+
+
+-------
+
+
+sudo apt-get install -y hunspell-dictionary hyphen-hyphenation-patterns libreoffice-grammarcheck libreoffice-help-5.2 libreoffice-l10n-5.2 libsane myspell-dictionary mythes-thesaurus openclipart2-libreoffice openclipart-libreoffice pstoedit unixodbc gstreamer1.0-plugins-bad libreoffice-officebean

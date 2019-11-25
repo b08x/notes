@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-09T03:45:38-04:00
+
+====== Sunday 09 Sep 2018 ======
+
+
+
+open non-mixer
+	add strip, 1 ports
+	inset aux a (one out)
+	insert panner plugin
+	insert rotator plugin
+	insert aux b (four out)
+
+run jconvolver yotk.conf
+
+create early and late verb strips -> connect convolver
+
+create master strip with square decoder
+
+{{./screenshot_2018-09-09-043837.png}}
+
+https://open-music-kontrollers.ch/lv2/moony/
+https://github.com/OSSIA/score
+https://musinf.univ-st-etienne.fr/lac2017/lacWorkshopsGB.html

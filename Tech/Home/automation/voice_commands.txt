@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-29T04:14:43-05:00
+
+====== voice commands ======
+Created Monday 29 January 2018
+
+https://github.com/Motiejus/SoundPatty/
+
+
+https://github.com/antiboredom/audiogrep
+
+https://gitlab.com/jezra/blather
+
+
+
+adjust code so commands are launched in their own processes 
+
+
+
+pocketsphinx pocketsphinx-devel pocketsphinx-libs pocketsphinx-models pocketsphinx-plugin sphinxbase sphinxbase-devel sphinxbase-libs sphinxtrain
+
+
+Removing:
+ sphinxbase                                        x86_64                                   0.8-16.fc27                                       @fedora                                   149 k
+ sphinxtrain                                       x86_64                                   1.0.8-38.fc27                                     @fedora                                   4.5 M
+Removing dependent packages:
+ openfst-tools                                     x86_64                                   1.6.3-1.fc27                                      @fedora                                   3.9 M
+ opengrm-ngram                                     x86_64                                   1.3.2-7.fc27                                      @fedora                                   9.5 M
+Removing unused dependencies:
+ openfst                                           x86_64                                   1.6.3-1.fc27                                      @fedora                                    32 M
+ sphinxbase-libs  
+
+
+use gstreamer1
+
+install gstreamer1-devel
+
+jack plugin in gstreamer1-plugins-good
+
+to test jack is working; 
+
+	gst-launch-1.0 audiotestsrc ! jackaudiosink
+
+
+https://wolfpaulus.com/embedded/raspberrypi2-sr/
+
+
+
+http://jasperproject.github.io/documentation/

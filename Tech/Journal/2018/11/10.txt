@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-10T22:12:05-05:00
+
+====== Saturday 10 Nov 2018 ======
+
+@dotfiles
+# replace rcm with yadm as dotfile/config manager
+
+https://thelocehiliosan.github.io/yadm/docs/faq
+
+easier than rcm. its basically a wrapper for git
+
+yadm add file
+yadm commit 
+1
+
+@bash_it
+https://github.com/Bash-it/bash-it
+plan on using bash_it for functions and aliases
+
+
+------
+
+@i3
+installing i3wm-themer....
+
+polybar needs some attention
+
+-----
+
+
+@pulse
+
+
+{{{code: lang="ruby" linenumbers="True"
+Nov 10 23:55:46 soundbot02 pulseaudio[2591]: [pulseaudio] module-jack-sink.c: JACK error >Cannot use real-time scheduling (RR/75)(1: Operation not permitted)<
+}}}
+
+
+adding b08x to pulse group
+
+also, set autospawn to no in client.conf
+
+----
+
+@ruby @pd
+
+https://matschaffer.com/2010/11/ruby-midi-pure-data/
+https://github.com/mgsx-dev/pd-offline
+https://github.com/michelson/osc-puredata-ruby
+https://github.com/nagachika/ruby-puredata
+
+
+--------
+
+@mixxx @midi
+https://www.mixxx.org/wiki/doku.php/mixxxcontrols

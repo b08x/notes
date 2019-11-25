@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-14T06:40:55-04:00
+
+====== subsonic ======
+Created Saturday 14 September 2019
+
+https://github.com/redshodan/unsonic
+
+
+python3: can't open file 'setup.py': [Errno 2] No such file or directory
+
+
+unsonic adduser b08x Btcs404! && \
+unsonic adduser asherry L0ggercat! && \
+unsonic config -s "lastfm.user=warehos" b08x && \
+* unsonic config -s "lastfm.password=*****" b08x
+
+[ ] fix the kind of annoying happenstance, that when searching for anything that has a special character (ie Bela) there are no results
+
+
+
+https://airsonic.github.io/docs/jukebox/#using-docker
+https://github.com/mviereck/x11docker/wiki/Container-sound:-ALSA-or-Pulseaudio
+
+
+https://github.com/TheBiggerGuy/docker-pulseaudio-example
+
+
+docker create \
+  --name=airsonic \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=America/New_York \
+  -p 4040:4040 \
+  -v /home/b08x/docker/airsonic/config:/config \
+  -v /home/b08x/Music:/music \
+  -v /home/b08x/Music/playlists:/playlists \
+  -v /home/b08x/Music/podcasts:/podcasts \
+  --group-add audio \
+  --device /dev/snd \
+  -v /home/b08x/sound.properties:/usr/lib/jvm/java-1.8-openjdk/jre/lib/sound.properties \
+  --restart unless-stopped \
+  linuxserver/airsonic

@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-20T00:21:35-04:00
+
+====== Thursday 20 Sep 2018 ======
+
+@jekyll
+https://github.com/toy/image_optim#configuration
+
+
+@atom
+liquid
+mark2pdf
+pgments
+sb-atom-sonic-pi
+	tool-bar
+	
+
+@ui @xdg
+to update xdg-mime (which is a mechinism that controls what application opens what type of file...run
+
+`xdg-mime default /usr/share/applications/Thunar.desktop inode/directory`
+
+
+@teiler
+some window classes i guess, confuse teiler. e.g. calf eq...
+just pop the window to floating and do an area screenshot...
+
+@tlp
+https://linrunner.de/en/tlp/docs/tlp-configuration.html
+# get a bit more out the battery
+/etc/default/tlp

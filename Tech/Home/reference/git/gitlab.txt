@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-07-24T00:12:01-04:00
+
+====== gitlab ======
+Created Monday 24 July 2017
+
+~~sudo docker run \~~
+~~--hostname gitlab.syncopatedtech.org \~~
+~~--env GITLAB_OMNIBUS_CONFIG="external_url 'https://gitlab.syncopatedtech.org'; gitlab_rails['lfs_enabled'] = true;" \~~
+~~--env TZ=America/New_York \~~
+~~--publish 443:443 \~~
+~~--publish 80:80 \~~
+~~--publish 2222:22 \~~
+~~--memory="4g" \~~
+~~--memory-swap="4g" \~~
+~~--name gitlab \~~
+~~--restart always \~~
+~~--volume /srv/docker_volumes/gitlab/config:/etc/gitlab \~~
+~~--volume /srv/docker_volumes/gitlab/logs:/var/log/gitlab \~~
+~~--volume /srv/docker_volumes/gitlab/data:/var/opt/gitlab \~~
+~~gitlab/gitlab-ce:latest~~
+
+~~docker create --name=gitlab \~~
+~~-e TZ=America/New_York \~~
+~~-p 443:443 -p 8000:80 -p 2222:22 \~~
+~~--memory="4g" --memory-swap="4g" \~~
+~~-v /backup/gitlab/config:/etc/gitlab \~~
+~~-v /backup/gitlab/logs:/var/log/gitlab \~~
+~~-v /backup/gitlab/data:/var/opt/gitlab \~~
+~~--restart always \~~
+~~gitlab/gitlab-ce:latest~~
+
+sudo docker create --name=gitlab \
+--hostname bender.qbase.org \
+-e TZ=America/New_York \
+-p 8443:443 -p 8080:80 -p 2222:22 \
+--memory="4g" --memory-swap="4g" \
+-v /var/lib/docker/gitlab/config:/etc/gitlab \
+-v /var/lib/docker/gitlab/logs:/var/log/gitlab \
+-v /var/lib/docker/gitlab/data:/var/opt/gitlab \
+--restart always \
+gitlab/gitlab-ce:latest
+
+
+===== hey =====
+make sure when creating the gitlab container that the time zone is set correct. right now it's set on UTC which is a pain in my ass. 
+
+====== upgrade procedure ======
+
+1. take a backup
+2. remove current container `docker rm gitlab`
+3. pull the latest image `docker pull gitlab/gitlab-ce:latest
+4. run the docker create command as shown above
+5. `docker start gitlab`
+6. wait about 5 minutes for the thing to reconfigure itself
+
+
+====== moving the container to another host ======
+
+1. take a backup on src host
+2. stop container on src host
+3. rsync gitlab/{data,config/logs} to dest host
+4. update dns to point gitlab.syncopatedtech.net to new host
+5. make sure firewall ports are opened on dest host (e.g. 80,443,2222)
+6. run docker create on dest host
+7. run docker start gitlab on dest host
+8. wait 5 minutes
+
+====== backup ======
+@backup
+alias glabb="docker exec -t gitlab gitlab-rake gitlab:backup:create STRATEGY=copy \
+		&& mv /storage/gitlab/data/backups/*.tar /storage/backups/gitlab/"
+

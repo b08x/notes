@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-06T07:09:07-04:00
+
+====== sonic visualizer ======
+Created Thursday 06 September 2018
+
+[ ] https://sonicvisualiser.org/videos.html
+[ ] https://github.com/bbc/bbc-vamp-plugins
+
+@sound
+http://www.charm.rhul.ac.uk/sound/sound.html

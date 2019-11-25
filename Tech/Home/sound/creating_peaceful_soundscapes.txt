@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-10-26T23:23:32-04:00
+
+====== creating peaceful soundscapes ======
+Created Thursday 26 October 2017
+
+@buddhamachine
+
+http://www.fm3buddhamachine.com/v2/?page_id=29
+
+
+@brainwave
+https://github.com/nemurimasu/noisy
+http://www.bwgen.com/
+
+
+@soundscapegenerator
+http://boodler.org/
+
+
+

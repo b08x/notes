@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== communications ======
+Created Sunday 16 July 2017
+
+phone
+
+emails
+
+chat
+

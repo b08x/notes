@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-29T01:51:14-04:00
+
+====== qsampler ======
+Created Saturday 29 September 2018
+
+qsampler: error while loading shared libraries: libgig.so.8: cannot open shared object file: No such file or directory
+
+udo locate libgig.so.8
+/home/b08x/source/libgig-4.1.0/src/.libs/libgig.so.8
+/home/b08x/source/libgig-4.1.0/src/.libs/libgig.so.8.0.0
+/usr/lib/libgig/libgig.so.8
+[[/usr/lib/libgig/libgig.so.8.0.0]]
+
+
+
+sudo vim [[/etc/ld.so.conf]]
+
+add [[/usr/lib/libgig]] to the top
+then run ldconfig
+

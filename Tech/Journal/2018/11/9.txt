@@ -1,0 +1,80 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-24T13:59:19-05:00
+
+====== Saturday 09 Nov 2018 ======
+
+
+@eq @compression
+
+---
+layout: post
+title:  "compression and eq part I"
+subtitle: "hmm buttons"
+date:   2018-09-19
+categories: [audio]
+tags: ["calf"]
+---
+
+
+from linux midi orchstration...
+[ jamin compression settings ] - a good baseline
+
+for my ears, a good default setting for jamins' multiband compression reduces the threshold to -20db, a ratio set at 2:1 and knee at 0.5 (knee doesn't really seem to translate to any of the other plugins as values range from 0 - 1 )
+
+attacks set to the low end of the
+
+from audio engineering in a nutshell;
+
+When using a compressor for the first time, switch its attack and release controls to
+"automatic".
+
+Set the threshold to "max" (= neutral) and decide whether you want strong (5:1 and up)
+or gentle compression (1.5:1 - 5:1).
+
+Move the threshold down until you begin to hear the desired effect.
+
+Calibrate the output gain so that the processed signal is as loud as the original, using the
+bypass switch.
+
+Now turn the attack and release knobs to the middle and switch to manual control.
+
+Use the attack time to control how much transients will be compressed. If the signal is too
+thin over all with very loud drum hits, use a short attack time to reduce them. If drums
+sound lifeless and squashed, set a longer attack.
+
+If the compressor is "pumping" (i.e. loud transients are followed by a dent in loudness),
+reduce the release time.
+When compressing stereo signals, make sure you link the control voltages for both
+channels (most unit
+
+
+
+	Knee: how harshly the compression sets in.
+	seems a higher kneee setting smooths out the the compression starting at the threshold....
+	  will look into setting knee higher, it seems to make sense a less aburpt shift in sound....
+
+
+----
+
+
+subtractive eq
+
+  muddiness....cut arond 150 and again 250
+  generall low cut
+
+dividing the soundspace
+
+[1]: http://www.balancemastering.com/finishingtracks/how-to-tutorial-significance-of-632Hz/
+Re-acclimatising your ear can help take in the whole picture:
+
+20: Sub
+63: Bass
+200: Low mids
+630: Mids
+2000: Upper mids
+6300: Treble
+20000: Air
+
+lowering the shelf....
+so then a realtive boost, that doesn't go above the shelf (say set at -6db)

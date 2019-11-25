@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-14T01:34:48-04:00
+
+====== Friday 14 Sep 2018 ======
+
+all the things...
+
+== snippets... ==
+@sonic_pi	
+
+`# key: do |
+# point_line: 0
+# point_index: 5
+# --
+do |x|
+  
+end
+`
+
+with this snippet, if you start typing "do" the autocomplete should pop up
+at which point this blank template is inserted....
+
+
+
+
+== midilings... ==
+
+
+
+== linuxsampler... ==
+	[ ] clean up soundfont file names...
+	
+
+
+
+== auto creating non-mixer strips... ==
+
+
+
+openshot
+
+
+voices seem to correspond to notes..
+	eg. when i play c on the keyboard, 2 voices are used..when i play c and e at the same time, 4 voices are used....
+	
+	this might be a setting to be adjusted to play more than 3/4 notes at a time...
+
+
+@vlc
+video effect settings;
+{{./screenshot_2018-09-14-035339.png}}
+{{./screenshot_2018-09-14-035408.png}}
+{{./screenshot_2018-09-14-035420.png}}
+
+
+{{./screenshot_2018-09-14-035351.png}}
+
+@ffmpeg
+https://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs
+
+
+@terminal @funstuff
+https://github.com/michael-lazar/rtv
+
+@dotfiles
+https://github.com/chrmod/dotfiles
+
+### the idea is to copy something to a clipboard, then use keycombo $mod+Menu to insert text into a page
+
+
+
+### cache links in zim
+http://sciunto.github.io/ZimArchivist/
+
+### 
+https://github.com/dpayne/cli-visualizer#setup

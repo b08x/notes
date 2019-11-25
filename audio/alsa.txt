@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-21T11:22:29-04:00
+
+====== alsa ======
+Created Saturday 21 September 2019
+
+====== apply ladspa filters to hardware in alsa ======
+[[https://alsa.opensrc.org/Low-pass_filter_for_subwoofer_channel_(HOWTO)|Low-pass_filter_for_subwoofer_channel_(HOWTO)]]
+
+[[https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture/Troubleshooting#HDMI|Troubleshooting HDMI]]
+
+====== Pops when starting and stopping playback ======
+Some modules (e.g. snd_ac97_codec and snd_hda_intel) can power off your sound card when not in use. This can make an audible noise (like a crack/pop/scratch) when turning on/off your sound card. Sometimes even when move the slider volume, or open and close windows (KDE4). If you find this annoying try modinfo snd_MY_MODULE, and look for a module option that adjusts or disables this feature.
+
+Example: disable the power saving mode and solve cracking sound trough speakers problem, using snd_hda_intel add in /etc/modprobe.d/modprobe.conf:
+
+options snd_hda_intel power_save=0
+The power_save_controller option if set to 'Y' will switch the audio card controller off to conserve power, but it can cause issues when the controller resumes. Setting it to N may reduce the severity of other issues as well.
+
+options snd_hda_intel power_save=0 power_save_controller=N
+You can also try it with modprobe snd_hda_intel power_save=0 before.
+
+You may also have to unmute the 'Line' ALSA channel for this to work. Any value will do (other than '0' or something too high).
+
+Example: on an onboard VIA VT1708S (using the snd_hda_intel module) these cracks occured even though 'power_save' was set to 0. Unmuting the 'Line' channel and setting a value of '1' solved the problem.
+
+Source: [[https://www.kernel.org/doc/Documentation/sound/alsa/powersave.txt|alsa powersave doc]]
+
+[[https://wiki.gentoo.org/wiki/ALSA#Laptops_with_HDMI_audio_output|ALSA#Laptops_with_HDMI_audio_output]]

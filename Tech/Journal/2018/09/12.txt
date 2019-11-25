@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-12T13:18:08-04:00
+
+====== Wednesday 12 Sep 2018 ======
+
+after spending a lot of time with surfraw today, stumbled upon this;
+https://github.com/jarun/googler
+
+:sources
+
+
+====== wireless fun ======
+
+{{./screenshot_2018-09-12-140746.png?width=720}}
+
+* trying to improve the integrity of the 5GHz wireless connection
+	* setting channel width to 40
+	* channel to 40
+		* ext channel to uppper (ideally to cover a broader range)
+
+=== this increased signal quality from about 20-30% to ~50% according to the status page.. • -90dmb to -85dbm ===
+
+* ~~[] trying bumping to tx power from 20 to 23~~
+* [x] setting protection mode to RTS
+	* this ensures connections are complelted before data is transmitted, otherwise packets just fly all over the place
+* [x] enable rts threshold
+	* this is the max packet size before the proctection mentioned above is enabled
+* [x] enable short preamble
+	* its like the tip of the data...devices need this to transfer data, also, enabling this reduces header size
+
+
+https://wiki.dd-wrt.com/wiki/index.php/QCA_wireless_settings#Extension_Channel

@@ -1,0 +1,68 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T04:47:27-05:00
+
+====== compiling ======
+Created Tuesday 20 February 2018
+
+FIXME: @sonicpi
+	[ ] Building source on avlinux (debian 9 stretch), encountered a couple of errors running the debian-build-script relating to a couple missing 			dependencies. 
+	
+				Namely `libqt5opengl5-dev` and `python-ase`
+				
+				```diff
+				diff --git a/app/gui/qt/build-debian-app b/app/gui/qt/build-debian-app
+				old mode 100644
+				new mode 100755
+				index 4542ced81..46deec9e7
+				--- a/app/gui/qt/build-debian-app
+				+++ b/app/gui/qt/build-debian-app
+				@@ -48,9 +48,9 @@ sudo apt-get install -y \
+					  libreadline6-dev libfftw3-dev libxt-dev libudev-dev cmake libboost-dev \
+					  libqwt-qt5-dev libqt5scintilla2-dev libqt5svg5-dev qt5-qmake qt5-default \
+					  qttools5-dev qttools5-dev-tools qtdeclarative5-dev libqt5webkit5-dev \
+				-     qtpositioning5-dev libqt5sensors5-dev qtmultimedia5-dev libffi-dev \
+				-     curl python erlang-base
+				-                                       
+				+     libqt5opengl5-dev qtpositioning5-dev libqt5sensors5-dev qtmultimedia5-dev \
+				+                libffi-dev curl python python-ase erlang-base
+				+
+				 if [ "$installMethod" == "2" ]; then
+								echo -e "${CYAN}Installing checkinstall...${NC}"
+								sudo apt-get install checkinstall
+				
+				```
+				
+				
+				supercollider deb pkg install fails 
+
+
+@sonicpi
+
+
+sudo dnf install gcc-c++ pkgconfig git automake gcc jack-audio-connection-kit-devel libsndfile-devel alsa-lib-devel avahi-devel libicu-devel readline-devel fftw-devel libXt-devel libgudev-devel cmake boost-devel qwt-qt5-devel qscintilla-qt5-devel qt5-qtsvg-devel qt-devel qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtwebkit-devel qt5-qtlocation-devel qt5-qtsensors-devel aubio-devel qtchooser wkhtmltopdf
+
+
+https://github.com/lpil/sonic-pi-tool
+
+
+for connecting multiple users over a network;
+https://ccrma.stanford.edu/groups/soundwire/software/jacktrip/
+
+http://kokkinizita.linuxaudio.org/linuxaudio/
+
+http://radscan.com/nas.html
+
+
+----
+
+../../server/bin/compile-extensions.rb && \
+../../server/bin/i18n-tool.rb -t && \
+cp -f ruby_help.tmpl ruby_help.h && \
+../../server/bin/qt-doc.rb -o ruby_help.h && \
+lrelease-qt5 SonicPi.pro && \
+qmake-qt5 SonicPi.pro && \
+make -j8 && \
+./create-pdf
+
+

@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T18:41:37-05:00
+
+====== abc ======
+Created Tuesday 20 February 2018
+
+X:1
+T:Notes
+M:C
+L:1/4
+K:C
+C, D, E, F,|G, A, B, C|D E F G|A B c d|e f g a|b c' d' e'|f' g' a' b'|]
+
+abc notation
+
+https://copr.fedorainfracloud.org/coprs/oleastre/abcMIDI/
+
+install easyabc

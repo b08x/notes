@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-24T19:13:31-04:00
+
+====== glibc ======
+Created Tuesday 24 September 2019
+
+# installing glibc>=2.24 to run ambix
+
+~~# clone and checkout the latest stable~~
+~~ # make install to /home/b08x/source/glibc-build/install/~~
+~~$ LD_LIBRARY_PATH=/home/user/fakeroot/lib/x86_64-linux-gnu/ YOUR_COMMAND~~
+
+add to sources.list
+deb http://ftp.de.debian.org/debian buster main 
+
+sudo apt install libc6=2.28-10

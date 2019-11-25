@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-30T03:28:23-04:00
+
+====== osc ======
+Created Wednesday 30 October 2019
+
+https://medium.com/@alessandravertrees/wireless-communication-in-ruby-using-osc-21be73d9167d
+
+https://github.com/danomatika/joyosc
+
+https://in-thread.sonic-pi.net/t/a-basic-framework-for-using-touchosc-with-sonic-pi/2293

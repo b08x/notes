@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-19T03:58:48-04:00
+
+====== Wednesday 19 Sep 2018 ======
+
+
+# adjusting screen brightness
+
+1) 
+	xrandr --output eDP-1 --brightness 0.8
+	
+
+
+2) 
+	getting xbacklight to work;
+		https://unix.stackexchange.com/a/385116
+		
+		edit xorg.conf to include the option
+
+
+
+https://media.ccc.de/v/lac2018-24-carla_plugin_host_feature_overview_and_workflows#t=648

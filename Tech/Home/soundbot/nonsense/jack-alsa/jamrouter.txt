@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-06T02:11:19-05:00
+
+====== jamrouter ======
+Created Saturday 06 January 2018
+
+https://github.com/williamweston/jamrouter
+
+* JACK and qjackctl:
+
+	While qjackctl provides a MIDI Driver dropdown in the Setup window,
+	JACK does not support any MIDI system other than JACK MIDI.  The MIDI
+	Driver option in qjackctl should invariably be set to 'none', and not
+	'raw', 'seq', or 'alsa_midi'.  JAMRouter is the piece of software
+	connecting to natively supported MIDI devices, not JACK.  Keeping
+	this one fact in mind will help avoid the common confusion
+	surrounding qjackctl's MIDI Driver option.
+
+seems worth looking into 

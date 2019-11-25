@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-04-15T17:03:47-04:00
+
+====== nvidia drivers ======
+Created Sunday 15 April 2018
+
+dnf update
+
+dnf install kernel-devel kernel-headers gcc dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig
+
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
+
+GRUB_CMDLINE_LINUX="rd.md.uuid=6e99dabf:7b64ace1:b95d8a3e:56afd2f4 rd.lvm.lv=fedora/root rd.md.uuid=cae62de6:39ddb7bd:48c386f2:ae8be9b4 rd.lvm.lv=fedora/swap rd.driver.blacklist=nouveau"
+
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+dnf remove xorg-x11-drv-nouveau
+
+mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+
+dracut /boot/initramfs-$(uname -r).img $(uname -r)
+
+
+systemctl set-default multi-user.target
+
+reboot
+
+chmod +x NVIDIA-Linux.run
+execute
+
+systemctl set-default graphical.target
+
+reboot
+
+dnf install vdpauinfo libva-vdpau-driver libva-utils

@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T11:00:46-05:00
+
+====== zim ======
+Created Tuesday 20 February 2018
+
+
+
+https://pages.gitlab.io/zim/manual/Usage/Getting_Things_Done.html
+
+
+plugins
+https://github.com/jaap-karssenberg/zim-wiki/wiki/TreeMap-plugin-%28converted-Text2mindmap-custom-tool%29
+
+https://gist.github.com/muguu/1d5910ef05259595fe49cde4c9db9d39#file-tasklist-py
+
+https://github.com/e3rd/zim-plugin-instantsearch/
+
+https://github.com/Osndok/zim-plugin-append
+
+https://github.com/jaap-karssenberg/zim-wiki/wiki/Git-Pusher
+
+https://github.com/jaap-karssenberg/zim-wiki/wiki/Text2mindmap-custom-tool
+
+https://github.com/e3rd/zim-plugin-instantsearch/
+
+https://gist.github.com/lelandbatey/8677901
+
+

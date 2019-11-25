@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T05:22:49-05:00
+
+====== linux audio ======
+Created Tuesday 20 February 2018
+
+https://wiki.thingsandstuff.org/Audio_setup
+
+https://fedoraproject.org/wiki/Audio_creation_spin_development
+
+https://fedoraproject.org/wiki/AudioCreationWebResources
+
+https://fedoraproject.org/wiki/Documentation_for_Musicians/Real-Time_Utilities#Real_Time_Audio_Production:Taking_it_a_Step_Further
+
+https://libremusicproduction.com/tutorials/modular-set-ups-concepts-and-practices-using-non-session-manager

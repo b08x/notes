@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-28T23:22:32-04:00
+
+====== pulseaudio ======
+Created Wednesday 28 August 2019
+
+https://wiki.archlinux.org/index.php/PulseAudio/Examples#PulseAudio_over_network
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=11124
+
+https://www.raspberrypi.org/forums/viewtopic.php?f=38&t=25684&p=234267&hilit=pulseaudio#p234267
+
+https://github.com/TheBiggerGuy/docker-pulseaudio-example

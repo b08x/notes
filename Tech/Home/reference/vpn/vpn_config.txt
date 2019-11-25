@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-08T14:18:04-04:00
+
+====== vpn config ======
+Created Friday 08 September 2017
+
+https://wiki.osuosl.org/howtos/vpn_config.html
+
+
+
+Fri Sep  8 14:23:10 2017 us=58213 WARNING: 'link-mtu' is used inconsistently, local='link-mtu 1558', remote='link-mtu 1542'
+Fri Sep  8 14:23:10 2017 us=58240 WARNING: 'cipher' is used inconsistently, local='cipher AES-256-CBC', remote='cipher BF-CBC'
+Fri Sep  8 14:23:10 2017 us=58249 WARNING: 'keysize' is used inconsistently, local='keysize 256', remote='keysize 128'
+Fri Sep  8 14:23:10 2017 us=58306 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA

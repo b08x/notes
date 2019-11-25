@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-28T22:08:57-05:00
+
+====== livecd ======
+Created Wednesday 28 February 2018
+
+
+
+a lot of the packages being installed via ansible can be done with an img or kickstart
+
+[*] working on moving some of the pkg install back to kickstart
+
+* perhaps make the installation of the desktop env an option on first boot with ansible
+
+
+# a good reference for packages to include
+
+https://fedoraproject.org/wiki/Audio_creation_spin_development?rd=AudioCreationSpinDevelopment
+
+# dont forget about the artwork
+
+https://fedoraproject.org/wiki/Audio_Creation/Spin_Artwork
+
+and that picture of the visual at the chruch
+
+# this is solid reference for configuring the spin to being finely tuned. ha ah. getit?
+
+https://wiki.archlinux.org/index.php/Professional_audio
+
+ht0tps://fedoraproject.org/wiki/Documentation_for_Musicians/Real-Time_Utilities?rd=Documentation_for_Musicians/Real-Time_Audio_Analysis#Real_Time_Audio_Production:Taking_it_a_Step_Further
+
+
+# create the live cd image 
+
+https://bollocks.fedorapeople.org/i3spin.html
+https://fedoraproject.org/wiki/Music_Creation_Lite_Spin?rd=MusicCreationSpinLite
+http://members.iinet.net.au/~timmsy/spin/fedora-livecd-music-creation.ks
+
+https://fedoraproject.org/wiki/Livemedia-creator-_How_to_create_and_use_a_Live_CD

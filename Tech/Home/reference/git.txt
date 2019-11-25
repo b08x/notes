@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== git ======
+Created Sunday 16 July 2017
+
+@git
+
+====== links ======
+
+http://bunnyman.info/tag/git.html
+
+http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+
+http://gitready.com/advanced/2009/02/11/pull-with-rebase.html
+
+http://tednaleid.github.io/understanding-git/#2
+
+====== sparse checkout ======
+`
+- hosts: production
+  vars:
+	base_vhost_dir: /usr/share/nginx/html
+	#git_repo_url: git@bitbucket.org:syncopatedtech/main_site.git
+
+  tasks:
+
+	- name: configure git repo dir to use sparse-checkout
+	  git_config: >
+		repo=
+		name=core.sparsecheckout
+		scope=local
+		value=true
+
+	- name: specify folder from repo to pull from
+	  lineinfile: >
+		create=yes
+		dest="destintion/.git/info/sparse-checkout"
+		line="_site/*"
+
+	- name: run git pull to pull _site folder down
+	  git: >
+		repo=
+		dest=
+		depth=1
+		version=master
+		clone=yes
+		update=yes
+		accept_hostkey=yes
+`
+in this example we enable sparse checkout for the repo this website belongs to.
+after a sucessful jekyll build, the _site folder is pushed 

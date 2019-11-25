@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-12T15:58:09-04:00
+
+====== todo ======
+Created Wednesday 12 September 2018
+
+[*] figure out what needs to be installed with kickstart and ansible
+
+	kickstart:
+		audio pkgs
+		base os
+	ansible:
+		desktop interface
+		specific configs
+		sesh mgmt
+		
+
+@lv2plugins
+look into non-mixer fork that can do lv2 plugins too
+
+
+
+
+
+
+====== Setting up ======
+
+install using livecd
+
+discard to fstab, disable selinux ( disk writes)
+
+reboot (so selinux doesnt dig its claws into the updates that are about to happen)
+
+dnf update
+
+reboot
+
+dnf install ansible
+
+run playbook

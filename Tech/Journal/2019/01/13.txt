@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-01-13T11:52:18-05:00
+
+====== Sunday 13 Jan 2019 ======
+
+Today I will be working on enjoying myself. Practice. Instead of focusing on recallinng conclusions, I can rest knowing that I know what I need to do. Believing in myself. The positive feedback loop starts from within. Seems necessary to be selfish before you can be selfless. Having the same amount of comfortable writing out/spitballing ideas on "paper" as I am talking to myself. First drafts are just that, as in; not a finished piece. Will require edits, changes, deletions. Its part of the process, not something to be embaressed by. 
+
+
+So;
+
+A title. 
+
+# description of words
+describing, not a particular day, but any day really. Looking for a word the describes that numerous labels we use for each other. Siser, friend, soulmate, partner, companion, lover, etc. The activies referenced are ones we mutually enjoy. these are reasons for our love. Its to describe a notion that its ok all of of the time. remembering that ok is  very good way to be. it describes how we work together. how we relax together. how we enjoy each other. how we appreiate each other. 
+
+find /home/b08x -type f -printf "%T@ %p\n" -ls | sort -n | cut -d' ' -f 2- | tail -n 1 | xargs -r ls -lah
+
+# setting the scene...
+
+
+----
+
+11:57pm
+Of course I spent most of my time now, trying to hang on to the faith that I know what I'm doing. That one day, I'll no longer experience the heartache I do now. I'm rather frustrated and distracted. I know things will be ok though. 
+
+That feeling is back. The audio engineering is losing interest. I'm not satisfied with my progress.
+

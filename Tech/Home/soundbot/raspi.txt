@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-04-18T23:40:08-04:00
+
+====== raspi ======
+Created Wednesday 18 April 2018
+
+#install fedora image to sdcard
+xzcat fedberry-xfce-27.0.20180403.raw.xz | sudo dd status=progress bs=4M of=/dev/sdc # Location of your media (will be sdX or mmcblkX depending on hardwae)
+
+@pi
+https://github.com/hybridgroup/pi-blaster
+
+https://github.com/hybridgroup/artoo-raspi/blob/master/examples/blink_led

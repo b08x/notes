@@ -1,0 +1,44 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-11-15T09:52:24-05:00
+
+====== Thursday 15 Nov 2018 ======
+
+@sonic_pi
+
+ideally...the changes made should work later if we run git pull and rebuild
+
+if osmid ports dont show up, check the path in util.rb
+
+after adjust the native_path, when closing sonic-pi o2m and m2o are left open....
+
+
+----
+
+@xdg
+
+to set default browser
+
+xdg-settings set default-web-browser firefox.desktop
+
+---
+
+@deadbeef 
+
+setting deadbeef up as a sampler editor...
+
+add copyinfo plugin and set to copy filename
+
+----
+
+@sfz	
+
+http://www.sfzformat.com/legacy/
+
+generally speaking, it seems like no_loop would be way to go
+
+{{{code: lang="ruby" linenumbers="True"
+<group> key=60 ampeg_attack=0.25 ampeg_release=0.12 loop_mode=no_loop
+<region> sample=typewriter_help\typewriter_help01.flac
+
+}}}

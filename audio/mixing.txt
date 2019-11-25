@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-27T02:29:47-04:00
+
+====== mixing ======
+Created Tuesday 27 August 2019
+
+https://github.com/radiocicletta/vlevel
+- a limiter to try

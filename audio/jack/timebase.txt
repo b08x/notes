@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-30T03:41:51-04:00
+
+====== timebase ======
+Created Wednesday 30 October 2019
+
+
+tap and set bpm via osc;
+https://github.com/dsacre/klick/blob/master/doc/manual.html

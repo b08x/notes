@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-05T13:39:36-04:00
+
+====== Wednesday 05 Sep 2018 ======
+
+@plugins
+[ ] https://copr.fedorainfracloud.org/coprs/fedpop/ladspa-bs2b-plugins/
+
+@rpms
+[ ] https://copr.fedorainfracloud.org/coprs/drewofdoom/fedora-proaudio/
+[ ] https://copr.fedorainfracloud.org/coprs/ycollet/linuxmao/
+
+@mediabot @docker @emby
+
+docker run -d \
+--volume /opt/docker/emby/config:/config \ # This is mandatory
+--volume /storage/media/tv:/mnt/tv \ # To mount a first share
+--volume /storage/media/movies:/mnt/movies \ # To mount a second share
+#--device /dev/dri/renderD128 \ # To mount a render node for VAAPI
+--publish 8096:8096 \
+--publish 8920:8920 \
+--env UID=1041 \
+--env GID=1041 \
+emby/embyserver:latest
+
+@tablet @midicontrol
+[ ] find the drivers for the pablo tablet
+	http://galexander.org/pablo/
+	https://www.linuxquestions.org/questions/linux-hardware-18/js_x-kb-gear-jam-studio-pablo-graphix-tablet-drivers-498720/
+	
+[ ] add watermark asherrys pics
+	https://stackoverflow.com/questions/5533458/how-to-add-watermarks-to-images-via-command-line-hopefully-using-irfanview
+	
+	
+[ ] use surf and st more
+[ ] look into tmux + st
+[ ] play with sweep
+
+
+==== tidying up music files ====
+
+# convert wma to ogg
+find -name '*wma' -exec ffmpeg -i {} -acodec vorbis -ab 128k {}.ogg \;
+" nice, but this leaves .wma in the output filename, for example output.wma.ogg " she said. 
+//" Add this argument: find -name '*wma' -exec ffmpeg -i {} -acodec vorbis -ab 128k {}.ogg \; -exec rename -v 's/\.wma//' {}.ogg \; " was the reply//
+
+[ ] beet-convert → beet-check
+
+
+
+

@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-20T21:19:51-04:00
+
+====== Saturday 20 Oct 2018 ======
+{{./screenshot_2018-10-20-211959.png}}
+{{./screenshot_2018-10-20-212013.png}}
+{{./screenshot_2018-10-20-212026.png}}

@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-10-26T23:23:18-04:00
+
+====== sound ======
+Created Thursday 26 October 2017
+
+While obviously tech centric, this is more focused on ideas and theories and whatever regarding making sounds....
+
+[[+ambisonics|ambisonics]]
+

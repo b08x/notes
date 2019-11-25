@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T13:50:11-05:00
+
+====== ruby ======
+Created Tuesday 20 February 2018
+@ruby
+
+
+
+@database
+# a unversial dsl; 
+https://github.com/ruby-rdf/rdf-do
+
+
+#making binaries
+https://github.com/phusion/traveling-ruby#getting-started
+
+
+https://medium.com/@pedrozath/so-i-wrote-a-library-to-help-me-compose-music-ddb4ae7c8227
+
+@rubygui
+http://shoesrb.com/manual/Shoes.html
+
+http://awesome-ruby.com
+
+
+forkoff
+celluloid
+threads

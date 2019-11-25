@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-12-07T14:58:44-05:00
+
+====== 7c ======
+Created Friday 07 December 2018
+
+@sfz @eq
+
+working on patch paramaters to ideally limit amount of eq/filters required later down the path...
+
+since we're using linuxsampler as the engine to use sfz files;  check what "opcodes" are supported
+
+@linuxsampler
+https://www.linuxsampler.org/sfz/
+
+in regards to panning;
+
+"Works, but can be fine-tuned. sfzplayer uses L=cos((100 + pan) / 200 * pi / 2) * sqrt(2), Dimension LE uses L=sqrt((100 - x) / 100), but LS uses a line segment approximation measured from GigaStudio, which lies somewhere between to other two."
+
+this tells me that panning should be left out of the sfz file and can be adjusted in the mixer....
+

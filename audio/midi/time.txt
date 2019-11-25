@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-24T23:08:30-04:00
+
+====== time ======
+Created Tuesday 24 September 2019
+
+jack_midi_clock
+
+https://github.com/x42/mclk.lv2u
