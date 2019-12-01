@@ -22,3 +22,23 @@ arco
 --------------------
 
 https://github.com/gethiox/keyboard2000
+
+
+
+
+--------------------
+
+@sequencer
+https://autostatic.com/tag/jack_midiseq/
+
+
+
+--------------------
+
+https://x42.github.io/midifilter.lv2/http___gareus_org_oss_lv2_midifilter_mapkeyscale.html
+
+
+--------------------
+
+@interactive_midi_programming
+http://improv.sapp.org/

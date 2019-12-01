@@ -11,3 +11,10 @@ Created Wednesday 23 October 2019
 * midi cc to note
 * midi note to cc
 * qmidiroute
+
+
+12/01/2019
+
+aseqnet - aseqnet  is  an  ALSA  sequencer  client which sends and receives event
+	   packets over network.
+
