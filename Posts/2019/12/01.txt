@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-01T16:32:59-05:00
+
+====== Sunday 01 Dec 2019 ======
+
+@midi
+
+https://wiki.zynthian.org/index.php/Zynthian_Wiki_Home
+
+https://github.com/zynthian/zynthian-sys/blob/master/sbin/jack-smf-recorder.sh
+
+http://extras.humdrum.org/
+
+https://github.com/humdrum-tools/humdrum-tools
+
+https://github.com/humdrum-tools/humextra/blob/master/src-programs/melseq.cpp
+
+http://sig.sapp.org/doc/examples/sig/sigControl/
