@@ -5,6 +5,9 @@ Creation-Date: 2019-09-21T11:22:29-04:00
 ====== alsa ======
 Created Saturday 21 September 2019
 
+
+[[https://gist.github.com/thanley11/100754cc911442901867|example asoundrc]]
+
 ====== apply ladspa filters to hardware in alsa ======
 [[https://alsa.opensrc.org/Low-pass_filter_for_subwoofer_channel_(HOWTO)|Low-pass_filter_for_subwoofer_channel_(HOWTO)]]
 
