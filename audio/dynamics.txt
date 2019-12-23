@@ -8,3 +8,12 @@ Created Tuesday 22 October 2019
 compression
 limiting
 gate
+
+
+
+--------------------
+
+@expander
+http://tap-plugins.sourceforge.net/ladspa/dynamics.html
+
+https://smallvenuesurvivalist.com/a-homebrew-upward-expander/
