@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-04T16:20:50-05:00
+
+====== Saturday 04 Jan 2020 ======
+
+atom
+patchage
+coltrane
+sonicpi
+vmpk
+zita-mu1
+qsampler
+qmidiarp
+polyphone
+gigedit
+reaper
+antimicro
+terminator
+ranger
+xterm
+deadbeef
+hydrogen
+jalv.select
+jkmeter
+puddletag
+picard
+baudline/jaaa/japa/jnoisemeter
+fmit
+helm
+sonicvisualier
+sooperlooper
+non-mixer
+ray-session-manager
