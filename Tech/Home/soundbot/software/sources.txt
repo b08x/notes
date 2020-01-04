@@ -17,7 +17,7 @@ https://github.com/x42/x42-plugins
 
 [ ] sooperlooper
 https://github.com/essej/sooperlooper
-
+[[lv2]]
 [ ] guitarix
 https://github.com/brummer10/GxPlugins.lv2
 

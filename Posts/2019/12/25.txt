@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-25T19:13:46-05:00
+
+====== Wednesday 25 Dec 2019 ======
+
+[[https://forum.cockos.com/showthread.php?t=225555|a thread about some additional kernal tunings]]
+
+[[https://linuxreviews.org/HOWTO_make_Linux_run_blazing_fast_(again)_on_Intel_CPUs|a good explanation of the above tunings in relation to security vs performance]]
+
+[[https://www.soundclick.com/default.cfm|possible avenue for distributing sounds to people through a streaming service]]																																				
+
+
+
+[[https://github.com/fiatjaf/dotfiles/tree/5087963cead99f65afee153be672c8e5e624d638/ranger-plugins|git annex plugin for ranger]]
