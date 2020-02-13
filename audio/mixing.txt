@@ -7,3 +7,11 @@ Created Tuesday 27 August 2019
 
 https://github.com/radiocicletta/vlevel
 - a limiter to try
+
+[[https://www.soundonsound.com/techniques/double-mid-sides-array|double mid side explanation]]
+
+[[https://www.youtube.com/watch?v=hBhZ0KVD_Ls|mixing in reaper]]
+
+	[[https://www.audiorecording.me/reaper-aux-send-setting-reverb-parallel-compression.html|reverb_aux_send_parallel_compression]]
+
+	https://www.soundonsound.com/techniques/reaverb-part-1

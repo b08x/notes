@@ -25,3 +25,6 @@ https://github.com/kronihias/ambix/issues/21
 
 --------------------
 
+GLVND over legacy OpenGL modules
+
+add `cmake_policy(SET CMP0072 NEW)` to CMakeLists.txt in the main ambix folder
