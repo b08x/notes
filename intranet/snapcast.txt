@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-09-26T05:41:12-04:00
-
-====== snapcast ======
-Created Thursday 26 September 2019
-
-https://github.com/badaix/snapcast

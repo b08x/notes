@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-02-20T06:08:37-05:00
-
-====== gists ======
-Created Tuesday 20 February 2018
-
-@bash @alias @jack @bashit
-https://github.com/jackdesert/utils/blob/master/jack_alias

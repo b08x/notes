@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-09-14T05:46:30-04:00
-
-====== nonmixer ======
-Created Friday 14 September 2018
-
-the export strip function doesn't seem to work...
-

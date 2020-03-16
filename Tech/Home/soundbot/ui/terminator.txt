@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-04-16T18:45:01-04:00
-
-====== terminator ======
-Created Monday 16 April 2018
-
-https://askubuntu.com/questions/869756/spawn-new-terminator-tabs-from-bash-script?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa

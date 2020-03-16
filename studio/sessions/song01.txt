@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-09-20T11:59:44-04:00
-
-====== song01 ======
-Created Friday 20 September 2019
-
-{{./score.png?type=score}}

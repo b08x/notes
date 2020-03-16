@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-10-01T02:56:45-04:00
-
-====== sox ======
-Created Tuesday 01 October 2019
-

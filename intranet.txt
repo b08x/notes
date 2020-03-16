@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-08-26T20:38:34-04:00
-
-====== intranet ======
-Created Monday 26 August 2019
-
-

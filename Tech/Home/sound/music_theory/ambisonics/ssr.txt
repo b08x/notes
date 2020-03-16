@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-01-24T13:33:41-05:00
-
-====== ssr ======
-Created Wednesday 24 January 2018
-
-ssr-aap --setup /usr/local/share/ssr/reproduction_setups/5.1.asd --input-prefix="Non-Mixer" /home/b08x/studio_new/resources/apps/example-scenes/simple_scene.asd
-

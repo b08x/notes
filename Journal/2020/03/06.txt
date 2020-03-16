@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-06T23:56:36-05:00
+
+====== Friday 06 Mar 2020 ======
+
+
+@iem @compiling
+
+a fix for a compile error;
+
+https://stackoverflow.com/questions/32408878/c-error-conversion-to-non-scalar-type-requested
+
+
+--------------------
+
+
+@soundbot @sysconfig
+
+== bypass password prompt in xfce ==
+
+ever get so annoyed at typing in your password, 14 times in a row that you say 'man, I'm annoy with this.'....
+I have.
+
+To bypass having to enter a password for every fucking thing......I mean, ahem....if you feel password protection on your workstation is uncessary and at times, distracting;
+
+achieve something similar to the sudo NOPASSWD option by adding this global rule to the existing polkit rules directory;
+
+
+→ Create the following file as root: /usr/share/polkit-1/rules.d/49-nopasswd_global.rules
+
+{{{code: lang="ruby" linenumbers="True"
+/* Allow members of the sudo group to execute any actions
+ * without password authentication, similar to "sudo NOPASSWD:"
+ */
+polkit.addRule(function(action, subject) {
+	if (subject.isInGroup("sudo")) {
+		return polkit.Result.YES;
+	}
+});
+}}}
+
+
+
+
+--------------------
+
+@youtube_dl
+
+to install (and subsquently upgrade) youtube-dl, run this; 
+
+{{{code: lang="sh" linenumbers="False"
+sudo pip install --upgrade youtube_dl
+}}}
+
+
+
+--------------------
+
+

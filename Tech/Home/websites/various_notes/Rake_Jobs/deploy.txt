@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-
-====== deploy ======
-Created Friday 30 June 2017
-
-http://andycroll.com/ruby/serving-a-jekyll-blog-using-heroku/

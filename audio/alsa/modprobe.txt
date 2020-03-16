@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-09-30T17:42:33-04:00
-
-====== modprobe ======
-Created Monday 30 September 2019
-
-options snd-usb-audio index=-2
-options snd-hda-intell powersave=0

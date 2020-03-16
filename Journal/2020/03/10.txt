@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-10T00:25:54-04:00
+
+====== Tuesday 10 Mar 2020 ======
+
+@reaper
+
+ReaTeam Scripts/Items Editing/Beat Permute (swap/delete/duplicate) [new]
+v1.0 by Melody Horn – April 24 2019
+  No changelog
+
+ReaTeam Scripts/Various/ChordGun [new]
+v1.4 by pandabot – October 26 2019
+  + fixed UI flaw with dropdown icon
+
+ReaTeam Scripts/Various/Create mix bus and reroute all selected tracks to it [new]
+v1.1.0 by Lokasenna – July 22 2018
+  Make sure sends are at unity gain, post-fader
+
+ReaTeam JSFX/Routing/FOA to DoubleMidSide [new]
+v1.0 by Michael Fewkes – October 25 2017
+  Initial release
+
+ReaTeam Scripts/Various/MusicMath - bpm/pitch to ms/Hz converter [new]
+v1.1 by tompad – December 31 2018
+  Added coverter pitch to Hz
+  Added tooltip "Click to copy to clipboard"
+  Added flashing green when clicking on ms or Hz label
+
+ReaTeam Scripts/Items Properties/Pitch scale generator [new]
+v1.0 by Will Develop – February 18 2020
+  No changelog
+
+
+--------------------
+

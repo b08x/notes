@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2020-01-11T04:55:01-05:00
-
-====== Saturday 11 Jan 2020 ======
-
-[[https://commons.wikimedia.org/wiki/Category:MIDI_files_of_chord_progressions|midi chord progressions]]

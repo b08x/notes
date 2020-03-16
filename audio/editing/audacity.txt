@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-09-19T11:05:36-04:00
-
-====== audacity ======
-Created Thursday 19 September 2019
-
-https://wiki.audacityteam.org/wiki/Building_On_Linux#Instructions_.28Used_by_Steve_on_bionic.29

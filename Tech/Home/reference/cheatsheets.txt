@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2017-09-13T21:12:00-04:00
-
-====== cheatsheets ======
-Created Wednesday 13 September 2017
-
-https://gist.github.com/alptugan/8aa987492e3e3041078f71d8ec5d045f
-

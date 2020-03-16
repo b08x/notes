@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-02-20T21:34:12-05:00
-
-====== ansible ======
-Created Tuesday 20 February 2018
-
-ansible-console might come in handy

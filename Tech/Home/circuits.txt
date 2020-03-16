@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-02-19T14:48:50-05:00
-
-====== circuits ======
-Created Monday 19 February 2018
-
-https://www.thespruce.com/calculate-electrical-circuit-load-capacity-1152739
