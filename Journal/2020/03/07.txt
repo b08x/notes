@@ -2,11 +2,9 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2020-03-07T05:43:52-05:00
 
-== Saturday 07 Mar 2020 ==
+====== Saturday 07 Mar 2020 ======
 
-
-====== compiling linuxsampler family ======
-
+===== compiling linuxsampler family =====
 @linuxsampler @compiling
 
 [[https://davidbolton.info/articles/build_linuxsampler.html|a good howto reference]]
@@ -39,7 +37,7 @@ then, run configure with options to build the vst plugin, as well as adjust the 
 	* then `make parser` again
 	* then `make`
 
-=== at this point...compile errors show: ===
+at this point...compile errors show:
 {{{code: lang="cpp" linenumbers="False"
 libtool: compile:  /usr/bin/g++-8 -std=gnu++14 -DHAVE_CONFIG_H -I. -I../../.. -I/usr/include/libgig -Wreturn-type -ffast-math -g -O2 -pthread -MT DiskThread.lo -MD -MP -MF .deps/DiskThread.Tpo -c DiskThread.cpp -o DiskThread.o >/dev/null 2>&1
 In file included from ../common/Voice.h:28,
@@ -49,74 +47,6 @@ In file included from ../common/Voice.h:28,
 ../common/../gig/Filter.h:619:46: error: ‘vcf_type_lowpass_1p’ is not a member of ‘gig’
                  vcf_type_1p_lowpass = ::gig::vcf_type_lowpass_1p,
                                               ^~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:619:46: note: suggested alternative: ‘vcf_type_lowpass’
-                 vcf_type_1p_lowpass = ::gig::vcf_type_lowpass_1p,
-                                              ^~~~~~~~~~~~~~~~~~~
-                                              vcf_type_lowpass
-../common/../gig/Filter.h:620:47: error: ‘vcf_type_highpass_1p’ is not a member of ‘gig’
-                 vcf_type_1p_highpass = ::gig::vcf_type_highpass_1p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:620:47: note: suggested alternative: ‘vcf_type_highpass’
-                 vcf_type_1p_highpass = ::gig::vcf_type_highpass_1p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-                                               vcf_type_highpass
-../common/../gig/Filter.h:621:46: error: ‘vcf_type_lowpass_2p’ is not a member of ‘gig’
-                 vcf_type_2p_lowpass = ::gig::vcf_type_lowpass_2p,
-                                              ^~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:621:46: note: suggested alternative: ‘vcf_type_lowpass’
-                 vcf_type_2p_lowpass = ::gig::vcf_type_lowpass_2p,
-                                              ^~~~~~~~~~~~~~~~~~~
-                                              vcf_type_lowpass
-../common/../gig/Filter.h:622:47: error: ‘vcf_type_highpass_2p’ is not a member of ‘gig’
-                 vcf_type_2p_highpass = ::gig::vcf_type_highpass_2p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:622:47: note: suggested alternative: ‘vcf_type_highpass’
-                 vcf_type_2p_highpass = ::gig::vcf_type_highpass_2p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-                                               vcf_type_highpass
-../common/../gig/Filter.h:623:47: error: ‘vcf_type_bandpass_2p’ is not a member of ‘gig’
-                 vcf_type_2p_bandpass = ::gig::vcf_type_bandpass_2p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:623:47: note: suggested alternative: ‘vcf_type_bandpass’
-                 vcf_type_2p_bandpass = ::gig::vcf_type_bandpass_2p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-                                               vcf_type_bandpass
-../common/../gig/Filter.h:624:49: error: ‘vcf_type_bandreject_2p’ is not a member of ‘gig’
-                 vcf_type_2p_bandreject = ::gig::vcf_type_bandreject_2p,
-                                                 ^~~~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:624:49: note: suggested alternative: ‘vcf_type_bandreject’
-                 vcf_type_2p_bandreject = ::gig::vcf_type_bandreject_2p,
-                                                 ^~~~~~~~~~~~~~~~~~~~~~
-                                                 vcf_type_bandreject
-../common/../gig/Filter.h:625:46: error: ‘vcf_type_lowpass_4p’ is not a member of ‘gig’
-                 vcf_type_4p_lowpass = ::gig::vcf_type_lowpass_4p,
-                                              ^~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:625:46: note: suggested alternative: ‘vcf_type_lowpass’
-                 vcf_type_4p_lowpass = ::gig::vcf_type_lowpass_4p,
-                                              ^~~~~~~~~~~~~~~~~~~
-                                              vcf_type_lowpass
-../common/../gig/Filter.h:626:47: error: ‘vcf_type_highpass_4p’ is not a member of ‘gig’
-                 vcf_type_4p_highpass = ::gig::vcf_type_highpass_4p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:626:47: note: suggested alternative: ‘vcf_type_highpass’
-                 vcf_type_4p_highpass = ::gig::vcf_type_highpass_4p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-                                               vcf_type_highpass
-../common/../gig/Filter.h:627:46: error: ‘vcf_type_lowpass_6p’ is not a member of ‘gig’
-                 vcf_type_6p_lowpass = ::gig::vcf_type_lowpass_6p,
-                                              ^~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:627:46: note: suggested alternative: ‘vcf_type_lowpass’
-                 vcf_type_6p_lowpass = ::gig::vcf_type_lowpass_6p,
-                                              ^~~~~~~~~~~~~~~~~~~
-                                              vcf_type_lowpass
-../common/../gig/Filter.h:628:47: error: ‘vcf_type_highpass_6p’ is not a member of ‘gig’
-                 vcf_type_6p_highpass = ::gig::vcf_type_highpass_6p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-../common/../gig/Filter.h:628:47: note: suggested alternative: ‘vcf_type_highpass’
-                 vcf_type_6p_highpass = ::gig::vcf_type_highpass_6p,
-                                               ^~~~~~~~~~~~~~~~~~~~
-                                               vcf_type_highpass
-In file included from EngineChannel.h:31,
 
 }}}
 
@@ -128,7 +58,7 @@ For, deb packages included in buster/kxstudio repo will suffice. Will revisit an
 
 --------------------
 
-====== configuring pulseaudio ======
+===== configuring pulseaudio =====
 
 @pulseaudio @sysconfig
 
@@ -147,6 +77,7 @@ boom
 
 --------------------
 
+===== create rutorrent docker container =====
 @docker @rutorrent
 
 setup for rutorrent;
@@ -167,7 +98,8 @@ linuxserver/rutorrent
 
 --------------------
 
- @nvidia @sysconfig
+===== using nvidia drivers with a lowlatency kernel =====
+@nvidia @sysconfig
 
 install lowlatency kernel and their headers
 

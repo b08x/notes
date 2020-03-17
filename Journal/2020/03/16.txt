@@ -1,0 +1,64 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-16T09:01:18-04:00
+
+====== Monday 16 Mar 2020 ======
+
+
+=== new tools ===
+
+diskscan - check ext drive for bad sectors
+bs1770gain - normalize audio/video
+
+--------------------
+
+=== pi hole ===
+@pihole
+
+[[https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245|option 2 works]]
+
+
+--------------------
+
+=== intranet ===
+@intranet
+
+[ ] config rutorrent to copy files to media dir
+
+[[https://github.com/rakshasa/rtorrent/wiki/Common-Tasks-in-rTorrent|how to do stuff in rtorrent]]
+
+
+
+
+--------------------
+
+
+=== low pass filters and other related items ===
+@mixing @audio
+
+`Try this: low pass every track, except for the vocals, and hear how much more it pops out of the mix. The contrast allows your vocal tracks to cut through better.`
+
+
+`Stem-mixing is a method of mixing audio material based on creating groups of audio tracks and processing them separately prior to combining them into a final ...`
+
+
+
+--------------------
+
+=== normalizing to the LUFS standard ===
+@deadbeef @sox 
+
+
+shellexec_config_wip [{"command": "audacity %F", "flags": ["local", "single"], "title": "Edit/Audacity", "name": "new_cmd"}, {"command": "mkdir -pv %D/converted && sox %F -r 48k %D/converted/%f", "flags": ["local", "single", "multiple"], "title": "Edit/Sox/Resample", "name": "sox_resample"}, {"command": "normalize-audio -m %F", "flags": ["local", "single", "multiple"], "title": "Edit/Normalize", "name": "norm_audos"}, {"command": "puddletag %D", "flags": ["local", "single"], "title": "Edit/Puddletag", "name": "puddle_tag"}, {"command": "mkdir -pv %D/converted && sox %F -r 48k %D/converted/%f channels 1", "flags": ["local", "single", "multiple"], "title": "Edit/Sox/To Mono and Resample", "name": "sox_mixres"}]
+
+
+
+
+--------------------
+
+=== studio tips ===
+@audio 
+
+https://audiohertz.com/2017/12/22/how-to-calibrate-your-studio-monitors/
+
+https://audiohertz.com/2018/03/15/how-to-mix-faster-with-the-secret-pink-noise-mixing-trick/

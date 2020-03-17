@@ -7,11 +7,7 @@ Creation-Date: 2020-03-15T22:05:50-04:00
 === configuring Ranger ===
 @sysconfig
 
-* enhanced file previews
-
-
 ranger --copy-config=scope
-
 
 To stop ranger from loading both the default and your custom rc.conf,
   please set the environment variable RANGER_LOAD_DEFAULT_RC to FALSE.
@@ -21,7 +17,7 @@ To stop ranger from loading both the default and your custom rc.conf,
 --------------------
 
 ==== configuring RCM (dot file manager) ====
-@sysconfig
+@sysconfig @rcm
 
 [[https://dotfiles.github.io/utilities/|a guide for managing dotfiles]]
 
@@ -41,7 +37,8 @@ adding files/folders with `mkrc -o $THING` will store the dotfiles in a host spe
 
 --------------------
 
-@backups @TODO
+[ ] auto backup script @backups
+	[ ] watch for new files and add them. e.g. [[~/IEM]] @rcm
 
 things to put in backup script:
 
@@ -63,15 +60,17 @@ rsync -r -t -p -o -g -v --progress -l -H -s --exclude-from=/home/b08x/exclude.tx
 
 --------------------
 
-@mpv @TODO
+@mpv
 
 [[https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f|mpv as an image viewer]]
 
 
 --------------------
 
-@sox @TODO
+@sox
 
 [[https://github.com/madskjeldgaard/ranger-sox|ranger sox]]
+[ ] configure ranger sox plugin
+
 
 --------------------
