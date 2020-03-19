@@ -17,13 +17,15 @@ bs1770gain - normalize audio/video
 
 [[https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245|option 2 works]]
 
+[[https://firebog.net/|blocklists]]
 
 --------------------
 
 === intranet ===
 @intranet
 
-[ ] config rutorrent to copy files to media dir
+[*] config rutorrent to copy files to media dir
+[ ] have those moved to its proper folder (sickbeard)
 
 [[https://github.com/rakshasa/rtorrent/wiki/Common-Tasks-in-rTorrent|how to do stuff in rtorrent]]
 

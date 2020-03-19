@@ -38,7 +38,8 @@ adding files/folders with `mkrc -o $THING` will store the dotfiles in a host spe
 --------------------
 
 [ ] auto backup script @backups
-	[ ] watch for new files and add them. e.g. [[~/IEM]] @rcm
+	[ ] decide what can be deleted
+	[ ] sync up folders by rsyncing each one individually with delete on destinatin enabled
 
 things to put in backup script:
 
@@ -49,6 +50,8 @@ git add/commit/push
 rsync -r -t -p -o -g -v --progress -l -H --numeric-ids -s --exclude-from=/home/b08x/exclude.txt /home/b08x/ [[/mnt/bender/backups/b08x/]]
 rsync -r -t -p -o -g -v --progress --delete --size-only -l -H -s --exclude-from=/home/b08x/exclude.txt /home/b08x/Storage/media/music/ [[/mnt/bender/backups/b08x/Storage/media/music/]]
 rsync -r -t -p -o -g -v --progress -l -H -s --exclude-from=/home/b08x/exclude.txt /home/b08x/.config/REAPER/ /mnt/bender/backups/b08x/.config/REAPER/
+
+
 
 
 --------------------

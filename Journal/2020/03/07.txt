@@ -85,11 +85,11 @@ setup for rutorrent;
 {{{code: lang="sh" linenumbers="False"
 docker create   \
 --name=rutorrent \
--e PUID=1000 -e PGID=1000 \
+-e PUID=1000 -e PGID=1041 \
 -p 8080:80 -p 5000:5000 \
 -p 45566:45566 -p 40418:40418/udp \
 -v /var/lib/docker/rutorrent/config:/config \
--v /media/downloads:/downloads 
+-v /media:/downloads \
 --restart unless-stopped \
 linuxserver/rutorrent
 }}}
