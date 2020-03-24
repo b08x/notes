@@ -12,7 +12,7 @@ Creation-Date: 2020-03-19T05:55:52-04:00
 [ ] set git push in Zim
 
 [ ] SystemBack & git-annex (backing up and tracking changes to your files)
-	[ ] git-annex [[~/Studio]]
+	[ ] git-annex ~/Studio
 
 [ ] ripgrep
   `$ cargo install ripgrep`
@@ -23,8 +23,8 @@ Creation-Date: 2020-03-19T05:55:52-04:00
 [[https://git-annex.branchable.com/forum/Get_annex.dotfiles__61__true_behavior_without_persistent_configuration__63__/|dealing with dot files]]
 
 [ ] `cabal install git-annex`
-	[ ] setup repo on soundbot in [[~/Studio]]
-		[ ] [[~/Storage]]
+	[ ] setup repo on soundbot in ~/Studio
+		[ ] ~/Storage
 
 
 

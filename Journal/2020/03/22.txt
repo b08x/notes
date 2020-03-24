@@ -1,0 +1,53 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-22T03:21:52-04:00
+
+====== Sunday 22 Mar 2020 ======
+
+=== compiling ffmpeg from source ===
+@compiling
+
+`sudo apt install yasm libx264-dev libfaac-dev libmp3lame-dev libtheora-dev libvorbis-dev libxvidcore-dev libxext-dev libxfixes-dev libv4l-dev libwavpack-dev`
+
+wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2
+
+`./configure --prefix=/usr/local/ffmpeg --enable-gpl --enable-version3 --enable-nonfree --enable-postproc --enable-pthreads  --enable-libfdk-aac --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-libvorbis --enable-ladspa --enable-libbluray --enable-libjack --enable-libopus --enable-libsoxr --enable-libv4l2 --enable-libwavpack --enable-libx264 --enable-shared`
+
+make
+sudo make install
+
+# configure the PATH param
+echo "# Add FFMpeg bin & library paths:" >> ~/.bashrc
+echo "export PATH=/usr/local/ffmpeg/bin:$PATH" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/ffmpeg/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+source ~/.bashrc
+
+
+--------------------
+
+=== hadori ===
+
+Hardlinks identical files
+This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght". Hardlinks identical files
+This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght".
+
+`sudo apt install hadori`
+
+
+--------------------
+
+=== ruby stuff ===
+@ruby
+
+https://github.com/tj/terminal-table
+https://github.com/commander-rb/commander
+
+
+
+--------------------
+
+=== starting jack via systemd ===
+@sysconfig
+
+https://www.kvraudio.com/forum/viewtopic.php?t=530516
+https://github.com/jackaudio/jackaudio.github.com/wiki/InstallationLayout
