@@ -1,0 +1,116 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-04T02:16:59-04:00
+
+====== Saturday 04 Apr 2020 ======
+
+=== things to do to sample files.... ===
+@sox 
+
+in this order;
+
+trim silence at start
+fade
+set to 48k 24bit
+norm
+flac
+
+[*] sox stuff script
+
+
+--------------------
+
+=== sonic-pi ===
+@compiling @sonicpi
+
+* a new service is install an enabled;
+{{{code: lang="sh" linenumbers="False"
+sudo systemctl status epmd.service 
+epmd.service - Erlang Port Mapper Daemon
+
+}}}
+
+
+[[https://linuxmusicians.com/viewtopic.php?f=19&t=20790|compiling sonicpi on debian buster]]
+
+--------------------
+
+=== something fun to try one of these days ===
+@midi @toreview
+
+
+[[https://github.com/reelyactive/midiot|MIDI events from low-power wireless traffic]]
+Converts real-time wireless traffic (Bluetooth Smart, Active RFID) into MIDI notes and OSC messages. The key of the note is determined by the transmitter's identifier and the velocity of the note is determined by the RSSI (proximity). 
+
+
+--------------------
+
+=== pink noise ===
+@audio 
+
+{{{code: lang="sh" linenumbers="False"
+The frequency spectrum of pink noise is linear in logarithmic scale; 
+it has equal power in bands that are proportionally wide.[4] 
+This means that pink noise would have equal power in the frequency range from 40 to 60 Hz as in the band from 4000 to 6000 Hz. 
+Since humans hear in such a proportional space, where a doubling of frequency (an octave) 
+is perceived the same regardless of actual frequency (40–60 Hz is heard as the same interval and distance as 4000–6000 Hz), 
+every octave contains the same amount of energy and thus pink noise is often used as a reference signal in audio engineering. 
+The spectral power density, compared with white noise, decreases by 3 dB per octave (density proportional to 1/f ). 
+For this reason, pink noise is often called "1/f noise".
+}}}
+
+
+
+--------------------
+
+=== a docker app that might be cool to try out ===
+@audio @mastering @docker @toreview
+
+
+
+https://github.com/sergree/matchering
+
+
+--------------------
+
+=== avoiding "aliasing" and trying to understand "samples" ===
+@audio @mixing
+
+[[https://www.youtube.com/watch?v=-jCwIsT0X8M|about sample rates]]
+
+
+
+--------------------
+
+@plugins @toreview
+
+https://www.kvraudio.com/product/proximity-by-vladg-sound
+
+https://www.tx16wx.com/
+
+https://www.izotope.com/en/learn/basic-vocal-doubling-techniques.html
+
+--------------------
+
+@audio @sfz
+
+https://sfzformat.com/tutorials/subtractive_synths
+
+
+
+--------------------
+@sooperlooper
+
+[[https://linuxmusicians.com/viewtopic.php?f=40&t=20483|post detailing a hydrogen + sooperlooper setup]]
+
+
+
+--------------------
+
+[*] add to slim.conf
+	~~`xrandr --setprovideroutputsource modesetting NVIDIA-0`~~
+
+
+	[*] then set the displays
+	[*] configure autologin too
+

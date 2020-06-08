@@ -1,0 +1,91 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-10T00:54:05-04:00
+
+====== Friday 10 Apr 2020 ======
+
+My eyes are going funny on me. Can't seem to configure the visual aspects of the computer. 
+Disabling the application that is designed to adjust settings relating to the ease of eye tension, seemed (seems?) to make things "better" looking for the moment. 
+
+Now I wonder what to do. I'm trying to be mindful of my amphetimine usage. I like the idea of insufulation. When I do it right, it's a fun rush. I'm not sure why I struggle with the idea though. I'm the one who is going to have to deal with the consequences. 
+
+I often get annoyed at the words that come out of my mouth. And sometimes surprised. 
+
+Adjusting "my"workstation is going better. Usually I get frustrated with enumerable details. Especially when there is a piece of the puzzle I don't have yet. My eyes refocus funny again. I often wonder about filters applied to the visual scape. Especially when it comes to how I see people. 
+
+I don't like mulling over the decisions regarding what substance I'll input next. Cigarettes and amphetimines are two that, if I don't have, I am not happy...
+I'm looking at this based on how things are, not an idealisied version. 
+
+It's 1:30am. Ingested 15mg to compromise (with) my brain. It's quite possible I'm just...cautious. I know that the more I take, the more pronouced the side effects become, which is uncomfortable. Right now I have the confidence that I'll be just fine without it. 
+
+I can't remember if I smoke as much as I do when I'm not taking amps. I think maybe just slightly less. Right now I'm engaged in "things". This is not the case as much without amps. This particularly annoys me. I loved computers, and the manipulation of sound using them, just plenty without. As a matter of fact, I was usually quite "stoned" while doing so. Well, I live near a college campus and I spend most of my time (when I can) taking amps and studying and/or practicing as much as I can. 
+
+I seem to love learning about concepts however I find the practice of those concepts daunting and I'm often discouraged. 
+
+I think my issues with Ann are mostly resolved. We argued well today. Coupled with our recent heated arguement that ended well, I think I can stop worrying so much about losing her.
+
+I'm going to listen to music now. The body feels all kinds of things. 
+
+I spend most of my engaged in an interal dialouge with my selfs. When I get the notion to engage with others, I struggle. 
+
+
+It's 4:30 now. I was able to spend some time configuring routing with the ambisonic plugins. Trying a different approach. Instead of each bus havin an encoder, I created a track with a multiencoder and send the signals from each bus to that. There are many ways to setup audio routing, which can be frustrating. 
+
+
+
+--------------------
+
+Not sure how to conceptualize ambisonics in terms of the final mastering process. Back when I was learning about networking, I would draw diagrams to help sort out routing. I'm having a difficult time even thinking about how to map out proper routing. 
+
+And right now I feel like I can't remember anything. 
+
+And right now the idea of making sound seems pointless. Technically, I suppose it bothers me that I have to break from the process. This worries me. 
+
+
+--------------------
+
+=== coming up with names for things ===
+
+is hard.
+
+
+
+--------------------
+
+@toreview
+
+https://hundredrabbits.itch.io/orca
+
+
+
+--------------------
+
+@audio
+
+speaker audio levels set in alsamixer; calibrated to ~80dBs
+
+~~front; 52~~
+~~surround; 62~~
+~~side; 84~~
+~~master; 78~~
+
+master; 78
+surround; 81
+side; 84
+center; 38
+lfe; 45
+
+zita-mu1 set to -10
+
+
+
+--------------------
+Kyle the Counselor's number:
+6145066936
+
+
+
+--------------------
+
+
+

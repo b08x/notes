@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-16T09:21:46-04:00
+
+====== Thursday 16 Apr 2020 ======
+
+@ambisonics
+
+https://github.com/google/spatial-media/tree/master/spatial-audio
+
+http://research.spa.aalto.fi/projects/sparta_vsts/hosirr.html
+
+[[https://forum.cockos.com/archive/index.php/t-97803.html|forum post asking about a multichannel setup]]
+
+https://ccrma.stanford.edu/courses/220a-fall-2017/resources/how-binaural-ambi.html
+
+

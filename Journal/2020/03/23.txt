@@ -25,6 +25,7 @@ http://www.cambridge-mt.com/mike-senior/#SessionNotes
 
 http://koo.corpus.cam.ac.uk/naturesound/
 http://desres18.netornot.at/
+https://www.youtube.com/watch?v=xvowEZqgflw
 
 --------------------
 @compiling @libcurl
@@ -56,11 +57,11 @@ This might be help with the use of [[https://github.com/McMartin/FRUT|FRUT]] whi
 
 --------------------
 
-=== sleep-research experiments ===
-@sleep
+~~sleep-research experiments~~
+~~@sleep~~
 
 
-http://johnhommer.com/academic/code/aghermann/index.html
+~~http://johnhommer.com/academic/code/aghermann/index.html~~
 
 
 --------------------

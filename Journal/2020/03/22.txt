@@ -26,12 +26,14 @@ source ~/.bashrc
 --------------------
 
 === hadori ===
+@backups
 
-Hardlinks identical files
-This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght". Hardlinks identical files
-This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght".
 
-`sudo apt install hadori`
+~~Hardlinks identical files~~
+~~This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght". Hardlinks identical files~~
+~~This might look like yet another hardlinking tool, but it is the only one which only memorizes one filename per inode. That results in less merory consumption and faster execution compared to its alternatives. Therefore (and because all the other names are already taken) it's called "HArdlinking DOne RIght".~~
+
+~~`sudo apt install hadori`~~
 
 
 --------------------

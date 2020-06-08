@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-05T07:18:10-04:00
+
+====== Tuesday 05 May 2020 ======
+
+
+{{./screenshot_2020-05-05-071815.png}}
+
+
+--------------------
+
+@mastering
+
+[[http://www.penguinproducer.com/Blog/2012/01/ladspa-noise-removal/|notes on eq stack for removing noise]]

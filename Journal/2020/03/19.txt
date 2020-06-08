@@ -6,15 +6,16 @@ Creation-Date: 2020-03-19T05:55:52-04:00
 
 === computer tasks ===
 
-[ ] startup script for jack
-	[ ] calibrate alsa levels
+[*] startup script for jack
+	[*] ~~calibrate~~ alsa levels
 
-[ ] set git push in Zim
+[*] set git push in Zim
 
-[ ] SystemBack & git-annex (backing up and tracking changes to your files)
-	[ ] git-annex ~/Studio
 
-[ ] ripgrep
+[ ] consider usage of git-annex (backing up and tracking changes to your files) <2020-07-07
+
+
+[*] ripgrep
   `$ cargo install ripgrep`
 
 
@@ -22,9 +23,9 @@ Creation-Date: 2020-03-19T05:55:52-04:00
 
 [[https://git-annex.branchable.com/forum/Get_annex.dotfiles__61__true_behavior_without_persistent_configuration__63__/|dealing with dot files]]
 
-[ ] `cabal install git-annex`
-	[ ] setup repo on soundbot in ~/Studio
-		[ ] ~/Storage
+[*] `cabal install git-annex`
+	[*] setup repo on soundbot in ~/Studio
+		[*] ~/Storage
 
 
 

@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-02T16:50:15-04:00
+
+====== Tuesday 02 Jun 2020 ======
+
+
+TODO: @soundbot @input 
+
+[ ] keyboard shortcut for 'xet -r' 'xet r'
+[*] how to switch windows when one of them is floating
+		= mod + space
+	* scratch pad for keyboards
+[ ] workspace assignments for apps
+[ ] scratchpad config for jack-keyboard/vmpk
+	[ ] lsmi-
+
+
+
+
+
+--------------------
+
+
+
+
+TODO: @intranet
+[ ] redo network interface configs <2020-06-06
+	* stop docker
+	* stop nm
+	* redo the configs
+	* start nm, estbaslish connectivity
+	[*] download wipe, as it gave me a sense of satisfaction with knowing the details
+	[*] remove hard drive from bender after wiping
+	disk info:
+	WD-WCAZA8309294
+	Model	WDC WD20EARX-00PASB0
+
+
+--------------------
+
+TODO: 

@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-11T06:26:28-04:00
+
+====== Monday 11 May 2020 ======
+
+@sox
+
+
+https://www.yesik.it/blog/2018-sox
+
+
+   Some  of  the SoX effects are primarily intended to be applied to a single instrument or `voice'.  To facilitate this, the remix effect and the global SoX option
+	   -M can be used to isolate then recombine tracks from a multi-track recording.
+
+
+@resources @vst
+https://blog.landr.com/best-free-vst-plugins/?fbclid=IwAR2zU1KaSs5_9PMDmNOFo2uGPNWX13JwQZzfKOZ6cB9dnwE4_ssg32--QCs
+
+
+@mixing 
+https://blog.landr.com/sidechain/

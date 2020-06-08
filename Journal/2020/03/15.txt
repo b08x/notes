@@ -36,11 +36,12 @@ adding files/folders with `mkrc -o $THING` will store the dotfiles in a host spe
 
 
 --------------------
-
-[ ] auto backup script @backups
-	[*] decide what can be deleted
-	[*] sync up folders by rsyncing each one individually with delete on destinatin enabled
-	[ ] add cron for rsync & systemback restore points
+[*] backup and restore and/or upgade process
+	[*] auto backup script @backups
+		[*] decide what can be deleted
+		[*] sync up folders by rsyncing each one individually with delete on destinatin enabled
+		[*] add cron for rsync & systemback restore points
+	[*] upgrade and store
 
 things to put in backup script:
 
@@ -74,7 +75,7 @@ rsync -r -t -p -o -g -v --progress -l -H -s --exclude-from=/home/b08x/exclude.tx
 @sox
 
 [[https://github.com/madskjeldgaard/ranger-sox|ranger sox]]
-[ ] configure ranger sox plugin
+[*] configure ranger sox plugin
 
 
 --------------------
