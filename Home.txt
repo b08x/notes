@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-29T22:46:54-04:00
+
+====== Home ======
+Created Tuesday 29 September 2020
+
+
+
+Ideally, this would be useful to keep track of things. However, it is much easier to think about documenting steps taken during various activities than it is to actually //do it//. 
+
+

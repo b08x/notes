@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-29T22:49:01-04:00
+
+====== Tuesday 29 Sep 2020 ======
+
+Today is Tuesday, September 29th in the year "2020"
+
