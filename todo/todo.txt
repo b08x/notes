@@ -1,0 +1,2 @@
+install todo stuff on lapbot due:2020-10-01 @sysconfig
+water plants due:2020-10-02 rec:1d @home +tasks
