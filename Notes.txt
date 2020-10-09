@@ -1,0 +1,278 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-09T06:16:46-04:00
+
+====== notes ======
+Created Saturday 03 October 2020
+
+
+--------------------
+
+
+//Saturday 03 October 2020//
+
+@xfce @soundbot
+
+https://superuser.com/questions/630954/meta-arrow-keys-to-move-windows-between-monitors
+https://github.com/jc00ke/move-to-next-monitor/blob/master/move-to-next-monitor
+
+@sonicpi @autocomplete
+
+
+https://github.com/dermusikman/sonicpi.vim/blob/master/autoload/sonicpicomplete.vim
+
+--------------------
+@sonicpi
+
+checkout previous commit from sept 14
+
+`git log`
+
+--------------------
+
+
+//Saturday 03 October 2020//
+
+@git
+
+https://github.com/fabiospampinato/autogit#readme
+
+--------------------
+@sonicpi @git
+> git checkout 735716ad3fb3dbe8202c8436092484b0d4401dac
+Note: switching to '735716ad3fb3dbe8202c8436092484b0d4401dac'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 735716ad3 Translated using Weblate (French)
+
+
+
+
+--------------------
+
+
+//Saturday 03 October 2020//
+
+* after exported to sfz, the sample file names need to be cleaned up as well as some parameters(opcodes)need to be adjusted
+
+
+--------------------
+@idea @task
+
+trying to organize creating an application
+
+//Saturday 03 October 2020//
+
+--------------------
+replace alt-tab with rofi
+
+//Sunday 04 October 2020//
+
+--------------------
+enabled 'all formats' supported in ffmpeg settings
+
+@deadbeef
+
+						
+
+--------------------
+@dotfiles
+
+remove .config/xfce4 and replace it with what is in ~/tmp/xfce
+
+make another copy before doing this
+
+
+//Sunday 04 October 2020//
+
+--------------------
+execute 'git submodule update' after pushing a commit within a submodule'		
+
+//Sunday 04 October 2020//
+
+--------------------
+@git
+setup meld as a merge tool
+
+//Sunday 04 October 2020//
+
+--------------------
+> git stream feature start 'deadbeef-import'
+Switched to branch 'feature/deadbeef-import'
+
+Your are now on feature/deadbeef-import. When you are done with the feature, run git stream feature finish deadbeef-import
+
+@soundbot
+
+//Sunday 04 October 2020//
+
+--------------------
+ensure that "file location" is not hard-coded anywhere
+@soundbot
+
+//Sunday 04 October 2020//
+
+--------------------
+==> Adding user 'b08x' to user-group 'sambashare'
+==> Samba services should now be enabled.==> Please add new users to 'sambashare' group.==> Reboot your system, so changes will take effect..
+Transaction successfully finished.
+
+@intranet @bender
+
+
+//Sunday 04 October 2020//
+
+
+@docker @bender
+
+create a shared volume in docker
+
+docker volume create --name torrent-downloads
+
+
+
+
+--------------------
+configure autofs fer bender
+@soundbot
+
+//Sunday 04 October 2020//
+
+--------------------
+apulse
+worked with firefox on laptop..
+@alsa 
+//Tuesday 06 October 2020//
+
+--------------------
+compiled libxtract via SAFE plugin source
+@libxtract @vamp @sonicannotator
+
+//Tuesday 06 October 2020//
+
+--------------------
+startjack and iem plug executables are in ~/.local/bin
+
+
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://github.com/thjaeger/easystroke/wiki/TipsAndTricks
+
+@keyboard @mapping
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://github.com/libratbag/piper
+
+@mouse @mapping
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://github.com/iberianpig/fusuma
+
+@mapping @gestures @ruby
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://github.com/docker/app
+
+@docker @soundbot
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://wiki.archlinux.org/index.php/Simple_stateful_firewall
+
+@firewall @bender
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://wiki.dd-wrt.com/wiki/index.php/DNSMasq_as_DHCP_server
+https://gist.githubusercontent.com/ctrezevant/15bc1759cd255608b80091c0bdb45b1a/raw/f531544d440513b88c0ba436655c5e89c3a4ea17/dnsmasq.conf
+@dns @pxe @routing
+
+//Tuesday 06 October 2020//
+
+
+
+--------------------
+copy files that are symlinked
+
+rsync --copy-links -rvP xfce4 /home/b08x/tmp
+
+@rsync
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://audiogridder.com/
+
+@soundbot @networking
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://github.com/pierreguillot/Camomile/wiki/How-to-create-new-plugins
+
+@puredata
+
+//Tuesday 06 October 2020//
+
+--------------------
+https://ineardisplay.com/plugins/
+@vst 
+
+//Tuesday 06 October 2020//
+
+--------------------
+after installing jacksettings, pulse audio no longer functions as expected. 
+~~going to replace pulse with apulse and see what happens~~
+
+@jack
+
+//Wednesday 07 October 2020//
+
+--------------------
+-s, --softmode
+			  Ignore xruns reported by the ALSA driver. This makes JACK less likely to disconnect unresponsive ports when running without --realtime.
+
+
+@jack
+
+//Wednesday 07 October 2020//
+
+--------------------
+
+@bluetooth @alsa
+
+* when working on asoundrc, perhaps leaving out the ctl. option will help
+
+
+--------------------
+
+@soundbot @algorhythms
+
+https://nedbatchelder.com/blog/200712/human_sorting.html
+
+"This makes “z2” sort after “z100”, for example. "
+
