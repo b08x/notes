@@ -276,3 +276,36 @@ https://nedbatchelder.com/blog/200712/human_sorting.html
 
 "This makes “z2” sort after “z100”, for example. "
 
+
+--------------------
+@kernel @security
+
+https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html
+
+Oct 18 01:10:36 ninjabot kernel: MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html for more details.
+
+
+//Sunday 18 October 2020//
+
+--------------------
+@acoustics
+
+http://www.roomeqwizard.com/index.html
+
+//Sunday 18 October 2020//
+
+--------------------
+@laptop @gestures
+
+pamac install gestures
+
+//Sunday 18 October 2020//
+
+--------------------
+@soundbot @analysis
+
+https://essentia.upf.edu/streaming_extractor_music.html#music-descriptors
+
+fpcalc
+
+//Sunday 18 October 2020//

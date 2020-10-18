@@ -5,3 +5,7 @@ Creation-Date: 2020-10-09T06:09:04-04:00
 ====== deadsampler ======
 Created Friday 09 October 2020
 
+
+https://hub.docker.com/r/mtgupf/essentia/
+
+http://antiboredom.github.io/audiogrep/
