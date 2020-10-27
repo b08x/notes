@@ -1,12 +1,10 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
-Creation-Date: 2020-10-27T05:11:43-04:00
+Creation-Date: 2020-10-27T05:13:04-04:00
 
 ====== None ======
 //^{Tuesday 27 October 2020}//
-@something
-
-perhaps...
+put tags here
 
 
 
