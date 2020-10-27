@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-26T09:16:37-04:00
+
+====== intranet ======
+Created Monday 26 October 2020
+
+pimpbot@syncopatedstudios.net
+
