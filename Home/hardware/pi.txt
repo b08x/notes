@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-09-30T00:22:28-04:00
 
-====== dpi ======
+====== pi ======
 Created Wednesday 30 September 2020
 
 Currently, piratebot.qbase.org is running retropie on a pi4
@@ -35,6 +35,7 @@ https://github.com/pimoroni/pirate-audio
 
 
 ===== installing mate =====
+@sysconfig @ui
 
 https://www.raspberrypi.org/forums/viewtopic.php?t=133691
 https://www.raspberrypi.org/forums/viewtopic.php?t=260974

@@ -6,39 +6,15 @@ Creation-Date: 2020-10-09T06:16:46-04:00
 Created Saturday 03 October 2020
 
 
---------------------
-
 
 //Saturday 03 October 2020//
 
-@xfce @soundbot
-
-https://superuser.com/questions/630954/meta-arrow-keys-to-move-windows-between-monitors
-https://github.com/jc00ke/move-to-next-monitor/blob/master/move-to-next-monitor
-
-@sonicpi @autocomplete
-
-
-https://github.com/dermusikman/sonicpi.vim/blob/master/autoload/sonicpicomplete.vim
-
---------------------
-@sonicpi
-
-checkout previous commit from sept 14
-
-`git log`
-
---------------------
-
-
-//Saturday 03 October 2020//
-
-@git
+@git 
 
 https://github.com/fabiospampinato/autogit#readme
 
 --------------------
-@sonicpi @git
+@sonicpi @git @helpdesk
 > git checkout 735716ad3fb3dbe8202c8436092484b0d4401dac
 Note: switching to '735716ad3fb3dbe8202c8436092484b0d4401dac'.
 
@@ -66,7 +42,7 @@ HEAD is now at 735716ad3 Translated using Weblate (French)
 
 
 //Saturday 03 October 2020//
-
+@soundbot 
 * after exported to sfz, the sample file names need to be cleaned up as well as some parameters(opcodes)need to be adjusted
 
 
@@ -78,6 +54,7 @@ trying to organize creating an application
 //Saturday 03 October 2020//
 
 --------------------
+@sysconfig @ui @shortcuts
 replace alt-tab with rofi
 
 //Sunday 04 October 2020//
@@ -100,7 +77,9 @@ make another copy before doing this
 //Sunday 04 October 2020//
 
 --------------------
-execute 'git submodule update' after pushing a commit within a submodule'		
+@git @tips
+
+execute 'git submodule update' after pushing a commit within a submodule'	
 
 //Sunday 04 October 2020//
 
@@ -124,6 +103,7 @@ Your are now on feature/deadbeef-import. When you are done with the feature, run
 ensure that "file location" is not hard-coded anywhere
 @soundbot
 
+
 //Sunday 04 October 2020//
 
 --------------------
@@ -137,7 +117,8 @@ Transaction successfully finished.
 //Sunday 04 October 2020//
 
 
-@docker @bender
+@docker @bender @idea
+
 
 create a shared volume in docker
 
