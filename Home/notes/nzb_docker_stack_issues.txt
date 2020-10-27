@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-27T14:34:03-04:00
+
+====== nzb docker stack issues ======
+//^{Tuesday 27 October 2020}//
+@docker @helpdesk
+
+{{{code: lang="sh" linenumbers="False"
+/tmp/pear/temp/imagick/imagick_helpers.c: In function 'php_imagick_progress_monitor_callable':
+/tmp/pear/temp/imagick/imagick_helpers.c:96:6: error: 'zend_fcall_info' {aka 'struct _zend_fcall_info'} has no member named 'function_table'; did you mean 'function_name'?
+   96 |  fci.function_table = EG(function_table);
+      |      ^~~~~~~~~~~~~~
+      |      function_name
+/tmp/pear/temp/imagick/imagick_helpers.c:111:5: error: 'zend_fcall_info' {aka 'struct _zend_fcall_info'} has no member named 'symbol_table'
+  111 |  fci.symbol_table = NULL;
+      |     ^
+make: *** [Makefile:204: imagick_helpers.lo] Error 1
+ERROR: `make' failed
+ERROR: Service 'nzedb' failed to build : The command '/bin/sh -c pecl install imagick-3.4.1' returned a non-zero code: 1
+
+}}}
+
+
+
+
+
