@@ -4,7 +4,7 @@ Creation-Date: 2020-10-09T06:08:59-04:00
 
 ====== soundbot ======
 
-
+[stuff with the tag soundbot]
 
 ===== [[+deadsampler|deadsampler]] =====
 a sample library organize/categorize/analysis thingy
