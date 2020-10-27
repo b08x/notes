@@ -16,3 +16,10 @@ This will copy instead of symlink
 
 
 
+{{{code: lang="sh" linenumbers="False"
+> mkrc -Cv -t ranger .config/ranger
+Moving...
+'/home/b08x/.config/ranger' -> '/home/b08x/Workspace/dotfiles/tag-ranger/config/ranger'
+Linking...
+'/home/b08x/Workspace/dotfiles/tag-ranger/config/ranger/commands.py' -> '/home/b08x/.config/ranger/commands.py'
+}}}
