@@ -3,112 +3,7 @@ Wiki-Format: zim 0.6
 Creation-Date: 2020-10-09T06:16:46-04:00
 
 ====== notes ======
-Created Saturday 03 October 2020
 
-
-
-//Saturday 03 October 2020//
-
-
-
---------------------
-
-
-
-
-
---------------------
-
-
-//Saturday 03 October 2020//
-
-
-
---------------------
-@idea @task
-
-trying to organize creating an application
-
-//Saturday 03 October 2020//
-
---------------------
-@sysconfig @ui @shortcuts
-replace alt-tab with rofi
-
-//Sunday 04 October 2020//
-
---------------------
-
-
-						
-
---------------------
-@dotfiles
-
-remove .config/xfce4 and replace it with what is in ~/tmp/xfce
-
-make another copy before doing this
-
-
-//Sunday 04 October 2020//
-
---------------------
-	
-
-//Sunday 04 October 2020//
-
-
-
-//Sunday 04 October 2020//
-
---------------------
-> git stream feature start 'deadbeef-import'
-Switched to branch 'feature/deadbeef-import'
-
-Your are now on feature/deadbeef-import. When you are done with the feature, run git stream feature finish deadbeef-import
-
-@soundbot
-
-//Sunday 04 October 2020//
-
---------------------
-
-
-
-
-//Sunday 04 October 2020//
-
---------------------
-
-
-@intranet @bender
-
-
-//Sunday 04 October 2020//
-
-
-
-
-
-
-
---------------------
-
-@soundbot
-
-//Sunday 04 October 2020//
-
---------------------
-apulse
-worked with firefox on laptop..
-@alsa 
-//Tuesday 06 October 2020//
-
---------------------
-compiled libxtract via SAFE plugin source
-@libxtract @vamp @sonicannotator
-
-//Tuesday 06 October 2020//
 
 --------------------
 startjack and iem plug executables are in ~/.local/bin
@@ -161,14 +56,6 @@ https://gist.githubusercontent.com/ctrezevant/15bc1759cd255608b80091c0bdb45b1a/r
 
 
 
---------------------
-copy files that are symlinked
-
-rsync --copy-links -rvP xfce4 /home/b08x/tmp
-
-@rsync
-
-//Tuesday 06 October 2020//
 
 --------------------
 https://audiogridder.com/
