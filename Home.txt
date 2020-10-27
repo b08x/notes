@@ -4,7 +4,37 @@ Creation-Date: 2020-09-29T22:46:54-04:00
 
 ====== Home ======
 
-===== Using the Task List =====
+
+=== Using the Task List ===
 
 
+* give the list a tag
+	* then add items below
 
+{{{code: lang="markdown" linenumbers="False"
+TODO: @intranet
+[] do this
+[] do that
+
+}}}
+
+
+* use "!" to add priority. The more exclaimation marks, the higher the priority. In this case "another thing" would be listed at the top
+
+
+{{{code: lang="markdown" linenumbers="False"
+[ ] this !!
+[ ] that !!!!
+[ ] another thing !!!!!
+}}}
+
+
+* to add a start date use >2020-11-30
+
+{{{code: lang="markdown" linenumbers="False"
+TODO: @projectname >2020-11-01
+[] do this first
+	[] this is a subtask
+[] or do this first and go back and use exclaimation points
+
+}}}

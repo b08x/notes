@@ -19,8 +19,8 @@ https://github.com/hugokernel/todofi.sh+
 https://github.com/bram85/topydo
 https://github.com/todotxt/todo.txt
 
-[ ] set zim to push to git upon closing, pull upon opening <2020-10-06 !
-[*] create .desktop for timemachine and configure for using a mic
+[ ] set zim to push to git upon closing, pull upon opening >2020-11-06 !
+
 
 
 
