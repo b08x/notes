@@ -3,9 +3,23 @@ Wiki-Format: zim 0.6
 Creation-Date: 2020-10-27T04:53:34-04:00
 
 ====== notes ======
-Created Tuesday 27 October 2020
+
 
 Where notes from the quicknote plugin are stored. 
 
 random notes and tasks can go here
 
+== Using Tags: ==
+
+helpdesk - something to fix
+tips - a note on how something was done or how to do something
+idea - something to try or at least consider
+intranet - home networking, service related
+
+sysconfig - anything to do with configuring the operating system
+
+
+soundbot - specific to audio related things within the linux realm
+
+
+* it seems that tags will include pages below. for example, if you click "idea" in the tag cloud it will bring up all the pages under Home:notes

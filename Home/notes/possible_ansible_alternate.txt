@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-27T05:26:50-04:00
+
+====== possible ansible alternate ======
+//Tuesday 27 October 2020//
+@ansible @sysconfig @admin
+
+https://github.com/wagoodman/bashful

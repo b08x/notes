@@ -2,11 +2,10 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-09-30T00:21:48-04:00
 
-====== tech ======
+====== systems ======
 
-Things related to the idea of "computers" and "software". 
+Things related to the management of Syncopated Studios related hosts/nodes/what have you
 
-[[+pi|pi stuff]]
 
 
 
