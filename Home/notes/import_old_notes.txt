@@ -1,10 +1,12 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
-Creation-Date: 2020-10-27T04:34:47-04:00
+Creation-Date: 2020-10-27T05:00:32-04:00
 
-===== File in title here =====
+import old notes
 //^{Tuesday 27 October 2020}//
+@zim
 
+[ ] import old notebooks
 
 
 
