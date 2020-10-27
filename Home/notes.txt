@@ -1,15 +1,37 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
-Creation-Date: 2020-10-27T04:19:41-04:00
+Creation-Date: 2020-10-27T04:25:16-04:00
 
 
 --------------------
 
-=== a title ===
+===== something =====
+//^{Tuesday 27 October 2020}//
 
-== //_{^{Tuesday 27 October 2020}}// ==
-@tag
+ekse
+
+
+
+
+
+--------------------
+
+==== and this ====
+//^{Tuesday 27 October 2020}//
+
+
+and this
+
+
+
+
+
+--------------------
+===== title =====
+//^{Tuesday 27 October 2020}//
+
 
 text
+
 
 
