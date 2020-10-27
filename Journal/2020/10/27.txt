@@ -6,22 +6,22 @@ Creation-Date: 2020-10-27T02:50:04-04:00
 
 Stuff. 
 
-
-@bender @intranet 
+TODO: @intranet
 [ ] setup [[https://www.newsdemon.com/usenet-access.php#payment|newsgroup account]] $60/yr
-[ ] configure/deploy nzbdocker
+[ ] configure/deploy nzbdocker @bender
 	[ ] jackett/sonarr/couchpotato
-[ ] portable drive sync
+[ ] portable drive sync @bender
+[ ] bender.syncopatedstudios.net
+	[ ] display this wiki @ http://bender.syncopatedstudios.net
+	[ ] edit quicknote template
 
-@intranet @sec
+
+@sec
 [ ] pihole 
 	[ ] dhcp/dns
 
-@intranet @media
+@media
 [ ] media viewer/gaming
 
 
-@intranet
-[ ] bender.syncopatedstudios.net
-	[ ] display this wiki
-	[ ] edit quicknote template
+
