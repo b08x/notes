@@ -23,25 +23,6 @@ https://github.com/todotxt/todo.txt
 [*] create .desktop for timemachine and configure for using a mic
 
 
-TODO: atom sonic-pi auto-complete !
-	add options to sample/fx/synth auto completes
-	add samples
-
-[*] arrange common room
-	[*] move stuff
-
-[ ] set OS to display zim on login
-
-[ ] ~~have daily task sheet printed out automatically !~~
-	[ ] ~~decide from which computer will run this service~~
-
-	lp .todo/todo.txt
-
-
-
-
-[ ] setup blather to open timemachine
-
 
 ====== to be sorted ======
 

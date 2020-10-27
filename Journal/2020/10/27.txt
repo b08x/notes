@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-27T02:50:04-04:00
+
+====== Tuesday 27 Oct 2020 ======
+
+Stuff. 
+
+
+@bender @intranet 
+[ ] setup [[https://www.newsdemon.com/usenet-access.php#payment|newsgroup account]] $60/yr
+[ ] configure/deploy nzbdocker
+	[ ] jackett/sonarr/couchpotato
+[ ] portable drive sync
+
+@intranet @sec
+[ ] pihole 
+	[ ] dhcp/dns
+
+@intranet @media
+[ ] media viewer/gaming
+
+
+@intranet
+[ ] bender.syncopatedstudios.net
+	[ ] display this wiki
+	[ ] edit quicknote template
