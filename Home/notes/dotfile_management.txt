@@ -6,7 +6,7 @@ Creation-Date: 2020-10-27T13:57:13-04:00
 //^{Tuesday 27 October 2020}//
 @sysconfig @admin @dotfiles
 
-[ ] migrate dotfile management from rcm to yadm
+[*] migrate dotfile management from rcm to yadm
 
 
 
