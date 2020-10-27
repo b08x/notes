@@ -57,9 +57,7 @@ make another copy before doing this
 
 //Sunday 04 October 2020//
 
---------------------
-@git
-setup meld as a merge tool
+
 
 //Sunday 04 October 2020//
 
@@ -74,16 +72,14 @@ Your are now on feature/deadbeef-import. When you are done with the feature, run
 //Sunday 04 October 2020//
 
 --------------------
-ensure that "file location" is not hard-coded anywhere
-@soundbot
+
+
 
 
 //Sunday 04 October 2020//
 
 --------------------
-==> Adding user 'b08x' to user-group 'sambashare'
-==> Samba services should now be enabled.==> Please add new users to 'sambashare' group.==> Reboot your system, so changes will take effect..
-Transaction successfully finished.
+
 
 @intranet @bender
 
@@ -91,18 +87,13 @@ Transaction successfully finished.
 //Sunday 04 October 2020//
 
 
-@docker @bender @idea
 
-
-create a shared volume in docker
-
-docker volume create --name torrent-downloads
 
 
 
 
 --------------------
-configure autofs fer bender
+
 @soundbot
 
 //Sunday 04 October 2020//
