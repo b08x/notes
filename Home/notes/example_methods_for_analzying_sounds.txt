@@ -5,11 +5,14 @@ Creation-Date: 2020-10-28T07:51:11-04:00
 ====== example methods for analzying sounds ======
 Created Wednesday 28 October 2020
 
-ζ notice how the analysis on the right looks like a childs scribling of an unhappy face while on the left
+ζ notice how the analysis on the right looks like a childs scribling of an unhappy face while on the left a couple of folksy demons are doing a dance. 
 
 {{/sound/comfortable_vs_loud.jpg}}
 
 https://pubs.asha.org/doi/pdf/10.1044/2018_JSLHR-S-17-0388
+
+I find it interesting they charge for "24 hour use" of an article. 
+	* somehow saves bandwidth? 
 
 "
 Abstract
