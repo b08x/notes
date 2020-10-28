@@ -12,7 +12,7 @@ mkrc -Cv -t zim templates
 
 This will copy instead of symlink
 
-[ ] perhaps do away with dotfiles. neither yadm nor rcm made that solution easy...
+[*] tried yadm; seems like rcm wins out
 	[ ] sync and restore workflow for dotfiles
 
 
@@ -27,8 +27,5 @@ Linking...
 
 
 
-rcm
-| pros | cons |
-|:-----|:-----|
-|      |      |
-|      |      |
+i guess just take the time and get to know the quirks of linux. for things like zim or xfce that will overwrite the symlinks, for now, put those in the "copy always". start with test folder, then just document each step then it's a script. 
+
