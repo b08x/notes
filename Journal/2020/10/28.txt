@@ -36,3 +36,9 @@ That's my fantasy anyway. Just show up, like a wizard. Do a wizard thing, then c
 I'm not sure which part of my brain decided that I am in fact, not a wizard. It would probably classify me as a homosapien cube box or something with more syllables than I care to slow down and acknowledge. 
 
 Using a 4-array microphone or other such multi mic setup; to analyze / segment the various freqs. Hmmmm....location. Sound out the mouth; where do the ranges of frequencies go. I can reasonably guess that the wavefront curve, is not uniform like on the diagrams.wavefront variance{{/sound/wavefrontvariance.jpg}}
+
+so yeah, I think that's a great idea. 
+
+/[[./HumanVoice.pdf]]
+
+"pre"
