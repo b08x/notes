@@ -11,3 +11,4 @@ execute 'git submodule update' after pushing a commit within a submodule'
 
 
 
+git submodule update --init --recursive
