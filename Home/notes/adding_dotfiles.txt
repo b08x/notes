@@ -12,7 +12,8 @@ mkrc -Cv -t zim templates
 
 This will copy instead of symlink
 
-[ ] sync and restore workflow for dotfiles
+[ ] perhaps do away with dotfiles. neither yadm nor rcm made that solution easy...
+	[ ] sync and restore workflow for dotfiles
 
 
 
@@ -23,3 +24,11 @@ Moving...
 Linking...
 '/home/b08x/Workspace/dotfiles/tag-ranger/config/ranger/commands.py' -> '/home/b08x/.config/ranger/commands.py'
 }}}
+
+
+
+rcm
+| pros | cons |
+|:-----|:-----|
+|      |      |
+|      |      |
