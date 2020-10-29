@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-28T20:57:07-04:00
+
+====== Accounting for some random default setting the OS choose. Boy, what an idiot. ======
+//^{Wednesday 28 October 2020}//
+@soundbot @alsa @sysconfig
+
+[ ] set alsa mixer levels upon session startup
+
+
+
+
+
