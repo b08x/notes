@@ -7,7 +7,8 @@ Creation-Date: 2020-11-05T07:50:56-05:00
 @soundbot @analysis
 
 
-
+Here is a vocal recording with a second of loud noise in the middle...I'm not sure if it's "clipping" (from this pic) although
+from the sound it seems like it...
 
 {{./pasted_image.png}}
 
