@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-11-05T10:11:44-05:00
+
+====== jupyter > an atom zim type ======
+//^{Thursday 05 November 2020}//
+put tags here
+
+{{{code: lang="sh" linenumbers="False"
+https://nbviewer.jupyter.org/github/SciRuby/sciruby-notebooks/blob/master/getting_started.ipynb
+}}}
+
+
+
+
+
