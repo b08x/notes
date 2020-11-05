@@ -17,8 +17,8 @@ TODO: @intranet
 
 
 @sec
-[ ] pihole 
-	[ ] dhcp/dns
+[*] pihole 
+	[*] dhcp/dns
 
 @media
 [ ] media viewer/gaming
