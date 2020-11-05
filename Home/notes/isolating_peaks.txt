@@ -7,9 +7,12 @@ Creation-Date: 2020-11-05T07:50:56-05:00
 @soundbot @analysis
 
 
-When attempting to quickly increase the volume so I could hear it...it was apparent that only one section of the audio saw a gain increase, while the rest was still in audible.
+
 
 {{./pasted_image.png}}
 
 
+Then normalizing to -23dbfs
+
+{{./pasted_image001.png}}
 
