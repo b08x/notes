@@ -29,3 +29,8 @@ Linking...
 
 i guess just take the time and get to know the quirks of linux. for things like zim or xfce that will overwrite the symlinks, for now, put those in the "copy always". start with test folder, then just document each step then it's a script. 
 
+
+@rcup 
+
+
+
