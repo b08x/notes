@@ -8,8 +8,8 @@ Stuff.
 
 TODO: @intranet
 [ ] setup [[https://www.newsdemon.com/usenet-access.php#payment|newsgroup account]] $60/yr
-[ ] configure/deploy nzbdocker @bender
-	[ ] jackett/sonarr/couchpotato
+[*] configure/deploy nzbdocker @bender
+	[*] jackett/sonarr/couchpotato
 [ ] portable drive sync @bender
 [ ] bender.syncopatedstudios.net
 	[ ] display this wiki @ http://bender.syncopatedstudios.net
