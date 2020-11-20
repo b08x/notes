@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-11-20T03:54:24-05:00
+
+alsa bluetooth
+@bluetooth @alsa
+//Friday 20 November 2020//
+
+https://forum.armbian.com/topic/6480-bluealsa-bluetooth-audio-using-alsa-not-pulseaudio/?do=findComment&comment=64416
