@@ -8,3 +8,4 @@ Created Wednesday 04 November 2020
 [b08x@piratebot seeed-voicecard]$ sudo ./install.sh --compat-kernel
 
 
+https://github.com/voice-engine/ec
