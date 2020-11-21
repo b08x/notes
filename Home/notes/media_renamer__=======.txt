@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-11-21T02:22:26-05:00
+
+====== media renamer ======
+https://www.filebot.net/
+//Saturday 21 November 2020//
