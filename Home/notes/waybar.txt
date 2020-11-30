@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-11-30T03:40:13-05:00
+
+====== waybar ======
+Created Monday 30 November 2020
+
+Nov 30 03:32:31 lapbot waybar[56609]: [2020-11-30 03:32:31.987] [warning] For a functional tray you must have libappindicator-* installed and export XDG_CURRENT_DESKTOP=Unity
+
+* install libappfinder gtk2 and gtk3
