@@ -15,7 +15,7 @@ apm install atom-beautify# Testing
 apm install ruby-test# Dockerfile support
 apm install language-docker
 # Other
-apm install platformio-ide-terminal # terminal inside your editor
+apm install platformio-ide-terminal
 apm install minimap # Sublime-like minimap
 apm install Sublime-Style-Column-Selection
 apm install toggle-quotes
