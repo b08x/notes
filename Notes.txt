@@ -40,20 +40,6 @@ https://github.com/docker/app
 
 //Tuesday 06 October 2020//
 
---------------------
-https://wiki.archlinux.org/index.php/Simple_stateful_firewall
-
-@firewall @bender
-
-//Tuesday 06 October 2020//
-
---------------------
-https://wiki.dd-wrt.com/wiki/index.php/DNSMasq_as_DHCP_server
-https://gist.githubusercontent.com/ctrezevant/15bc1759cd255608b80091c0bdb45b1a/raw/f531544d440513b88c0ba436655c5e89c3a4ea17/dnsmasq.conf
-@dns @pxe @routing
-
-//Tuesday 06 October 2020//
-
 
 
 
