@@ -12,8 +12,7 @@ TODO: @intranet
 	[*] jackett/sonarr/couchpotato
 [ ] portable drive sync @bender
 	 https://project.altservice.com/issues/827
-[ ] bender.syncopatedstudios.net
-	[ ] display this wiki @ http://bender.syncopatedstudios.net
+[ ] http://bender
 
 
 
