@@ -4,7 +4,7 @@ Creation-Date: 2020-11-30T22:54:00-05:00
 
 ====== aliases and shortcuts ======
 Created Monday 30 November 2020
-
+{{{code: lang="sh" linenumbers="False"
 # alias soundbot="cd ~/Soundbot"
 #FIXME something isn't working right with zita-a2j/j2a ---
 #test
@@ -56,3 +56,6 @@ alias ping="sudo ping"
 
 #alias source="cd '$HOME/Downloads/source'"
 #alias wkspace="cd '$HOME/Workspace'"
+
+}}}
+
