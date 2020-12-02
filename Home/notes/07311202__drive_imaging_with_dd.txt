@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-12-02T06:33:59-05:00
 
-====== 2020/02/12:timestamp disk dd ======
+====== 07311202  drive imaging with dd ======
 //Wednesday 02 December 2020//
 @systems @commandlinefu
 for optimal imaging of a drive with an iso:
