@@ -3,17 +3,17 @@ Wiki-Format: zim 0.6
 Creation-Date: 2020-12-02T05:04:10-05:00
 
 ====== workflow ======
-Created Wednesday 02 December 2020
+last update [d: 2020-12-02]
 
 
 
 unable to play audio from browser (or at all)
 
 * check alsa levels
-	* stoppulse
-	* jack_control exit
-	* jack_control start
-	* startpulse
+* stoppulse
+* jack_control exit
+* jack_control start
+* startpulse
 * check alsa levels again as they may have reset
 
 
