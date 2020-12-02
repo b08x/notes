@@ -10,5 +10,11 @@ Created Wednesday 02 December 2020
 unable to play audio from browser (or at all)
 
 * check alsa levels
-* stoppulse && 
+	* stoppulse
+	* jack_control exit
+	* jack_control start
+	* startpulse
+* check alsa levels again as they may have reset
+
+
 
