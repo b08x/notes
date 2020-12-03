@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-12-03T03:57:33-05:00
+
+====== 03571203 ======
+@sway @ui
+
+https://man.sr.ht/~kennylevinsen/greetd/
+
+{{{code: lang="sh" linenumbers="False"
+
+}}}
