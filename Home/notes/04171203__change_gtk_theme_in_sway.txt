@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-12-03T04:18:09-05:00
+
+====== 04171203 | change gtk theme in sway ======
+@sway @ui
+
+
+{{{code: lang="sh" linenumbers="False"
+> gsettings set org.gnome.desktop.interface gtk-theme "oomox-also_random"
+
+}}}
