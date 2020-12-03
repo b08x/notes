@@ -17,4 +17,5 @@ unable to play audio from browser (or at all)
 * check alsa levels again as they may have reset
 
 
-
+atom stuff
+* selection -> split into lines
