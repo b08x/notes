@@ -27,3 +27,7 @@ https://github.com/apognu/tuigreet
 systemd-cat [OPTIONS...] COMMAND ...
 
 Execute process with stdout/stderr connected to the journal.
+
+@ui
+
+https://www.deviantart.com/rvc-2011/art/SwayWM-on-Manjaro-714547700?comment=1%3A714547700%3A4502771199
