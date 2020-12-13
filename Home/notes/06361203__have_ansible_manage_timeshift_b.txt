@@ -6,7 +6,6 @@ Creation-Date: 2020-12-03T06:36:57-05:00
 @backups @systems @ansible
 ssia
 
-[ ] have ansible manage backups
 
 {{{code: lang="sh" linenumbers="False"
 

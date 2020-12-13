@@ -6,7 +6,7 @@ Creation-Date: 2020-10-28T07:25:14-04:00
 //^{Wednesday 28 October 2020}//
 @ranger @dotfiles @atom
 
-[ ] config ranger to open folders as project folders in atom, and individual files in mousepad
+[>] config ranger to open folders as project folders in atom, and individual files in mousepad
 
 
 

@@ -4,7 +4,7 @@ Creation-Date: 2020-10-27T07:46:36-04:00
 
 ====== deadbeef not playing mkvs ======
 //^{Tuesday 27 October 2020}//
-@deadbeef @helpdesk
+@deadbeef
 
 enabled 'all formats' supported in ffmpeg settings
 

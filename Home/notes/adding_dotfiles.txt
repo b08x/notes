@@ -13,7 +13,7 @@ mkrc -Cv -t zim templates
 This will copy instead of symlink
 
 [*] tried yadm; seems like rcm wins out
-	[ ] sync and restore workflow for dotfiles
+	[>] sync and restore workflow for dotfiles
 
 
 

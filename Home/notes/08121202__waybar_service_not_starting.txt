@@ -4,8 +4,7 @@ Creation-Date: 2020-12-02T08:13:57-05:00
 
 ====== 08121202 | waybar service not starting ======
 @helpdesk @systems @systemd
-currently set as a service that opens when a graphical-session is used. technically this isn't the case. edit the file in .config/systemd/... to use multi-user.target
 
-{{{code: lang="sh" linenumbers="False"
+~~FIXME: currently set as a service that opens when a graphical-session is used. technically this isn't the case. edit the file in .config/systemd/... to use multi-user.target~~
 
-}}}
+* set bar section in sway/config

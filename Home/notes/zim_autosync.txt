@@ -7,6 +7,6 @@ zim autosync
 @intranet @zim
 
 [ ] set zim to push to git upon closing, pull upon opening >2020-11-06 !
-	[ ] format quicknote template
+	[*] format quicknote template
 
 
