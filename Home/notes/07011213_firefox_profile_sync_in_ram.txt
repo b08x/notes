@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-12-13T07:02:08-05:00
+
+====== 07011213 firefox profile sync in ram ======
+@systems
+
+[ ] noting this to see if there is an improvement
+
+{{{code: lang="sh" linenumbers="False"
+
+}}}
