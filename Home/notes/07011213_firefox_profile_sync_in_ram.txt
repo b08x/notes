@@ -5,8 +5,6 @@ Creation-Date: 2020-12-13T07:02:08-05:00
 ====== 07011213 firefox profile sync in ram ======
 @systems
 
-[ ] noting this to see if there is an improvement
+[x] noting this to see if there is an improvement
 
-{{{code: lang="sh" linenumbers="False"
-
-}}}
+* there wasn't right; launching ff would produce and error that ff was already running. corrupt profile. 
