@@ -24,3 +24,16 @@ touch userChrome.css
   13   │ }
 
 }}}
+
+
+* it works. ☺ There is a part where something has to be enabled in [[about:config]]
+
+{{{code: lang="cpp" linenumbers="False"
+about:config
+
+then set:
+
+toolkit.legacyUserProfileCustomizations.stylesheets
+
+to be true.
+}}}
