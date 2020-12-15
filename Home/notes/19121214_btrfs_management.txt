@@ -14,3 +14,11 @@ Creation-Date: 2020-12-14T19:12:33-05:00
 -> Additionally, if you plan on using this script with grub-btrfs, you should make your grub directory a subvolume so it isn't reverted when you undo snapshots
 
 }}}
+
+
+
+https://gist.github.com/broedli/4f401e0097f185ba34eb
+
+https://wiki.archlinux.org/index.php/snapper#Incremental_backup_to_external_drive
+
+[[git@github.com:doudou/snapsync.git]]
