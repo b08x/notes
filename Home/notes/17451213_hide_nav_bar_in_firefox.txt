@@ -26,7 +26,7 @@ touch userChrome.css
 }}}
 
 
-* it works. ☺ There is a part where something has to be enabled in [[about:config]]
+* it works. ☺ There is a part where something has to be enabled in about:config
 
 {{{code: lang="cpp" linenumbers="False"
 about:config
