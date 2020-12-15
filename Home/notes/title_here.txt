@@ -1,9 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
-Creation-Date: 2020-11-21T15:59:48-05:00
-
-====== title here ======
-Created Saturday 21 November 2020
-
-ll
-
