@@ -10,3 +10,4 @@ Creation-Date: 2020-12-01T01:34:05-05:00
 
 One thread suggested disabled ipv6
 
+* seems to be the onboard card itself or the firmware. either way, using a usb wireless dongle did not reproduce the problem...
