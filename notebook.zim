@@ -10,7 +10,7 @@ endofline=unix
 disable_trash=False
 
 [TaskListPlugin]
-all_checkboxes=False
+all_checkboxes=True
 labels=FIXME, TODO, @@, todo
 integrate_with_journal=start
 included_subtrees=

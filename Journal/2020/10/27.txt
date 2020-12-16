@@ -10,7 +10,7 @@ TODO: @intranet
 [ ] setup [[https://www.newsdemon.com/usenet-access.php#payment|newsgroup account]] $60/yr
 [*] configure/deploy nzbdocker
 	[*] jackett/sonarr/couchpotato
-[ ] portable drive sync
+[*] portable drive sync
 	 https://project.altservice.com/issues/827
 [ ] http://bender
 
