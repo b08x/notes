@@ -3,7 +3,7 @@ Wiki-Format: zim 0.6
 Creation-Date: 2020-10-09T06:16:46-04:00
 
 ====== notes ======
-
+Sat 26 Dec 2020 06:05:27 PM EST
 
 --------------------
 startjack and iem plug executables are in ~/.local/bin
