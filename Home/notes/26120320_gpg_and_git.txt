@@ -7,13 +7,16 @@ Creation-Date: 2020-12-26T03:21:54-05:00
 
 https://github.com/acasajus/git-blur
 
+
+{{{code: lang="sh" linenumbers="False"
+gpg --gen-key
+gpg --export --armor --output public.key rwpannick@gmail.com
+}}}
+
+
 git blur init
 
 then add files to encrpt to .gitattributes
 add more files or 
 
 git add .
-
-{{{code: lang="sh" linenumbers="False"
-
-}}}
