@@ -8,25 +8,8 @@ Things related to the management of Syncopated Studios related hosts/nodes/what 
 
 
 
-
-====== tasks ======
-
-https://github.com/hugokernel/todofi.sh+
-
-~~https://github.com/AnthonyDiGirolamo/todotxt-machine~~
-
-https://github.com/bram85/topydo
-https://github.com/todotxt/todo.txt
-
-
-
-
-
-
 ====== to be sorted ======
 
-@printer
 
-lpoptions -d EPSON_ET-3700_Series
 
 

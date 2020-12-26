@@ -20,8 +20,3 @@ https://github.com/auriq/opendata/tree/master/population
 
 https://www.elastic.co/guide/en/kibana/current/xpack-graph.html
 
-
-
-{{{code: lang="sh" linenumbers="False"
-
-}}}
