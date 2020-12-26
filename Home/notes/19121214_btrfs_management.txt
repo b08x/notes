@@ -22,3 +22,13 @@ https://gist.github.com/broedli/4f401e0097f185ba34eb
 https://wiki.archlinux.org/index.php/snapper#Incremental_backup_to_external_drive
 
 [[git@github.com:doudou/snapsync.git]]
+
+
+The snapshot you are trying to boot into is probably set as read-only.
+
+You can check it with:
+
+$ sudo btrfs property get -ts /path/to/snapshot/
+If it returns ro=true, you have to make it writable with:
+
+$ sudo btrfs property set -ts /path/to/snapshot/ ro false
