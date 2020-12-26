@@ -7,3 +7,11 @@ Created Tuesday 27 October 2020
 
 clones / timemachine
 
+from lapbot/ninjabot;
+
+git pull dotfiles
+rcup -v -t backup
+
+ -d /mnt/bender/b08x 
+rsync -aiiP --recursive --verbose --force --stats --sparse --exclude-from=/home/b08x/.filter /home/b08x/ /mnt/bender/b08x/
+
