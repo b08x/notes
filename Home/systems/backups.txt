@@ -5,13 +5,12 @@ Creation-Date: 2020-10-27T07:02:39-04:00
 ====== backups ======
 Created Tuesday 27 October 2020
 
-clones / timemachine
+https://gist.github.com/508f854ef570168ce0d4a3ca47275233
 
-from lapbot/ninjabot;
 
-git pull dotfiles
-rcup -v -t backup
 
- -d /mnt/bender/b08x 
-rsync -aiinP --recursive --verbose --force --stats --sparse --exclude-from=/home/b08x/.filter /home/b08x/ /mnt/bender/b08x/
+# from lapbot/ninjabot;
 
+```bash
+ansible-pull --purge -U https://github.com/b08x/ansible -d /home/b08x/Workspace/ansible --tags dotfiles,backup
+```
