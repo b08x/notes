@@ -2,11 +2,8 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-12-03T06:36:57-05:00
 
-====== 06361203 | have ansible manage timeshift backups ======
+====== 06361203 | have ansible manage backups ======
 @backups @systems @ansible
 ssia
 
-
-{{{code: lang="sh" linenumbers="False"
-
-}}}
+[ ] have ansible manage backups
