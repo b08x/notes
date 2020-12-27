@@ -45,3 +45,6 @@ you want to jump to.
 type in two characters, select the letter assigned to 
 place on the screen you want to be.
 
+==== % is not just two circles with a line in between ====
+
+jump between the beginning/end of a class, module, def or do 
