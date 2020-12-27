@@ -48,3 +48,10 @@ place on the screen you want to be.
 ==== % is not just two circles with a line in between ====
 
 jump between the beginning/end of a class, module, def or do 
+
+==== using git ====
+https://github.com/tpope/vim-fugitive
+
+==== multiline edit ====
+
+https://github.com/mg979/vim-visual-multi/wiki/Quick-start
