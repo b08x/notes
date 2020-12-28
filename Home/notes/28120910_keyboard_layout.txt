@@ -5,6 +5,8 @@ Creation-Date: 2020-12-28T09:14:40-05:00
 ====== 28120910 keyboard layout stuff ======
 @keyboard @mappings @ui
 
+a list of all the xkb_config settings
+https://www.mankier.com/7/xkeyboard-config
 
 {{{code: lang="sh" linenumbers="False"
 grep -E "(ctrl|caps|compose):" /usr/share/X11/xkb/rules/bas
