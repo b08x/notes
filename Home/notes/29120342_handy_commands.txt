@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-12-29T03:43:15-05:00
+
+====== 29120342 handy commands ======
+@cli @clifu @pacman
+
+
+check issues with package installations;
+{{{code: lang="sh" linenumbers="False"
+	pacman -Qkk >/dev/null
+}}}
