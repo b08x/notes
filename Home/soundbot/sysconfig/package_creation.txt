@@ -9,3 +9,8 @@ Created Tuesday 29 December 2020
 https://dev.to/cloudx/testing-our-package-build-in-the-docker-world-34p0
 
 * install docker
+
+
+
+https://github.com/SpotlightKid/jack-audio-tools
+
