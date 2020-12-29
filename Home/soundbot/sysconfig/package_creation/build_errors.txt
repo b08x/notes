@@ -20,3 +20,19 @@ make: *** [Makefile:134: jalv.select] Error 1
 	Aborting...
 
 ```
+
+wlogout
+```
+==> Making package: wlogout 1.1.1-3 (Tue 29 Dec 2020 11:50:15 AM UTC)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Found wlogout-1.1.1.tar.gz
+  -> Found wlogout-1.1.1.tar.gz.sig
+==> Validating source files with md5sums...
+	wlogout-1.1.1.tar.gz ... Passed
+	wlogout-1.1.1.tar.gz.sig ... Skipped
+==> Verifying source file signatures with gpg...
+	wlogout-1.1.1.tar.gz ... FAILED (unknown public key E25D679AF73C6D2F)
+==> ERROR: One or more PGP signatures could not be verified!
+```
