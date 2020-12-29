@@ -10,3 +10,14 @@ check issues with package installations;
 {{{code: lang="sh" linenumbers="False"
 	pacman -Qkk >/dev/null
 }}}
+
+
+loop through a directory and do..something.
+{{{code: lang="sh" linenumbers="True"
+for dir in ~/apps/*;
+  do 
+     [ -d "$dir" ] && cd "$dir" && echo "Entering into $dir and installing packages"
+  done;
+}}}
+
+s

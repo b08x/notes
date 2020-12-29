@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-12-29T06:32:59-05:00
+
+====== build errors ======
+Created Tuesday 29 December 2020
+
+jalv-select
+```
+jalv.select.h:30:10: fatal error: gtkmm.h: No such file or directory
+   30 | #include <gtkmm.h>
+	  |          ^~~~~~~~~
+compilation terminated.
+resources.c:1:10: fatal error: gio/gio.h: No such file or directory
+	1 | #include <gio/gio.h>
+	  |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:134: jalv.select] Error 1
+==> ERROR: A failure occurred in build().
+	Aborting...
+
+```
