@@ -58,3 +58,21 @@ Unable to load configuration: name 'Validator' is not defined
 Unable to load configuration: name 'Validator' is not defined
 Unable to load configuration: name 'Validator' is not defined
 
+
+--------------------
+====== 31120146 flatpak ======
+@flatpak
+
+
+{{{code: lang="sh" linenumbers="False"
+flatpak install flathub org.gimp.GIMP
+
+Note that the directories 
+
+'/var/lib/flatpak/exports/share'
+'/home/b08x/.local/share/flatpak/exports/share'
+
+are not in the search path set by the XDG_DATA_DIRS environment variable, so
+applications installed by Flatpak may not appear on your desktop until the
+session is restarted.
+}}}
