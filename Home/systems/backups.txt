@@ -19,3 +19,12 @@ ansible-pull --purge -U https://github.com/b08x/ansible -d /home/b08x/Workspace/
 # rsync icons
 
 rsync -avP .icons/oomox-equilibrium-gray-dark ninjabot:~/.icons/
+
+# downgrades
+to downgrade all packages;
+
+pacman -Suu 
+
+or just a package
+
+pacman -Suu terminator
