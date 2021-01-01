@@ -14,3 +14,8 @@ https://gist.github.com/508f854ef570168ce0d4a3ca47275233
 ```bash
 ansible-pull --purge -U https://github.com/b08x/ansible -d /home/b08x/Workspace/ansible --tags dotfiles,backup
 ```
+
+
+# rsync icons
+
+rsync -avP .icons/oomox-equilibrium-gray-dark ninjabot:~/.icons/
