@@ -25,6 +25,7 @@ soundbot - specific to audio related things within the linux realm
 * it seems that tags will include pages below. for example, if you click "idea" in the tag cloud it will bring up all the pages under Home:notes
 
 --------------------
+
 ====== 30122143 fixing the terminator ======
 @terminator @helpdesk
 
@@ -60,6 +61,7 @@ Unable to load configuration: name 'Validator' is not defined
 
 
 --------------------
+
 ====== 31120146 flatpak ======
 @flatpak
 
@@ -78,10 +80,7 @@ session is restarted.
 }}}
 
 --------------------
-====== 01010516 gsettings not being applied ======
+
+====== 01010516 ======
 @sway @ui @helpdesk
 
-commands in /etc/sway/config.d/ * aren't b eing executed
-I dont see any gtk files in ~/.
-
-[ ] might move /etc/sway/themes* and /etc/sway/config.d/* back to home
