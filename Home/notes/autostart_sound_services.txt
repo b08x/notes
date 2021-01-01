@@ -11,7 +11,7 @@ adding jack_control to bashrc to something like that worked well.
 [ ] after create issue re: soundbot.socket
 
 
-
+refer to beets.socket
 
 {{{code: lang="sh" linenumbers="False"
 

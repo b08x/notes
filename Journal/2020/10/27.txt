@@ -21,7 +21,7 @@ TODO: @intranet
 	[*] dhcp/dns
 
 @media
-[ ] media viewer/gaming
+[x] media viewer/gaming
 
 
 
