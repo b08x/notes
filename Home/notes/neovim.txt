@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-12-31T08:38:23-05:00
 
-====== 31120837 configuring solargraph ======
+====== neovim ======
 @solargraph @neovim
 
 
@@ -10,3 +10,11 @@ Creation-Date: 2020-12-31T08:38:23-05:00
 :CocInstall coc-solargraph
 :CocEnable
 }}}
+
+
+
+https://github.com/tpope/vim-surround
+
+
+# maybe, the current bindings seem to work ok
+https://github.com/ervandew/supertab
