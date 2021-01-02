@@ -7,6 +7,3 @@ Creation-Date: 2020-12-22T11:08:08-05:00
 
 https://github.com/lakinduakash/linux-wifi-hotspot
 
-{{{code: lang="sh" linenumbers="False"
-
-}}}
