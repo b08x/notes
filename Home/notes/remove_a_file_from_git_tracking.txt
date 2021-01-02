@@ -13,5 +13,3 @@ yadm rm -r --cached ranger/__pycache__
 this will remove the folder from git tracking but not remove the folder itself
 
 
-
-
