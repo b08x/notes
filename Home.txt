@@ -8,6 +8,7 @@ creating a page with a ":" (colon) in the title,
 will create subpages for everything after the colon (":")
 
 
+https://github.com/klaussinani/taskbook
 
 === Using the Task List ===
 
