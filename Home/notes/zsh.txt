@@ -18,6 +18,8 @@ https://github.com/CorradoRossi/oh-my-zsh-atom-plugin
 
 https://github.com/viasite-ansible/ansible-role-zsh
 
+https://github.com/viasite-ansible/zsh-ansible-server
+
 
 https://github.com/jedahan/ripz
 https://github.com/johnhamelink/rvm-zsh
