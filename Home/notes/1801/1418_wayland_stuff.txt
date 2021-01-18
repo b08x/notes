@@ -14,3 +14,9 @@ https://forum.snapcraft.io/t/wayland-dconf-and-xdg-runtime-dir/186
 https://github.com/intel/media-driver/issues/621
 https://gist.github.com/DDoSolitary/ce7a005f9a139e0547484508a78259f7
 https://wiki.archlinux.org/index.php/Hardware_video_acceleration
+
+https://github.com/naibaf0/dotfiles
+
+#######
+
+https://wiki.archlinux.org/index.php/Backlight#Color_correction
