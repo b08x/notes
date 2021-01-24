@@ -6,10 +6,14 @@ Creation-Date: 2020-12-28T09:14:40-05:00
 @keyboard @mappings @ui
 
 a list of all the xkb_config settings
-https://www.mankier.com/7/xkeyboard-config
-
+https://man.archlinux.org/man/xkeyboard-config.7
 {{{code: lang="sh" linenumbers="False"
 grep -E "(ctrl|caps|compose):" /usr/share/X11/xkb/rules/bas
 e.lst
 }}}
 
+https://wiki.archlinux.org/index.php/Xmodmap
+
+https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration
+
+https://www.x.org/releases/current/doc/xorg-docs/input/XKB-Config.html
