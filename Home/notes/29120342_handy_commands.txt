@@ -20,4 +20,3 @@ for dir in ~/apps/*;
   done;
 }}}
 
-s
