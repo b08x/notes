@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2020-12-26T18:35:01-05:00
 
-====== 26121834 setting up a printer in cups ======
+====== 1834 cups options ======
 @printer
 
 Not sure if this is entirely necessary, but at one point lpoptions was involved in setting up the printer.

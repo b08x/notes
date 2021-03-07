@@ -1,8 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
-Creation-Date: 2020-12-26T19:01:37-05:00
-
-====== 26121901 sndcopy forwards audio from android ======
-@android @audio
-
-https://www.linuxuprising.com/2020/06/sndcpy-forwards-audio-from-android-10.html
