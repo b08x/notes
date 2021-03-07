@@ -2,12 +2,10 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2021-03-06T21:38:34-05:00
 
-====== 0603:2138 vim ruby stuff ======
+====== 0306:2138 vim ruby stuff ======
 @vim @ruby
-begin text here
 
-{{{code: lang="sh" linenumbers="False"
-*vimcmdline.txt*                                                  *vimcmdline*
+{{{code: lang="markdown" linenumbers="False"
 				 vimcmdline~
 			  Send lines to interpreter~
 
@@ -254,3 +252,4 @@ example:
 >
 			 vim:tw=78:ts=8:ft=help:norl
 }}}
+
