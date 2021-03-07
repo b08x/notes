@@ -6,7 +6,3 @@ Creation-Date: 2020-12-13T18:21:06-05:00
 @ui
 
 https://github.com/Diolinux/PhotoGIMP
-
-{{{code: lang="sh" linenumbers="False"
-
-}}}

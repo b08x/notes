@@ -3,7 +3,7 @@ Wiki-Format: zim 0.6
 Creation-Date: 2020-11-28T20:35:12-05:00
 
 ====== Bluetooth (V5.0) Stereo Digital Amplifier Receiver ======
-Created Saturday 28 November 2020
+@hardware
 
 https://www.keiid.com/keiid-bluetooth-50-stereo-digital-amplifier-receiver-rms-2x-40w-for-home-audio-bookshelf-passive-speakers-bgm-music-system-compact-with-fm-radiousbtf-auxmp3mic-remote-control-sleep-timer-p2196547.html
 

@@ -7,6 +7,3 @@ Creation-Date: 2020-12-27T02:37:59-05:00
 
 archivebox-git
 
-{{{code: lang="sh" linenumbers="False"
-
-}}}

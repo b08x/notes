@@ -12,7 +12,3 @@ adding jack_control to bashrc to something like that worked well.
 
 
 refer to beets.socket
-
-{{{code: lang="sh" linenumbers="False"
-
-}}}
