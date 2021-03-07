@@ -11,5 +11,3 @@ e.g.
 rsync --copy-links -rvP xfce4 /home/b08x/tmp
 
 
-
-
