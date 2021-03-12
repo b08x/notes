@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-03-12T07:55:21-05:00
+
+====== Friday 12 Mar 2021 ======
+
+Beginning today you may have noticed the default web browser has changed.  With the newest release of chroium, serveral problems are resolved.* 
