@@ -8,6 +8,7 @@ document_root=
 shared=True
 endofline=unix
 disable_trash=False
+profile=
 
 [TaskListPlugin]
 all_checkboxes=True
