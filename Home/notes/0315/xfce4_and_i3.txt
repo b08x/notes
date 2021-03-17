@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-16T20:16:15-04:00
+
+====== xfce4 and i3 ======
+Created Tuesday 16 March 2021
+
+http://feeblenerd.blogspot.com/2015/11/pretty-i3-with-xfce.html
+
+@xfce
+
+https://www.xfce-look.org/browse/cat/
