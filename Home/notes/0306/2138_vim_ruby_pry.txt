@@ -1,15 +1,19 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2021-03-06T21:38:34-05:00
 
-====== 2138 vim ruby stuff ======
-@vim @ruby
+====== 2138 vim ruby pry ======
+@vim @ruby @pry
 
+
+'''
 				 vimcmdline~
 			  Send lines to interpreter~
+'''
 
 Author: Jakson A. Aquino <jalvesaq@gmail.com>
 
+'''
  1. Overview                                             |vimcmdline_overview|
  2. Usage                                                   |vimcmdline_usage|
  3. Options
@@ -25,10 +29,12 @@ Author: Jakson A. Aquino <jalvesaq@gmail.com>
 		Keep the cursor at the end of terminal (nvim)    |cmdline_auto_scroll|
 	Set the application to run as interpreter                |cmdline_app|
 		Run interpreter in external terminal       |cmdline_external_term_cmd|
+'''
 
 
 ==============================================================================
 							 *vimcmdline_overview*
+
 
 ====== 1. Overview~ ======
 
@@ -44,35 +50,58 @@ REPL application for Vim instance.
 ==============================================================================
 								*vimcmdline_usage*
 
+
 ====== 2. Usage~ ======
 
 If you are editing one of the supported file types, in Normal mode do:
 
+'''
   - <LocalLeader>s to start the interpreter.
+'''
 
+'''
   - <Space> to send the current line to the interpreter.
+'''
 
+'''
   - <LocalLeader><Space> to send the current line to the interpreter and
 	keep the cursor on the current line.
+'''
 
+'''
   - <LocalLeader>q to send the quit command to the interpreter.
+'''
 
 For languages that can source chunks of code:
 
+'''
   - In Visual mode, press:
+'''
 
+'''
 	- <Space> to send a selection of text to the interpreter.
+'''
 
+'''
   - And, in Normal mode, press:
+'''
 
+'''
 	- <LocalLeader>p to send from the line to the end of paragraph.
+'''
 
+'''
 	- <LocalLeader>b to send block of code between the two closest marks.
+'''
 
+'''
 	- <LocalLeader>f to send the entire file to the interpreter.
+'''
 
+'''
 	- <LocalLeader>m to send the text in the following motion to the
 	  interpreter. For example <LocalLeader>miw would send the selected word.
+'''
 
 Your `~/.inputrc` should not include `set keymap vi` because it would cause
 some applications to start in vi's edit mode. Then, you would always have to
@@ -83,7 +112,10 @@ press either `a` or `i` in the interpreter console before using it.
 
 ====== 3. Options~ ======
 
+'''
 							 *vimcmdline_mappings*
+'''
+
 
 ===== 3.1 Change the default mappings~ =====
 
@@ -101,17 +133,24 @@ Below are examples of how to change the default mappings in your |vimrc|:
 <
 							   *vimcmdline_colors*
 
+
 ===== 3.2 Change output colors~ =====
 
 If you are using Neovim, you can use its syntax highlight capabilities to
 colorize the interpreter output, and you can customize the colors in your
 |vimrc| in three different ways:
 
+'''
   1. The hex code of the foreground color.
+'''
 
+'''
   2. The ANSI number of the foreground color.
+'''
 
+'''
   3. The complete highlighting specification.
+'''
 
 The example of customization below will work if either your editor supports
 true colors or if it supports 256 colors (see in Neovim: |tui-colors|):
