@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2020-10-28T06:47:35-04:00
 
 ====== portable document library with notebooks ======
@@ -16,8 +16,8 @@ either programically link all the docs in the doc root to a page, export using "
 ~~If the document root is /var/www/documents and the setting for index is on, that should work out. ~~
 It won't matter in this case; set ngninx with the basic config to point to var/dub dub dub
 and the zim export will put the files where they need to be. 
-[ ] have zim export with links to pdfs in document root
-	[ ] put together markdown template for export
+[x] have zim export with links to pdfs in document root
+[ ] put together markdown template for export <2021-04-01
 
 
 {{{code: lang="sh" linenumbers="False"

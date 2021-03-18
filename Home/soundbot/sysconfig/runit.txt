@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2021-01-24T22:42:01-05:00
 
 ====== runit ======
@@ -7,5 +7,5 @@ Created Sunday 24 January 2021
 
 http://smarden.org/runit/
 
-[ ] try out and see how it compares to systemd
+[x] try out and see how it compares to systemd
 
