@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-18T14:31:26-04:00
+
+====== Dotfiles ======
+Created Thursday 18 March 2021
+
+https://www.atlassian.com/git/tutorials/dotfiles
+
