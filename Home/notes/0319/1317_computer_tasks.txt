@@ -6,6 +6,3 @@ Creation-Date: 2021-03-19T13:18:21-04:00
 @ui @systems
 
 
-{{{code: lang="sh" linenumbers="False"
-
-}}}
