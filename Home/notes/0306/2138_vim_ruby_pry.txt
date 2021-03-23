@@ -33,7 +33,7 @@ Author: Jakson A. Aquino <jalvesaq@gmail.com>
 
 
 ==============================================================================
-							 *''vimcmdline''_overview*
+							 *dd''vimcmdline''_overview*
 
 
 ====== 1. Overview~ ======
