@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2020-10-09T06:16:46-04:00
 
 ====== notes ======
@@ -12,24 +12,17 @@ startjack and iem plug executables are in ~/.local/bin
 
 //Tuesday 06 October 2020//
 
---------------------
-https://github.com/thjaeger/easystroke/wiki/TipsAndTricks
 
-@keyboard @mapping
 
 //Tuesday 06 October 2020//
 
 --------------------
-https://github.com/libratbag/piper
 
-@mouse @mapping
 
 //Tuesday 06 October 2020//
 
 --------------------
-https://github.com/iberianpig/fusuma
 
-@mapping @gestures @ruby
 
 //Tuesday 06 October 2020//
 
