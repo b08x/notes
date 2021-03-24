@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-24T03:40:58-04:00
+
+====== Ruby ======
+Created Wednesday 24 March 2021
+
+select vs find
+
+find will return one value whereas select can return multiple values
+

@@ -7,7 +7,7 @@ Created Wednesday 24 March 2021
 
 mouse and keyboard stuff
 
---------------------
+---
 https://github.com/thjaeger/easystroke/wiki/TipsAndTricks
 
 @keyboard @mapping

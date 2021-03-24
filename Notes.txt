@@ -7,19 +7,6 @@ Sat 26 Dec 2020 06:05:27 PM EST
 
 //20//
 
---------------------
-https://github.com/pierreguillot/Camomile/wiki/How-to-create-new-plugins
-
-@puredata @camomile
-
-
-//Tuesday 06 October 2020//
-
---------------------
-https://ineardisplay.com/plugins/
-@vst 
-
-//Tuesday 06 October 2020//
 
 --------------------
 after installing jacksettings, pulse audio no longer functions as expected. 
@@ -30,11 +17,7 @@ after installing jacksettings, pulse audio no longer functions as expected.
 //Wednesday 07 October 2020//
 
 --------------------
--s, --softmode
-			  Ignore xruns reported by the ALSA driver. This makes JACK less likely to disconnect unresponsive ports when running without --realtime.
 
-
-@jack
 
 //Wednesday 07 October 2020//
 
@@ -47,27 +30,15 @@ after installing jacksettings, pulse audio no longer functions as expected.
 
 --------------------
 
-@soundbot @algorhythms
-
-https://nedbatchelder.com/blog/200712/human_sorting.html
-
-"This makes “z2” sort after “z100”, for example. "
 
 
 --------------------
-@kernel @security
-
-https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html
-
-Oct 18 01:10:36 ninjabot kernel: MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html for more details.
 
 
 //Sunday 18 October 2020//
 
 --------------------
-@acoustics
 
-http://www.roomeqwizard.com/index.html
 
 //Sunday 18 October 2020//
 
