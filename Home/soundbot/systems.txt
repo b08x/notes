@@ -3,7 +3,8 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-10-27T03:53:49-04:00
 
 ====== systems ======
-admin/configuration stuff specifically related to soundbot
+Development &  Production hosts
 
 
-[*] create .desktop for timemachine and configure for using a mic
+arch
+debian

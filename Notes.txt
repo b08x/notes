@@ -5,43 +5,7 @@ Creation-Date: 2020-10-09T06:16:46-04:00
 ====== notes ======
 Sat 26 Dec 2020 06:05:27 PM EST
 
---------------------
-startjack and iem plug executables are in ~/.local/bin
-
-
-
-//Tuesday 06 October 2020//
-
-
-
-//Tuesday 06 October 2020//
-
---------------------
-
-
-//Tuesday 06 October 2020//
-
---------------------
-
-
-//Tuesday 06 October 2020//
-
---------------------
-https://github.com/docker/app
-
-@docker @soundbot
-
-//Tuesday 06 October 2020//
-
-
-
-
---------------------
-https://audiogridder.com/
-
-@soundbot @networking
-
-//Tuesday 06 October 2020//
+//20//
 
 --------------------
 https://github.com/pierreguillot/Camomile/wiki/How-to-create-new-plugins
