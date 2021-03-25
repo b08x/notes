@@ -25,3 +25,7 @@ hash.find_all{|k,v| v.even?}   # => :b, 2], [:d, 4], [:f, 6
 
 
 In the example above, you can observe that .find_all gives an array even though you are iterating on an Array or a Hash. .select instead gives us an Array or a Hash.
+
+
+----
+[[https://speakerdeck.com/bkuhlmann/ruby-pattern-matching?slide=38|ruby pattern matching]]
