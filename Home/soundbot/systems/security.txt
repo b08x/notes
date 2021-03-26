@@ -5,8 +5,6 @@ Creation-Date: 2021-03-24T03:35:47-04:00
 ====== security ======
 Created Wednesday 24 March 2021
 
-@kernel @security
+Password Management
 
-https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html
-
-Oct 18 01:10:36 ninjabot kernel: MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html for more details.
+[ ] migrate to gnome-keyring with browser support
