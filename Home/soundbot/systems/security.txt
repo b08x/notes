@@ -7,4 +7,4 @@ Created Wednesday 24 March 2021
 
 Password Management
 
-[ ] migrate to gnome-keyring with browser support
+[ ] cd migrate to gnome-keyring with browser support
