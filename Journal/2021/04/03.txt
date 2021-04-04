@@ -16,3 +16,13 @@ auto apt autoremove;
 The following packages will be REMOVED:
   gtk2-engines libjs-modernizr lsp-plugins-data optipng parallel python3-pyqt5.qtmultimedia python3-pyqt5.qtwebkit python3-pystache python3-qtpy python3-xdg
   ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert ruby-test-unit ruby-xmlrpc sysstat
+
+
+Recommended packages:
+  fonts-lato
+The following NEW packages will be installed:
+  gtk2-engines parallel python3-pystache sysstat fonts-lato
+
+
+The following NEW packages will be installed:
+  gtk2-engines libruby2.5 oomox parallel python3-pystache rake ruby ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert ruby-sass ruby-test-unit ruby-xmlrpc ruby2.5
