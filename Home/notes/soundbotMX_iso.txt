@@ -6,6 +6,6 @@ Creation-Date: 2021-03-20T13:41:52-04:00
 @soundbot
 
 the newest snapshot image from ninja contains nvidia drivers...
-[ ] sort out video driver iso issue
-[ ] create one role playbook
+[x] sort out video driver iso issue
+[x] create one role playbook
 

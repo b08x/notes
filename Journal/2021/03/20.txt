@@ -12,4 +12,4 @@ sudo ddm-mx -p nvidia
 
 
 
-[ ] consider ansible for things like /etc/modprobe.d/alsa-base.conf
+[x] consider ansible for things like /etc/modprobe.d/alsa-base.conf

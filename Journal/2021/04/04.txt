@@ -7,11 +7,16 @@ Creation-Date: 2021-04-04T08:33:45-04:00
 
 endevoros post-install
 
-copy sshkeys
 start sshd
-sudoers & polkit
-oh-my-zsh
+copy sshkeys
+
 
 install rvm
 ruby3
+
+sudoers & polkit
+oh-my-zsh user/root
+
+
+
 

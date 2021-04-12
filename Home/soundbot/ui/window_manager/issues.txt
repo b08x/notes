@@ -78,7 +78,7 @@ enum Foo {
 
 Was about to go through the process of switching cargo to the nightly branch, which I can safely assume won't affect overall system stablity. 
 
-[ ] switch cargo repo to nightly branch on ninjabot
+[x] switch cargo repo to nightly branch on ninjabot
 
 
 
