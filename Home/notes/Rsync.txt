@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-13T16:55:08-04:00
+
+====== Rsync ======
+Created Tuesday 13 April 2021
+
+* --existing, --ignore-non-existing
+	   This  tells  rsync to skip creating files (including directories) that do not
+	   exist yet on the destination.  If this option is combined with the  --ignore-
+	   existing  option,  no  files  will be updated (which can be useful if all you
+	   want to do is delete extraneous files).
+
