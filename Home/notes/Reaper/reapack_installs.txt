@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-15T19:45:36-04:00
+
+====== reapack installs ======
+Created Thursday 15 April 2021
+
+ReaTeam Scripts/MIDI Editor/Delete all notes outside the current scale [new]
+v1.0 by Lokasenna – December 30 2016
+  Initial release
+
+X-Raym Scripts/MIDI Editor/Duplicate selected notes as fifth and octave triads [new]
+v1.0.1 by X-Raym – July 16 2016
+  No changelog
+
+X-Raym Scripts/MIDI Editor/Export active take in MIDI editor as CSV of notes and velocity [new]
+v2.0 by X-Raym – November 17 2017
+  # Change CSV separator from . to , This is not compatible with v1 workflow
+  + Added channel infos
+  + Prevent muted notes to be exported
+
+ReaTeam Scripts/MIDI Editor/js_Notation - Set display length of selected notes to double and add staccato articulation.lua [new]
+v1.2 by juliansader – August 15 2016
+  + Bug fix for compatibility with takes that do not start at 0.
+
+ReaTeam Scripts/MIDI Editor/js_Notation - Set display length of selected notes to quadruple and add staccatissimo articulation.lua [new]
+v1.2 by juliansader – August 15 2016
+  + Initial release (derived from the "Set display length to double..." script)
+
+ReaTeam Scripts/MIDI Editor/Set space between selected notes from grid size [new]
+v1.0.1 by cfillion – February 01 2017
+  Fix behavior when multiple notes are at the same position.
+
+ReaTeam Scripts/MIDI Editor/Step sequencing (replace mode) [new]
+v1.0 by cfillion – February 05 2021
+  fix midi event passthrough [p=2229143]
+
+ReaTeam Scripts/MIDI Editor/Theory Helper [new]
+v1.40 by Lokasenna – August 28 2017
+  Fix: Note velocity being sent as 128.
