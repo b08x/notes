@@ -9,3 +9,8 @@ Creation-Date: 2021-04-22T01:48:07-04:00
 https://fedoramagazine.org/vcv-rack-modular-synthesizers/
 
 https://docs.fedoraproject.org/en-US/modularity/
+
+
+
+---> osc-listenter → containers for midi routing
+
