@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-22T01:48:07-04:00
+
+====== Thursday 22 Apr 2021 ======
+
+@fedora @vcv @synthesizers
+
+https://fedoramagazine.org/vcv-rack-modular-synthesizers/
+
+https://docs.fedoraproject.org/en-US/modularity/

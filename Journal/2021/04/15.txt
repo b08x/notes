@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-15T13:27:51-04:00
+
+====== Thursday 15 Apr 2021 ======
+
+https://github.com/moviemasher/moviemasher.rb
+
+https://freeshell.de/~bolangi/cgi1/nama.cgi/examples.html

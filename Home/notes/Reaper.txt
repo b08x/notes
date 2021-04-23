@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-15T06:27:49-04:00
+
+====== Reaper ======
+Created Thursday 15 April 2021
+
+* run plugins as dedictaed process...
+	* with ambi plugins, cpu was reduced from ~20% to ~15
+
+
+https://github.com/junh1024/Reaper-Surround
