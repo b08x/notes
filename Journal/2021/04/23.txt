@@ -12,12 +12,14 @@ sonic
 	
 	
 	----
-	
 
 # audio over osc
 https://git.iem.at/cm/aoo
 
 # linux laptop orchestra
 http://l2ork.music.vt.edu/main/links/
+
+# control multimedia apps or i3 with midi
+https://github.com/agraef/midizap
 
 
