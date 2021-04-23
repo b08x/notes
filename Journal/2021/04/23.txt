@@ -8,4 +8,16 @@ bipscript
 	control lv2 plugins
 
 sonic
+	
+	
+	
+	----
+	
+
+# audio over osc
+https://git.iem.at/cm/aoo
+
+# linux laptop orchestra
+http://l2ork.music.vt.edu/main/links/
+
 
