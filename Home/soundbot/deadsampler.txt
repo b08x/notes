@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.6
+Wiki-Format: zim 0.4
 Creation-Date: 2020-10-09T06:09:04-04:00
 
 ====== deadsampler ======
@@ -11,3 +11,9 @@ https://acousticbrainz.org/data
 https://hub.docker.com/r/mtgupf/essentia/
 
 http://antiboredom.github.io/audiogrep/
+
+
+https://github.com/exaile/moodbar
+
+# a quick way to create spectrograms with sox
+https://gist.github.com/hrywlms/5fca1ab19670363a2d43
