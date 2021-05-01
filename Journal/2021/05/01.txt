@@ -6,3 +6,6 @@ Creation-Date: 2021-05-01T06:44:21-04:00
 
 http://soundbot.duckdns.org
 
+# install ip check script as cron job on piratebot
+https://www.duckdns.org/install.jsp?tab=pi&domain=soundbot
+
