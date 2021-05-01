@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-13T23:43:51-04:00
+
+====== synthdefs ======
+Created Tuesday 13 April 2021
+
+https://github.com/everythingwillbetakenaway/Synthdefs

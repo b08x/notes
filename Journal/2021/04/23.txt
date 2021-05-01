@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-04-23T16:07:05-04:00
+
+====== Friday 23 Apr 2021 ======
+
+bipscript 
+	control lv2 plugins
+
+sonic
+	
+	
+	
+	----
+
+# audio over osc
+https://git.iem.at/cm/aoo
+
+# linux laptop orchestra
+http://l2ork.music.vt.edu/main/links/
+
+# control multimedia apps or i3 with midi
+https://github.com/agraef/midizap
+
+# pipewire
+https://tube.aquilenet.fr/videos/watch/playlist/e7f7309a-412c-4bee-8db1-43dd4b11f203?playlistPosition=7&resume=true
+
+# web interface (node.js) to pure-data patches to control audio/dsp
+https://github.com/clemofi/ospw
+
+
