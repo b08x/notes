@@ -9,3 +9,20 @@ http://soundbot.duckdns.org
 # install ip check script as cron job on piratebot
 https://www.duckdns.org/install.jsp?tab=pi&domain=soundbot
 
+
+
+
+===== installing self signed crt =====
+
+# first we generate a self signed certificate for domain foo
+
+```openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes \
+	-out foo.crt -keyout foo.key -subj "/CN=foo.com"
+```
+# then add it to the system wide ca store
+```sudo trust anchor --store foo.crt```
+
+```sudo update-ca-trust```
+
+
+
