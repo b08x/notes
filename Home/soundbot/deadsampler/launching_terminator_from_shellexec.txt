@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-13T05:01:40-04:00
+
+
+//Thursday 13 May 2021//
+
+d3a1c931] Running terminator -b -e echo '/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/1_French Horns D#6(L).wav'
+[13546459] Running terminator -b -e echo '/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/11_French Horns A3(L).wav'
+[d3a1c931] 	Usage: terminator [options]
+
+terminator: error: Additional unexpected arguments found: ['/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/1_French Horns D#6(L).wav']
+[13546459] 	Usage: terminator [options]
+
+terminator: error: Additional unexpected arguments found: ['/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/11_French Horns A3(L).wav']
+[d3a1c931] Finished in 0.180 seconds with exit status 2 (failed)
+/usr/share/gems/gems/tty-command-0.10.1/lib/tty/command.rb:106:in `run': Running `terminator -b -e echo '/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/1_French Horns D#6(L).wav'` failed with (TTY::Command::ExitError)
+  exit status: 2
+  stdout: Nothing written
+  stderr: Usage: terminator [options]
+
+terminator: error: Additional unexpected arguments found: ['/mnt/bender/b08x/Library/Sounds/samples/instruments/brass/FrenchHorn/french_horns/1_French Horns D#6(L).wav']
+	from /usr/local/bin/deadsampler:11:in `block in <main>'
+	from /usr/local/bin/deadsampler:10:in `each'
+	from /usr/local/bin/deadsampler:10:in `<main>'

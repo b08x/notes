@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2020-10-09T06:09:04-04:00
 
 ====== deadsampler ======
@@ -17,3 +17,14 @@ https://github.com/exaile/moodbar
 
 # a quick way to create spectrograms with sox
 https://gist.github.com/hrywlms/5fca1ab19670363a2d43
+
+- [ ] trim end of file by X %
+- [ ] remove and/or add comment
+- [ ] sox "do stuff" then open old/new files with tony (or some way compare the sounds)
+
+
+keep "Default" playlist empty, as that is where converted/imported/edited files will be sent to for now
+
+```
+mkdir -pv %D/converted && sox %F %D/converted/%f silence -l 1 0.1 1% -1 4.0 1% && deadbeef --queue %D/converted/%f
+```
