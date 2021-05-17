@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-08-05T15:06:40-04:00
+
+====== tablet control ======
+Created Saturday 05 August 2017
+
+
+
+~~build app for android tablet using https://ionicframework.com/~~
+
+~~https://nullr0ute.com/tag/u-boot/~~
+
+~~foot controlled. so two-three boxes~~
+
+~~i guess we could try just using the wirless and netjack or something like that, but also should use usb~~
+
+* ~~switch/change effects~~
+* ~~gain control~~
+* ~~looper~~
+* ~~play samples~~
+
+
+~~can switch interfaces from foot to push button~~
+
+
+~~we'll have to gauge the quality/performance of the hardware. running what it is now, it's sluggish. will definietly need to install custom os~~
+
+~~try to incorporate the idea of using a rasp pi to offload some stuff...~~
+
+
+~~https://nullr0ute.com/tag/u-boot/~~

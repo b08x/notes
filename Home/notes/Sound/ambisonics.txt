@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-07T22:42:52-04:00
+
+====== ambisonics ======
+Created Friday 07 September 2018
+
+@links @ambisonics
+http://www.sekisushai.net/ambitools
+
+@holophon @ambisonics
+http://gmem.org/recherche/dynamical-spatialization-of-sound-holophon-a-graphic-and-algorithmic-editor-for-sigma1/
+
+@ssr @ambisonics
+https://ssr.readthedocs.io/en/latest/gui.html
+
+@tetraproc
+
+#understanding azimuth & elevation
+
+#
+https://econtact.ca/11_3/nettingsmeier_ambisonics.html
+https://ccrma.stanford.edu/courses/155/assignment/ex4/tutorial.html

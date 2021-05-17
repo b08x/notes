@@ -1,0 +1,104 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-01-21T15:06:49-05:00
+
+====== yadm ======
+Created Thursday 21 January 2021
+
+ yadm clone [[git@github.com:b08x/dots.git]]
+Initialized empty shared Git repository in /home/b08x/.local/share/yadm/repo.git/
+remote: Enumerating objects: 99, done.
+remote: Counting objects: 100% (99/99), done.
+remote: Compressing objects: 100% (81/81), done.
+remote: Total 99 (delta 4), reused 99 (delta 4), pack-reused 0
+Unpacking objects: 100% (99/99), 31.12 KiB | 1.64 MiB/s, done.
+From github.com:b08x/dots
+ * [new branch]      main       -> origin/main
+error: Untracked working tree file '.zshrc' would be overwritten by merge.
+fatal: read-tree failed
+Unstaged changes after reset:
+D	.atom/config.cson
+D	.atom/snippets.cson
+D	.atom/styles.less
+D	.config/nvim/coc-settings.json
+D	.config/nvim/init.vim
+D	.config/ranger/plugins/ranger-sox.py
+D	.config/ranger/rc.conf
+D	.config/ranger/rifle.conf
+D	.config/sway/config
+D	.config/sway/config.d/50-systemd-user.conf
+D	.config/sway/config.d/90-enable-gtk-theme
+D	.config/sway/config.d/91-enable-kvantum-theme
+D	.config/sway/config.d/92-enable-mako-theme
+D	.config/sway/config.d/93-link-theme-files
+D	.config/sway/config.d/94-enable-xterm-emulation
+D	.config/sway/config.d/95-generate-help
+D	.config/sway/config.d/96-generate-waybar-config
+D	.config/sway/config.d/98-application-defaults
+D	.config/sway/config.d/99-autostart-applications
+D	.config/sway/definitions
+D	.config/sway/help.man
+D	.config/sway/inputs/default-keyboard
+D	.config/sway/inputs/default-touchpad
+D	.config/sway/lapbot.conf
+D	.config/sway/modes/default
+D	.config/sway/modes/recording
+D	.config/sway/modes/resize
+D	.config/sway/modes/scratchpad
+D	.config/sway/modes/screenshot
+D	.config/sway/outputs/default-screen
+D	.config/waybar/.gitignore
+D	.config/waybar/config
+D	.config/waybar/config.template
+D	.config/waybar/style.css
+D	.config/zim/accelmap
+D	.config/zim/customtools/customtools.list
+D	.config/zim/customtools/test-usercreated.desktop
+D	.config/zim/notebooks.list
+D	.config/zim/preferences.conf
+D	.config/zim/quicknote.conf
+D	.config/zim/style.conf
+D	.gemrc
+D	.gitconfig
+D	.local/share/zim/templates/markdown/Default.markdown
+D	.local/share/zim/templates/markdown/something.markdown
+D	.local/share/zim/templates/plugins/quicknote.txt
+D	.local/share/zim/templates/wiki/Default.txt
+D	.zsh/completion/_ag
+D	.zsh/completion/_bundler
+D	.zsh/completion/_g
+D	.zsh/completion/_production
+D	.zsh/completion/_rspec
+D	.zsh/completion/_staging
+D	.zsh/configs/color.zsh
+D	.zsh/configs/editor.zsh
+D	.zsh/configs/history.zsh
+D	.zsh/configs/homebrew.zsh
+D	.zsh/configs/keybindings.zsh
+D	.zsh/configs/options.zsh
+D	.zsh/configs/post/completion.zsh
+D	.zsh/configs/post/path.zsh
+D	.zsh/configs/prompt.zsh
+D	.zsh/functions/_git_delete_branch
+D	.zsh/functions/change-extension
+D	.zsh/functions/envup
+D	.zsh/functions/g
+D	.zsh/functions/mcd
+D	.zshenv
+M	.zshrc
+Saved working directory and index state On main: Conflicts preserved from yadm clone command
+**NOTE**
+  Merging origin/main failed.
+
+  As a result, yadm did 'reset origin/main', and then
+  stashed the conflicting data.
+
+  This likely happened because you had files in $HOME
+  which conflicted with files tracked by origin/main.
+
+  You can review the stashed conflicts with the
+  command 'yadm stash show -p' from within your
+  $HOME directory. If you want to restore the
+  stashed data, you can run 'yadm stash apply' or
+  'yadm stash pop' and then handle the conflicts
+  in another way.

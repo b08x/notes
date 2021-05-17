@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-11T18:34:26-04:00
+
+====== software ======
+Created Tuesday 11 September 2018
+
+@rpm
+https://github.com/millerthegorilla/rpm_maker
+
+
+@jamin
+
+http://jamin.sourceforge.net/en/routes.html
+x{{./flowchart.png}}
+
+@synths @visual
+### a warm place
+[ ] http://www.warmplace.ru/soft/pixitracker/

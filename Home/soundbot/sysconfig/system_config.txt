@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-11T06:24:36-04:00
+
+====== system config ======
+Created Thursday 11 June 2020
+
+
+
+xmacro
+https://download.sarine.nl/xmacro/Description.html
+
+thread using xmodmap
+https://faq.i3wm.org/question/2569/set-mod-key-only-as-left-mod-key.1.html
+
+
+[ ] test xmacro for recording input events
+[ ] remap powermic inputs and assign them amixer mute/unmute
+[ ] keyboard shortcut for 'xet -r' 'xet r'
+[ ] remap capslock
+
+
+
+
+
+
+[*] how to switch windows when one of them is floating
+		= mod + space
+	* scratch pad for keyboards
+[ ] workspace assignments for apps
+[*] scratchpad config for jack-keyboard/vmpk
+[ ] lsmi-
+
+
+[ ] rebuild soundbot
+	[ ] workout backup and restore process
+	[ ] decide to build from scratch or modify avl
+		[ ] ansible?
+	[ ] use raid0 or have one ssd for OS and another for sound files?
+		[ ] figure out loading of soundfonts/samples 

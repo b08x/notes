@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-10T02:09:22-04:00
+
+====== midi ======
+Created Sunday 10 September 2017
+
+http://www.music-software-development.com/midi-tutorial.html
+
+https://en.wikipedia.org/wiki/General_MIDI
+
+
+http://midieditor.sourceforge.net/index.php?category=download

@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-27T03:26:49-05:00
+
+====== os tuning ======
+Created Saturday 27 January 2018
+
+
+
+DBus-controlled services
+
+DBus is a solid standard used for a wide variety of services which need to be started automatically, but on demand only, in the background, not specifically at boot. One set of DBus services used extensively in Ubuntu is 'gvfs', the virtual filesystem for the Gnome desktop; if these are permitted to run, polling of hardware including the USB bus will occur, which is likely to interfere with USB MIDI interfaces, eat CPU power, and cause xruns in general. To disable gvfs, become root and run the follwing two commands:
+
+mv /usr/share/dbus-1/servicesgvfs-daemon.service /usr/share/dbus-1/servicesgvfs-daemon.service.disabled
+mv [[/usr/share/dbus-1/services/gvfs-metadata.service]]
+
+
+--------------------
+
+random; 
+
+use systemctl 'mask' for hibernate.target and hybrid-sleep.target

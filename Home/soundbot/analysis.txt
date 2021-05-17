@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-11T17:45:02-04:00
+
+====== analysis ======
+Created Thursday 11 June 2020
+
+https://github.com/dechamps/audiotools
+
+https://github.com/bbc/audiowaveform
+
+https://github.com/bbc/audio_waveform-ruby
+
+https://pythonawesome.com/audio-processing-by-using-pytorch-1d-convolution-network/
+
+https://towardsdatascience.com/music-genre-classification-with-python-c714d032f0d8
+https://librosa.github.io/librosa/tutorial.html
+
+https://gist.github.com/parulnith/7f8c174e6ac099e86f0495d3d9a4c01e
+
+https://pytorch.org/tutorials/beginner/audio_preprocessing_tutorial.html

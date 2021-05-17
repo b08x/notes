@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-19T20:11:32-05:00
+
+====== beets ======
+Created Friday 19 January 2018
+
+@gitannex @beets
+http://benjam.info/blog/posts/2016-01-04-git-annex-music/
+
+http://akeil.net/posts/music-with-mpd-and-beets.html
+
+https://raw.githubusercontent.com/doronbehar/.config_beets/master/config.yaml
+
+
+----
+
+
+last left off; Finding tags for album "Bachata Heightz - The First".

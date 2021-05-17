@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-11T19:31:58-04:00
+
+====== convolver ======
+Created Tuesday 11 September 2018
+
+@jconvolver
+https://github.com/wargreen/jc_confgen

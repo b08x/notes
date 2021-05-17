@@ -1,0 +1,60 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-10-27T00:05:44-04:00
+
+====== preproposal ======
+Created Friday 27 October 2017
+
+Hello, 
+
+I hope this message finds you both doing well.
+
+I was hoping to enlist your expertise, empathy and enlightenment for a project that I hope will serve at least a few people well over the course of time. 
+
+Having had the direct, quite distressing experience of calling a "suicide hotline", I was thinking there might be a service the community could provide that worked a bit...better. 
+
+A Suicide //Understanding //hotline, with the hopes that understanding would lead to prevention, if that is what the individual chooses. This would be a volunteer based situation, where volunteers would sign up for, lets say 4 hour, 'virtual ranger shifts' where they would receive calls from distressed folks who would have a chance to have a //conversation// about their current state of mind as opposed to mindless advice that usually ends up doing more harm than good. 
+
+As far as the tech side goes, without going into too much tech jargon gore; 
+virtual phone systems (pbx) would be setup to forward calls from a main 800 number to a volunteers cell phone (or something, still thinking on that). I am very much focused on the highest possible quality, as one of the biggest stressors to someone in distress is...for lack of a better phrase...shit sound. clicks, beeps, pauses, dropouts, static, echos....are enough to send certain types right over the edge. So, i'm doing my best to set things up so a call sounds almost as good as two people sitting in a room having a chat. once i have a better semblance of an architecture fro that, I'm hoping to enlist some more techies to assist as things would look to be a few months out as is (with testing and what not). but ideally sooner...and also in that time figure out a funding situation. Right now, I'm pricing out servers and voice over ip lines, which can reach up to and above ~2k/yr. Obviously though, i'd love to cut that down as much as possible without comprising quality....quality is the most important perhaps only rivaled by availability. anywho 
+
+In between the time focused on tech, would be best used having a few workshops where we discuss tips and tricks for handling these calls. Just to sort of get the ball rolling, these are just notes jotted down...
+
+#######
+//just a real person who will listen. almost as if yer talkin sports, calming...//
+
+//no medical advice. no suggestions like go to the //hospital//, or 'dont you have..??' //
+
+//have you had any proteins today? type of food is mostly //irrelevant in distress//. have a fucking snickers bar...and some water. //
+
+//dont really get into stuff like 'you have so much to live for, blah blah.' you dont know that. //
+//not really "prevention" as much as understanding, which ideally would lead to prevention. //
+//the person doesnt need to hear that they "shouldn't" do anything. //
+
+//redirects....actively listening for cues into the persons life. there must be some sort of technique to this...//
+
+
+//after an //experience// calling a hotline that actually made us more frustrated, it //occurred// to us what helped the most was a friend being to hear//
+//"i want to die" and not overreacting, or saying what they think they *should* say. sometimes all it takes is to be able to let it out, //
+//without that stigma that something is "wrong". lets face it, most of us, at some point, at least think about it....//
+####
+
+I'm reaching out to the two of you specifically, because you are two of the most //genuinely //empathetic people I've had the pleasure of meeting. I feel the approach you both take to the this life would greatly serve a well under-served portion of our community, culture, society, planet....Hell, both of you have made facebook posts that kept me from dark corners...
+
+
+I'll be honest...I've never organized anything before, so any assistance, advice, insight, direction, whatever, would be most greatly appreciated. My *goal* is to over the course of the next week or two at the most, finalized the tech side of things and start assessing funding. Like I said though, in between then and now...I would looove to have a few workshops to discuss these sort of things. 
+
+As I very much do understand how busy life is, please understand Im not seeking any sort of commitment...at this stage feedback would most appreciated and anything beyond that would be saintly indeed. 
+
+Thank you both for your time. I very much look forward to possible future hugs. ☺
+
+-Bob
+
+
+
+
+
+
+
+
+

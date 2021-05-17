@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-06-11T17:46:00-04:00
+
+====== speech ======
+Created Thursday 11 June 2020
+
+http://kaldi-asr.org/
+
+https://pytorch.org/tutorials/beginner/audio_preprocessing_tutorial.html#migrating-to-torchaudio-from-kaldi

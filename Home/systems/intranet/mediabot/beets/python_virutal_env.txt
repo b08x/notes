@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-19T20:11:39-05:00
+
+====== python virutal env ======
+Created Friday 19 January 2018
+
+http://akeil.net/posts/music-with-mpd-and-beets.html
+
+pip install --user pipenv
+mkdir -pv .virtualenvs
+cd .virtualenvs/
+virtualenv --python python2.7 beets
+source beets/bin/activate
+pip install beets
+ln -s ~/.virtualenvs/beets/bin/beet ~/bin/beet
+beet config -p

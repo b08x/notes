@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-22T10:27:00-05:00
+
+====== testing ======
+Created Monday 22 January 2018
+
+How can you tell if you have an Ambiophonic system working properly? If you put just a left signal into the system that implies a very large value of level difference, well over say 60 dB. In normal hearing such a signal would seem to be at the 90 degree side. So when you apply RACE to say a left only signal, if the crosstalk is properly cancelled, you should hear the sound very very far to the side. It may not be quite at 90 degrees because of a pinna direction finding error. You need the rear speakers to get the last few degrees, but if the sound is close to the side you know RACE is working well indeed. 
+
+
+http://www.ambiophonics.org/Tutorials/Myths.html

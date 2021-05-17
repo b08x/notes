@@ -1,0 +1,230 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== various notes ======
+Created Thursday 29 June 2017
+
+
+
+
+http://kickster.nielsenramon.com/
+
+https://github.com/openshift-quickstart/jekyll-openshift
+
+so it looks like the gravy train has stopped at both heroku and openshift.
+	though still good for a one off static site....
+	
+github pages is still viable, so we'll focus on that deployment method.
+
+
+--------------------
+
+
+things for auto creating a site;
+
+==== process flow; ====
+
+Created Wednesday 28 June 2017
+
+# new website
+
+mkdir -pv {website name/fqdn}
+
+echo "{website subdomain}" > dir/.ruby-gemset
+echo "2.4.0" > dir/.ruby-version
+
+cd dir
+
+~~copy over vagrant template~~
+copy over rakefile template
+copy over Gemfile template
+copy over gitignore templ
+copy readme template
+
+~~add to ansible/host_vars {template to copy}~~
+~~add to ansible/inventory {lineinfile}~~
+
+create remote repo
+[[https://forum.gitlab.com/t/create-a-new-project-in-a-group-using-api/1552/6|to create a new repo (or "project") in gitlab;]]
+
+git init
+git add .
+git remote add
+commit 
+push
+~~git-flow init~~
+
+git push --set-upstream origin development
+
+
+
+[[website bootstrap script]]
+
+
+
+
+
+==== jekyll dir layout: ====
+
+_assets
+  fonts
+  images
+  js
+  stylesheets
+_includes
+_layouts
+_plugins
+
+optional
+_posts
+_pages
+
+
+-------
+
+===== more various notes =====
+
+Created Wednesday 21 June 2017
+
+bootstrap
+
+make website directory
+
+~~vagrant file & ansible playbook for dev~~
+
+~~add new host to hosts file~~
+~~e.g.~~
+
+~~[webserver]:dev~~
+~~dreaqu~~
+
+~~create hostvars file~~
+
+~~insert vars into vagrant file~~
+~~ - hostmanager alias~~
+~~ -~~ 
+
+----
+
+rake new
+
+prompt for site name
+
+***
+WORKSPACE = "/home/b08x/workspace/websites"
+
+TEMPLATE_DIR = "WORKSPACE/devops/vagrant_templates/"
+
+site_name = stdin.gets
+
+desc "setup local dev environment"
+task :devsetup do
+  site_dir = WORKSPACE/#{site_name}
+  system "mkdir -pv #{site_dir}"
+  ~~system "cp -v TEMPLATE_DIR/Vagrantfile_libvirt site_dir/Vagrantfile"~~
+end
+
+
+
+task :sass do
+  source_file = 'source/_scss/app.sass'
+  dest_file = 'source/css/app.css'
+  system "sass --watch #{source_file}:#{dest_file} --style compressed"
+end
+***
+
+--------------------
+
+ansible playbook for prod
+ - host vars
+ - nginx stuff
+ - ssl stuff
+
+ssh config for prod
+
+
+----
+
+create git repo...add readme/license/.gitignore (gplv3)
+
+clone repo
+
+edit license file (lines 634, 655) research best practice for this...
+https://www.gnu.org/licenses/gpl-faq.en.html#WMS
+then git push
+
+git-flow init
+
+get vagrant stuff up...
+
+bundle install
+
+jekyll new . -f
+
+[b08x@qubert dreaqu_dot_org] $ jekyll new . -f
+/home/b08x/.rvm/gems/ruby-2.4.0@dreaqu/gems/sprockets-3.6.3/lib/sprockets/digest_utils.rb:47: warning: constant ::Fixnum is deprecated
+/home/b08x/.rvm/gems/ruby-2.4.0@dreaqu/gems/sprockets-3.6.3/lib/sprockets/digest_utils.rb:51: warning: constant ::Bignum is deprecated
+/home/b08x/.rvm/gems/ruby-2.4.0@dreaqu/gems/sprockets-3.6.3/lib/sprockets/processor_utils.rb:110: warning: constant ::Fixnum is deprecated
+/home/b08x/.rvm/gems/ruby-2.4.0@dreaqu/gems/sprockets-3.6.3/lib/sprockets/processor_utils.rb:111: warning: constant ::Bignum is deprecated
+Running bundle install in /home/b08x/workspace/websites/dreaqu_dot_org... 
+  Bundler: /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/resolver.rb:386:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'minima (~> 2.0)' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/resolver.rb:356:in `each'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/resolver.rb:356:in `verify_gemfile_dependencies_are_found!'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/resolver.rb:203:in `start'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/resolver.rb:182:in `resolve'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/definition.rb:252:in `resolve'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/definition.rb:176:in `specs'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/definition.rb:235:in `specs_for'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/definition.rb:224:in `requested_specs'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/runtime.rb:118:in `block in definition_method'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/runtime.rb:19:in `setup'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler.rb:100:in `setup'
+  Bundler: from /home/b08x/.rvm/gems/ruby-2.4.0@global/gems/bundler-1.14.6/lib/bundler/setup.rb:20:in `<top (required)>'
+  Bundler: from /home/b08x/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+  Bundler: from /home/b08x/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+
+
+this is bitching that it cant find the default theme for jekyll. 
+
+also doing this creates a new gem file, which fucks everything up.;..
+
+prolly cos we ran bundle install before jekyll new, which created a gemfile.lock file...
+
+we may not want to run jekyll new...
+
+as now we'll copy over files from another theme...
+
+(this might be as far as we can go for now with automation...now its a matter of creating the "theme" is is fluid.
+
+--------------------
+
+markdown stuff;
+@markdown
+http://www.eyeshalfclosed.com/blog/2013/07/29/which-markdown/
+
+going with rdiscount cos of image sizes
+
+http://stackoverflow.com/questions/5101591/what-does-mean-in-a-gem-file
+
+--------------------
+
+on the license issue; 
+
+in this case, we're starting off with a jekyll theme...with copyrighted content...
+which, should prolly be MIT license...
+if we add fancy javascript stuff...switch to gplv3
+ - having said that, we're basically copying js stuff from other places...attribute?
+   - unless we create the js ourselves, keep MIT..otherwise gplv3
+
+'''
+   now, eventually we're gonna have the webstore..which will prolly fall under gplv3
+'''
+
+e.g.;
+The content of this project itself is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License, and the underlying source code used to format and display that content is licensed under the GNU GPLv3 license.
+
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+

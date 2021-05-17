@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-28T01:59:33-04:00
+
+====== resources ======
+Created Wednesday 28 August 2019
+
+http://www.bandshed.net/sounds/sfz/
+	
+http://www.svengrahn.pp.se/sounds/sounds.htm
+
+http://bbcsfx.acropolis.org.uk/
+
+https://www.conversesamplelibrary.com/
+
+http://virtualplaying.com/
+
+https://vis.versilstudios.com/vsco-community.html
+
+https://in-thread.sonic-pi.net/t/source-of-percussion-samples/1830?u=robin.newman
+
+
+https://www.conversesamplelibrary.com/pack/mother-merey-and-the-black-dirt-morning-time-cant-get-drunk
+
+http://www.airwindows.com/vsts/
+
+
+http://mattiaswestlund.net/?page_id=29
+
+
+https://www.researchgate.net/figure/AmbDec-with-configuration-derived-by-the-procedure-given-in-Appendix-1-This-is-a-very_fig6_260300581

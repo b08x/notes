@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-28T18:49:54-04:00
+
+====== newznab ======
+Created Thursday 28 September 2017
+
+<newznab>: SVN URL: svn/svn.newznab.com/nn/branches/nnplus 
+<newznab>: SVN Username: svnplus 
+<newznab>: SVN Password: svnplu5 
+
+
+
+newznab id = 7B81EBD5-ABA9-4B5B-9222-33D607608D14
+
+
+https://github.com/cmeindl/Docker-NewzNab_Plus

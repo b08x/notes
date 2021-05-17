@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-08-28T03:15:12-04:00
+
+====== bluetooth ======
+Created Wednesday 28 August 2019
+
+https://github.com/libretro/Lakka-LibreELEC/wiki/Wireless-Dualshock
+
+https://code.google.com/archive/p/bluez-tools/
+
+https://wiki.archlinux.org/index.php/Bluetooth_headset

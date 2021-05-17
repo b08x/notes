@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-24T12:15:59-04:00
+
+====== kde ======
+Created Monday 24 September 2018
+
+@keyboard
+disable repeating keystrokes here...
+{{./screenshot_2018-09-24-121852.png}}
+
+
+
+Space efficiency
+The Plasma Netbook shell has been dropped from Plasma 5, see the following KDE forum post. However, you can achieve something similar by editing the file ~/.config/kwinrc adding BorderlessMaximizedWindows=true in the [Windows] section.
+
+Using a Proxy?
+If you are using a HTTP(S) proxy you can configure apm to use it by running:
+
+apm config set https-proxy YOUR_PROXY_ADDRESS
+You can run apm config get https-proxy to verify it has been set correctly.
+
+[ ] install minimalistic look & feel 
+[ ] get a better handle on the window management
+	[ ] apps are opening on different desktops (unlike xfce where you have to set that)
+
+consult arch kde wiki
+
+
+--------------------
+
+
+if this issue comes up where we cant resize a maxiumized windows....chekc this button....
+
+appearance — application style — window decorations — configure breeze
+
+
+{{./screenshot_2018-09-25-020615.png}}
+
+
+
+
+

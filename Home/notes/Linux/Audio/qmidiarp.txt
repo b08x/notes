@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-20T07:53:00-04:00
+
+====== qmidiarp ======
+Created Friday 20 September 2019
+
+0..9 : Note indices
+   + : One octave up
+   - : One octave down
+   t : One semitone up
+   g : One semitone down
+   = : Reset to standard octave and semitone
+   > : Double tempo
+   < : Half tempo
+   . : Reset to standard tempo
+ ( ) : Chord, begin..end, e.g. (012) would be a chord of the 
+	   lowermost three notes in the buffer   
+   / : Volume up by 20%
+   \ : Volume down by 20%
+   d : Double length
+   h : Half length
+   p : Pause

@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-08-10T14:51:20-04:00
+
+====== jack-alsa ======
+Created Thursday 10 August 2017
+
+http://jackaudio.org/faq/routing_alsa.html
+
+
+
+http://linux-audio.4202.n7.nabble.com/jack2-vs-jack1-zita-vs-jack2-zita-a2j-performance-differences-td90534.html
+
+https://proaudio.tuxfamily.org/wiki/index.php?title=DAW_Digital_Audio_Workstation
+
+
+http://www.sabi.co.uk/Cfg/ALSA/asound.conf
+
+
+https://www.alsa-project.org/main/index.php/Asoundrc
+
+
+perhaps consider using pulse; 
+
+https://askubuntu.com/questions/572120/how-to-use-jack-and-pulseaudio-alsa-at-the-same-time-on-the-same-audio-device
+
+
+https://www.youtube.com/watch?v=qaumI8dz4Ag
+
+
+# "hard codin the usb mics into alsa, as opposed to using alsa_in/out
+
+nver seemed to have any luck with the zitar alts?
+
+@asound
+https://gist.github.com/RainWarrior/6c09741a9cf741b8fc28
+
+@jack @pulse
+https://github.com/dasgeekchannel/jackaudioscript/blob/master/jack_starter.sh

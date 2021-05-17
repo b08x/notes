@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== npm_grunt_bower ======
+Created Wednesday 21 June 2017
+
+order of tasks;
+
+#install bower globally..
+
+npm install -g bower
+
+npm install -g grunt-cli
+
+bower install
+
+#install dep from package.json
+npm install
+
+grunt

@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-19T01:28:15-05:00
+
+====== install os ======
+Created Monday 19 February 2018
+
+
+
+# "nand" is basically installing onboard. test this later so if we brick it it's not a hassle. boot from microsd for meow
+http://linux-sunxi.org/Installing_to_NAND
+
+"eMMC" is also a term thrown around to refer to this...
+
+
+# uboot - universal boot loader - for arm devices and the like
+
+--------------------
+
+to install; 
+
+http://linux-sunxi.org/Fedora
+
+dny -y install gcc-arm-linux-gnu
+
+[b08x@jambot Downloads] $ sudo arm-image-installer --image=Fedora-Xfce-armhfp-27-1.6-sda.raw.xz --norootpass --selinux=off --target=Yones_Toptech_BS1078_V2 --media=/dev/sdg --addconsole --resizefs
+
+
+[b08x@jambot ~] $ sudo update-uboot --target=Yones_Toptech_BS1078_V2 --media=/dev/sdg
+
+
+
+http://linux-sunxi.org/Yones_Toptech_BS1078_V2
+
+
+---
+
+# if we really want to get hardcore
+http://linux-sunxi.org/UART
+
+
+

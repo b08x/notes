@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-02-20T19:23:06-05:00
+
+====== i3 ======
+Created Tuesday 20 February 2018
+
+@jambot @i3 @ruby
+https://github.com/veelenga/i3ipc-ruby
+
+
+@i3 
+#saving layouts
+https://github.com/talwrii/i3-clever-layout
+
+@i3blocks
+https://github.com/vivien/i3blocks-contrib

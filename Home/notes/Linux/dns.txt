@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-07-22T07:50:03-04:00
+
+====== dns ======
+Created Saturday 22 July 2017
+
+
+As of now (Sat 22 Jul 2017 07:50:26 AM EDT) we have two choices for dns
+pihole (to be renamed Clamps) or hookerbot...
+
+
+[[https://superuser.com/a/478501|getting dns to properly resolve hostnames in ddwrt]]
+
+
+# not sure if this works, will test later
+~~Option 66 for TFTP~~
+~~If would like to use a DHCP support for TFTP (TFTP Server Address) server~~
+~~dhcp-option=66,"192.168.41.108"~~
+
+
+====== ddwrt ======
+
+what a fucking pain.
+
+under main setup tab
+
+static dns1 can be set to another internal or use the usual
+
+leave local DNS blank under networksetup/router ip
+
+enable dhcp server
+enable dnsmasq for dhcp
+use dnsmasq for dns
+dhcp-authoritative
+
+
+under the services tab; 
+	under dhcpd server section
+	set "used domain" to LAN & WLAN
+	set LAN domain to syncopatedtech.net
+
+(add static leases if you like)
+
+enable dnsmasq
+enable local dns
+enable no dns rebind
+
+expand-hosts
+address=/bender.qbase.org/192.168.41.2
+ptr-record=2.41.168.192.in-addr.arpa,"bender.qbase.org"
+
+[ ] see if this option needs to be under dhcp'd options or dnsmasq options
+dhcp-option=66,"192.168.1.100"
+

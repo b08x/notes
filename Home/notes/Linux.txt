@@ -6,3 +6,11 @@ Creation-Date: 2021-05-01T07:14:31-04:00
 Created Saturday 01 May 2021
 
 {{~/Library/Documents/sound/comfortable_vs_loud.jpg}}
+
+git@github.com:lupoDharkael/flameshot.git
+ - screencapture util
+
+# error while loading shared libraries
+	- export LD_LIBRARY_PATH=/usr/lib64
+	
+https://bbs.linuxdistrocommunity.com/profile/b08x
