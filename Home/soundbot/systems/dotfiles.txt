@@ -1,11 +1,19 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2021-03-24T03:29:41-04:00
 
 ====== dotfiles ======
 Created Wednesday 24 March 2021
 
 https://www.atlassian.com/git/tutorials/dotfiles
+
+git init --bare $HOME/.dotfiles
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dots config --local status.showUntrackedFiles no
+echo "alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.aliases
+
+
+
 
 git init --bare $HOME/.dotfiles
 

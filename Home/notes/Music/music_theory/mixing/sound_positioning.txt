@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-27T13:48:44-04:00
+
+====== sound positioning ======
+Created Friday 27 September 2019
+
+
+# pretty good posts about the perception of sound and where it comes from
+https://bb.linuxsampler.org/viewtopic.php?f=7&t=52
+
+pan/reverb | ambisonics
+

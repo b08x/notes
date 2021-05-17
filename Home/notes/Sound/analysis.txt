@@ -5,3 +5,8 @@ Creation-Date: 2021-05-01T07:12:43-04:00
 ====== analysis ======
 Created Saturday 01 May 2021
 
+dc offset
+
+DC offset is a mean amplitude displacement from zero. 
+In Audacity it can be seen as an offset of the recorded waveform away from the center zero point. 
+DC offset is a potential source of clicks, distortion and loss of audio volume

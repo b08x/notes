@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-03T08:04:12-04:00
+
+====== wiki ======
+Created Thursday 03 October 2019
+
+gollum post hooks
+- 

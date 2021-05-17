@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-09-13T16:21:55-04:00
+
+====== rutorrent ======
+Created Friday 13 September 2019
+
+
+docker create   --name=rutorrent   -e PUID=1000   -e PGID=1000   -p 8080:80   -p 5000:5000   -p 45566:45566   -p 40418:40418/udp   -v /var/lib/docker/rutorrent/config:/config   -v /storage02/downloads:/downloads   --restart unless-stopped   linuxserver/rutorrent

@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-20T14:37:59-04:00
+
+====== puredata ======
+Created Saturday 20 October 2018
+
+https://forum.audiob.us/discussion/24468/mobmuplat-patch-super-looper-16
+
+http://cdm.link/2013/02/make-a-pd-patch-run-it-on-android-ios-right-away-two-free-solutions/
+
+https://forum.pdpatchrepo.info/topic/10429/psychedellic-audioguide-using-mobmuplat-or-pdparty/2
+
+http://write.flossmanuals.net/pure-data/audio-streaming/
+
+
+
+

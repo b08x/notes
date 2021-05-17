@@ -1,0 +1,81 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-06-10T17:08:37-04:00
+
+====== relative minor major parts ======
+Created Saturday 10 June 2017
+
+===== A complete list of relative minor/major pairs =====
+__this is just denoting anything that is sharp or flat. e.g. C major has none and neither does A minor.__ 
+
+{{{object: aligns="left,left,left" wraps="1,1,1"
+| Key Signature             <| Major Key<| Minor Key<|
+|:---------------------------|:----------|:----------|
+|                            | C major   | A minor   |
+| B♭, E♭, A♭, D♭, G♭, C♭, F♭ | C♭ major  | A♭ minor  |
+| F♯, C♯, G♯, D♯, A♯, E♯, B♯ | C♯ major  | A♯ minor  |
+| F♯, C♯                     | D major   | B minor   |
+| B♭, E♭, A♭, D♭, G♭         | D♭ major  | B♭ minor  |
+| B♭, E♭, A♭                 | E♭ major  | C minor   |
+| F♯, C♯, G♯, D♯             | E major   | C♯ minor  |
+| B♭                         | F major   | D minor   |
+| F♯, C♯, G♯, D♯, A♯, E♯     | F♯ major  | D♯ minor  |
+| F♯                         | G major   | E Minor   |
+| B♭, E♭, A♭, D♭, G♭, C♭     | G♭ major  | E♭ minor  |
+| B♭, E♭, A♭, D♭             | A♭ major  | F minor   |
+| F♯, C♯, G♯                 | A major   | F♯ minor  |
+| B♭, E♭                     | B♭ major  | G minor   |
+| F♯, C♯, G♯, D♯, A♯         | B major   | G♯ minor  |
+}}}
+
+
+so, 
+
+G, A, B, C, D, E, F# = G major & E minor
+{{./score.png?type=score}}
+
+[[https://www.basicmusictheory.com/c-relative-minor|Basic Music Theory - Relative C Minor]]
+
+[[http://lilypond.org/text-input.html|lilypond basics]]
+
+{{./score001.png?type=score}}	
+
+[[http://lilypond.org/doc/v2.18/Documentation/notation/writing-pitches|writing pitches in lilypond]]
+
+====== Scales with sharp key signatures ======
+Sharp key signatures consist of a number of sharps between one and seven, applied in this order: F C G D A E B.  A mnemonic device often used to remember this is "Father Charles Goes Down And Ends Battle."
+The key note or tonic of a piece in a major key is immediately above the last sharp in the signature.[7] For example, one sharp (F♯) in the key signature of a piece in a major key indicates the key of G major, the next note above F♯. (Six sharps, the last one being E♯ (an enharmonic spelling of F♮) indicate the key of F♯ major, since F has already been sharped in the key signature.)
+
+{{{object: aligns="left,left,left,left,left" wraps="0,0,0,0,0"
+| Major key | # of sharps | Sharp notes                | Minor key | Enharmonic Equivalent |
+|:----------|:------------|:---------------------------|:----------|:----------------------|
+| C major   | 0           |                            | A minor   | none                  |
+| G major   | 1           | F♯                         | E minor   | none                  |
+| D major   | 2           | F♯, C♯                     | B minor   | none                  |
+| A major   | 3           | F♯, C♯, G♯                 | F♯ minor  | none                  |
+| E major   | 4           | F♯, C♯, G♯, D♯             | C♯ minor  | none                  |
+| B major   | 5           | F♯, C♯, G♯, D♯, A♯         | G♯ minor  | C♭ maj/A♭ min         |
+| F♯ major  | 6           | F♯, C♯, G♯, D♯, A♯, E♯     | D♯ minor  | G♭ maj/E♭ min         |
+| C♯ major  | 7           | F♯, C♯, G♯, D♯, A♯, E♯, B♯ | A♯ minor  | D♭ maj/B♭ min         |
+}}}
+
+
+====== Scales with flat key signatures ======
+
+"Flat key signatures" consist of one to seven flats, applied as: B E A D G C F[5][6] The mnemonic device is then reversed for use in the flat keys: "Battle Ends And Down Goes Charles' Father".[4] The major scale with one flat is F major. In all other "flat major scales", the tonic or key note of a piece in a major key is four notes below the last flat, which is the same as the second-to-last flat in the signature.[7] In the major key with four flats (B♭ E♭ A♭ D♭), for example, the penultimate flat is A♭, indicating a key of A♭ major.
+
+{{{object: aligns="left,left,left,left,left" wraps="0,0,0,0,0"
+| Major Key | # of Flats | Flat Notes                 | Minor Key | Enharmonic equivalent |
+|:----------|:-----------|:---------------------------|:----------|:----------------------|
+| C maj     | 0          |                            | A min     | none                  |
+| F maj     | 1          | B♭                         | D min     | none                  |
+| B♭ maj    | 2          | B♭, E♭                     | G min     | none                  |
+| E♭ maj    | 3          | B♭, E♭, A♭                 | C min     | none                  |
+| A♭ maj    | 4          | B♭, E♭, A♭, D♭             | F min     | none                  |
+| D♭ maj    | 5          | B♭, E♭, A♭, D♭, G♭         | B♭ min    | C♯ maj/A♯ min         |
+| G♭ maj    | 6          | B♭, E♭, A♭, D♭, G♭, C♭     | E♭ min    | F♯ maj/D♯ min         |
+| C♭ maj    | 7          | B♭, E♭, A♭, D♭, G♭, C♭, F♭ | A♭ min    | B maj/G♯ min          |
+}}}
+
+
+

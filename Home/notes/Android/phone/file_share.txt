@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== file share ======
+Created Tuesday 11 July 2017
+
+https://github.com/pigmonkey/droidsync

@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-11T23:53:31-04:00
+
+====== non ======
+Created Tuesday 11 September 2018
+
+http://non.tuxfamily.org/mixer/doc/MANUAL.html#n:1.2.3.1.2.
+
+#pros/cons of using NSM
+https://www.mail-archive.com/non@lists.tuxfamily.org/msg00439.html
+
+
+http://linux-audio.4202.n7.nabble.com/OSC-direct-communication-with-non-session-manager-clients-td101472.html
+
+#solution for communicating with non-mixer through nsm
+
+---
+
+The Non-Mixer 1.2.0  -- Copyright (c) 2008-2013 Jonathan Moore Liles
+WARNING: LADSPA_PATH environment variable not set
+		 Assuming /usr/lib/ladspa:/usr/local/lib/ladspa
+OSC=osc.udp://localhost:13688/
+[non-mixer] Announcing to NSM
+[nsmd] Got announce from Non-Mixer
+[nsmd] Client was expected.
+[nsmd] Process has pid: 18666
+[nsmd] The client "Non-Mixer" at "osc.udp://127.0.0.1:15191/" informs us it's ready to receive commands.
+X_ChangeProperty: BadValue (integer parameter out of range for operation) 0x0
+
+
+[ ] set NSM_URL in .profile
+1) start nsmd first
+	`nsmd --osc-port 14758 --session-root ~/studio/sessions`

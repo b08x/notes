@@ -1,0 +1,169 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-04-04T18:18:37-04:00
+
+====== sample ======
+Created Wednesday 04 April 2018
+
+# network troubleshooting
+
+?wired or wireless? 
+?do you know if there is an web admin portal on the device?
+
+### option a
+connect computer directly to device
+which would involve; 
+	setting a static ip on computer as well as device
+	would have to ask if there is an admin portal on device to set static ip
+
+### option b
+power down everything & disconnect
+power on router, wait 1 minute to fully boot
+then plug in the computer to the router
+ping router. 
+
+connect first network device to router. 
+	you can probably check what IP was handed from the router admin page, under DHCP leases
+	make sure a static IP sin't set on the device, as there is a potential for DHCP to hand out a duplicate address. if there isn't a web admin page, ping the address
+	
+?do you remember how you connected the devices in the first place? 
+?From within the Roon audio settings, what is selected for VOLUME CONTROL MODE? 
+	
+	check connected devices from router
+	from imac, use GO → Connect to server
+	
+?what model router? 
+
+
+https://discussions.apple.com/thread/2561398
+
+?file share protocol AFP/SMB? 
+
+
+"I found a fix. I had the same problem after installing OS X Server.
+
+Simply put, I did the following:
+
+Go to ~/Library/Preferences and find the file com.apple.sidebarlists.plist
+Copy the file for backup purposes and open original with Xcode
+Leave the following items and delete the rest:
+
+finderprojects
+favoriteitems
+systemitems
+savedsearches
+Go to the Apple Menu > Force Quit... and relaunch Finder (which really did nothing but I did it)
+
+Shutdown/Restart your Mac so the changes to take full effect.
+Now I can see my network devices under Shared in the sidebar."
+
+====== first ======
+
+Hi Customer, 
+
+One of the more frustrating aspects of technology is when things stop working for seemingly no reason at all. No worries though, we'll get you sorted. 
+
+First, power off all equipment and disconnect any network cables connected. This will hopefully elminate any potential conflicts. Then, power up the router. Give it about a minute to fully boot. 
+Once you can see the router is fully booted up, plug the network cable from the imac into the router and power on the imac. Once the imac is booted, open up a terminal and try pinging the router. Usually the IP address of a router is 192.168.0.1 or 192.168.1.1 
+
+If you don't get a response from the ping test, try logging into the router admin page, as sometimes routers will block IMCP traffic. If you aren't sure of the userid/passwd do a google search for your router model and you should be able to find the default login info.
+If you are able to ping the router, then plug one of the network devices into the router and power up the device (or if wireless, just power up the device). Then, check the Network Folder on the imac to see if the device shows up. 
+
+If that doesn't work, then we'll check to see that the router is handling traffic as it should. Login into the admin page and look for the network services tab. What we're looking for here is whether or not DHCP has handed out duplicate IP address or if there is a MAC address conflict. With both network devices powered off and disconnected from the router, clear the allocated DHCP leases, then reboot the router. After that, plug one of the network devices in to the router and check connectivity. 
+
+Another thing we can try is to clear out the cached list of networked devices the imac can see. 
+
+1) Go to ~/Library/Preferences and find the file com.apple.sidebarlists.plist
+
+2) Copy the file for backup purposes and open original with Xcode
+
+3) Leave the following items and delete the rest:
+
+finderprojects
+favoriteitems
+systemitems
+savedsearches
+
+4) Shutdown/Restart your Mac so the changes to take full effect.
+
+
+
+
+
+
+====== Explaining Functionality ======
+
+
+Hi customer, 
+
+After checking the diagnostic report it looks like you have what's called "Private Zone" enabled. This feature makes it so that the zone specified can only be controlled by the device it's connected to. In your case, your MacBook audio output is the zone, and the built-in speakers would be considered the device it's connected to. You would want this option enabled if for example; you don't want your laptop in the bedroom to be controlled by any of the remotes in the home. 
+
+====== Explaining Limitations ======
+
+
+You're not doing anything wrong, you'll just need to disable that option if you want to control your DAC remotely. 
+
+
+What you can do, from within settings-->storage open the edit screen for the watched folder, and under Options enable "Playlist 
+
+what you could do, is take the playlists which contain songs from both drives and create two seperate playtake the songs you have on one hard drive and create a playlist with just those. same for the songs on the other hard drive. then you can import both playlists into roon. After import is complete you can then copy the songs to the watched folder in roon. Once you get through this, you can then copy the songs from the watched folder back to your external in linear order. while it's a bit of upfront work, the benefit to this is that your music files will be better organized. 
+
+
+Unfortunately with the way m3u files work, the fact that external usb drive assignments often change makes this a difficult challenge to overcome. Especially since different operating systems use different path formats. For example, if your external drive is given a drive letter D:\ and you create a playlist with songs on that drive, the m3u file will always expect drive letter D:\ as the start of the file path it references. But if you unplug then plug in your usb drive and are assigned a drive letter E:\, the m3u won't know where to look for the music files and you'll likely encounter errors within Roon. So this isn't so much a limitation of Roon as it is a limitation of the m3u file format. 
+
+What you could do is add the music folders on your external drives as watched folders then create a new playlist within Roon. Doing it this way will allow Roon to do a number things including; check for file corruption, add any missing metadata as well as check and remove duplicate files. Which are features that wouldn't be utilized by just importing the m3u playlist. 
+
+====== Diagnosing Regressions ======
+
+
+Attempt to isolate the problem. 
+
+First I would ask which device the customer notices audio dropouts. Both devices listed support Roon with audio outputs but only one is noted as being connected with an ethernet cable, while the other may be wireless or USB. I might attempt to optimize wireless settings on the router. Making sure at least, that a low-traffic channel is being used. 
+
+Disconnect both networked devices from the router. Then take the device that was using wireless and instead plug it in an ethernet port. Or if the device was plugged in via USB, swap out the USB cable or if another USB cable isn't handy, use ethernet. Test audio from there. 
+
+====== Troubleshooting Audio ======
+
+
+~~The chain of devices might be an issue. But an issue I've run into myself, is that the default device on the server is set to analog. ~~
+
+~~Yes. Two different troubleshooting steps were taken at the same time. Which makes the issue harder to pinpoint. ~~
+
+~~With the first setup, check that the Chord DAC Digital Input selector. Make sure the display reads "AES". Also, check that all cables are securely plugged in and that all devices are powered on. ~~
+~~Then click on the audio tab within Roon where you should see a list of connected devices. Make sure that the Auralic DAC is enabled. Also, within System Output, make sure Volume Control Mode is set to "Use CoreAudio Mixer"~~
+
+You'll want to start by having all of the devices powered off. Then, double check the cables to make sure they are all securely plugged in. Then go ahead and power on the Auralic device. You should notice the LED light next to the power button is lit up and solid. A flashing LED indicates the device is adjusting it's sample rate, which could lead to synchronization issues with the Chord device. Once that is confirmed, power on the server. 
+
+Before we connect anything else, we should double check that the Auralic device is enabled in Roon. Click on the audio tab where you should see a list of connected devices. Make sure that the Auralic DAC is enabled. 
+
+After you confirm that, go ahead and power on the Chord device. You'll want to make sure the display on tops reads "AES". If it does not, use the digital input selector button to make the display show "AES". Once you see that, power on the amp and speakers. Then test it out by playing something with the volume set at somewhere below mid point. 
+
+
+
+====== Documenting Functionality ======
+
+The ROCK web interface allows listeners to perform administrative tasks to the system. 
+
+As ROCK is a custom build based off Linux and does not have a graphical desktop, the web interface was created so that even those not familiar with command line stuff can perform system related tasks. 
+
+If you're experiencing problems and feel a reboot is necessary or your OCD takes over and want to wipe the database clean, you can login the web interface and simply click a button. You can also reinstall the OS if you feel like it. Keep in mind that reinstalling the OS does not effect the database. So, if you're having trouble with your settings or notice corrupted metadata, you'd be better off just wiping the database and keeping the OS as is. This will save you at least 3 cigarettes. 
+
+If the mood strikes you to manipulate some settings, the web interface offers you the ability to  to set up wired or wireless networking. 
+
+Just a word of caution though, wireless connectivity has the potential for dropping transmitted data, which could result in poor audio performance. For optimal ear enjoyment, we recommend using a wired connection. 
+
+
+
+====== Delivering Bad News ======
+
+
+
+My apologies for the delay in response. We've been attempting to figure out a solution to this issue that wouldn't require you to purchase any additional equipment. ~~However, a limitiation with most ISP issued equipment is that you can only have a limited number of connected devices before you see performance degradation. Their devices are really more for basic users, with only a few standard devices connected. Your situation is a bit more advanced and requires equipment better designed to handle an abundance of streaming traffic.~~
+
+With the wireless extender out of the picture, we can further isolate the problem. 
+
+I'm glad to see that you'll be receiving a Quantum Router from Verizon (that just means, new and faster). Did they happen to give you a model number? Hopefully it's one of the newer ones with Wireless-AC capability. Wireless-AC is the fastest standard to date and is almost like running a wired network. This will allow enough bandwidth to accommodate the traffic from both streaming as well as your usual internet usage which will most likely resolve your issue. 
+
+Were you planning on using the Quantum Router they're sending for your setup in South Carolina? If they send you the newest version, I would recommend using that one for your larger setup and then using the decent one for the smaller setup. 
+
+In the meantime, I'll go over these logs to make sure we didn't miss anything else. 

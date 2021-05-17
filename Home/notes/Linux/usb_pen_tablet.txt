@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-17T10:21:28-04:00
+
+====== usb pen tablet ======
+Created Thursday 17 October 2019
+
+attempting to get the kbgear "usb" (serial to usb) tablet operating...
+
+
+
+https://ubuntuforums.org/archive/index.php/t-116035.html
+
+* load kbtab module at boot
+
+```bash
+vim /etc/modules-load.d/modules.conf
+add kbtab
+```
+
+found a driver for it...
+
+http://archive.debian.org/debian/pool/main/x/xserver-xorg-input-jamstudio/xserver-xorg-input-jamstudio_1.2.0.orig.tar.gz
+
+as it seems we need to tell x11 how to deal with the input...
+

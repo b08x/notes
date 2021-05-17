@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-12T19:57:00-04:00
+
+====== keyboard to midi ======
+Created Wednesday 12 September 2018
+
+https://github.com/dsheeler/kbd2jackmix

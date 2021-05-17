@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-16T23:58:24-04:00
+
+====== preparing samples ======
+Created Sunday 16 May 2021
+
+https://github.com/dechamps/audiotools
+
+```
+#<AudioInfo:0x000055c7dcf02810 @file=#<Pathname:/mnt/backup/Library/Sounds/samples/synths/Caveman Cosmonaut/bass/bass_16_1_f2.wav>, @sourcepath="/mnt/backup/Library/Sounds/samples/synths/Caveman Cosmonaut/bass/bass_16_1_f2.wav", @filename=#<Pathname:bass_16_1_f2.wav>, @extension=".wav", @basefolder=#<Pathname:samples/synths/Caveman Cosmonaut/bass>, @destpath="/home/b08x/Sounds/samples/synths/Caveman Cosmonaut/bass/bass_16_1_f2.wav", @channels=1, @samplerate=44100, @encoding="wav", @bitdepth=16, @length=1.76, @peak=-4.96, @rms=-11.89>
+#<Annotate:0x000055c7dd12e2b0 @source="/mnt/backup/Library/Sounds/samples/synths/Caveman Cosmonaut/bass/bass_16_1_f2.wav", @notes=["C3", "C5", "F2", "F6"], @notes_in_hz=[], @notes_aubio=["C3", "C5", "F2", "F6"], @key="C minor">
+```
+
+when processing one shot synth, a low bass sound, (~43Hz), the annotator doesn't pick up this frequency range (0-100Hz)
+
+[ ] remove dc offset
+[ ] trim silence at start/end
+[ ] look into high pass/low pass/band pass filters
+[ ] normalize

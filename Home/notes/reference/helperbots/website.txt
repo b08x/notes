@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-21T21:37:38-05:00
+
+====== website ======
+Created Sunday 21 January 2018
+
+https://github.com/gustavoquinalha/jekyll-help-center-theme

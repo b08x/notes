@@ -1,0 +1,1266 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+
+### commandlinefu.com by David Winterbottom
+
+### Shell recorder with replay
+script -t /tmp/mylog.out 2>/tmp/mylog.time; <do your work>; <CTRL-D>; scriptreplay /tmp/mylog.time /tmp/mylog.out
+
+### rsync directory tree including only files that match a certain find result.
+find /src/dir/ -mtime -10 -printf %P\\0|rsync --files-from=- --from0 /src/dir/ /dst/dir/
+
+### Remote mysql dump all databases with ssh
+mysqldump -u user -p --all-databases | ssh user@host dd of=/opt/all-databases.dump
+
+### m4a to mp3 conversion with ffmpeg and lame
+ffmpeg -i input.m4a -acodec libmp3lame -ab 128k output.mp3
+
+### Get the IP of the host your coming from when logged in remotely
+echo ${SSH_CLIENT%% *}
+
+### Run local bash script on remote server
+ssh -T user@server < script.sh
+
+### Recursively search for large files. Show size and location.
+find . -size +100000k -exec du -h {} \;
+
+### Step###2  Create a copy of the bootload and partition table!
+dd if=/dev/sda of=/home/sam/MBR.image bs=512 count=1
+
+### Use wget to download one page and all it's requisites for offline viewing
+wget -e robots=off -E -H -k -K -p http://<page>
+
+### Clone or rescue a block device
+ddrescue -v /dev/sda /dev/sdb logfile.log
+
+### Use AbiWord to generate a clean HTML document from a Microsoft Word document.
+abiword --to=html file.doc --exp-props=
+
+### Download all videos in your Boxee queue
+for i in $(curl -u <username> http://app.boxee.tv/api/get_queue | xml2 | grep /boxeefeed/message/object/url | cut -d "=" -f 2,3); do get_flash_videos $i; done
+
+### Find the biggest files
+du -sk * | sort -rn | head
+
+### Efficient remote forensic disk acquisition gpg-crypted for multiple recipients
+dd if=/dev/sdb | pigz | gpg -r <recipient1> -r <recipient2> -e --homedir /home/to/.gnupg | nc remote_machine 6969
+
+### stderr in color
+mycommand 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
+
+### back ssh from firewalled hosts
+ssh -R 5497:127.0.0.1:22 -p 62220 user@public.ip
+
+### Stop Flash from tracking everything you do.
+for i in ~/.adobe ~/.macromedia ; do ( rm $i/ -rf ; ln -s /dev/null $i ) ; done
+
+### Show memory stats on Nexenta/Solaris
+echo ::memstat | mdb -k
+
+### Single use vnc-over-ssh connection
+ssh -f -L 5900:localhost:5900 your.ssh.server "x11vnc -safer -localhost -nopw -once -display :0"; vinagre localhost:5900
+
+### Rename HTML files according to their title tag
+perl -wlne'/title>([^<]+)/i&&rename$ARGV,"$1.html"' *.html
+
+### Send your terminfo to another machine
+infocmp rxvt-unicode | ssh 10.20.30.40 "mkdir -p .terminfo && cat >/tmp/ti && tic /tmp/ti"
+
+### Compare copies of a file with md5
+cmp file1 file2
+
+### Use file(1) to view device information
+file -s /dev/sd*
+
+### rename files according to file with colums of corresponding names
+xargs -n 2 mv < file_with_colums_of_names
+
+### Bind a key with a command
+bind -x '"\C-l":ls -l'
+
+### commandlinefu.com by David Winterbottom
+
+### Create a pdf version of a manpage
+man -t manpage | ps2pdf - filename.pdf
+
+### Secure copy from one server to another without rsync and preserve users, etc
+tar -czvf - /src/dir | ssh remotehost "(cd /dst/dir ; tar -xzvf -)"
+
+### Join lines
+tr "\n" " " < file
+
+### ASCII webcam live stream video using mplayer
+mplayer -tv driver=v4l2:gain=1:width=640:height=480:device=/dev/video0:fps=10:outfmt=rgb16 -vo aa tv://
+
+### do 'foo' until it exits successfully, pausing in between crashes
+until foo some args; do echo "crashed: $?  respawning..." >&2; sleep 10; done
+
+### Generate MD5 hash for a string
+md5sum <<<"test"
+
+### Ask user to confirm
+Confirm() { read -sn 1 -p "$1 [Y/N]? ";  $REPLY = [Yy] ; }
+
+### mplayer webcam window for screencasts
+mplayer -cache 128 -tv driver=v4l2:width=176:height=177 -vo xv tv:// -noborder -geometry "95%:93%" -ontop
+
+### Monitor a file with tail with timestamps added
+tail -f file | while read line; do echo -n $(date -u -Ins); echo -e "\t$line"; done
+
+### VI config to save files with +x when a shebang is found on line 1
+au BufWritePost * if getline(1) =~ "^###!" | if getline(1) =~ "/bin/" | silent !chmod +x <afile> | endif | endif
+
+### Recompress all .gz files in current directory using bzip2 running 1 job per CPU core in parallel
+parallel -j+0 "zcat {} | bzip2 >{.}.bz2 && rm {}" ::: *.gz
+
+### prevent accidents while using wildcards
+rm *.txt <TAB> <TAB>
+
+### Blink LED Port of NIC Card
+ethtool -p eth0
+
+### Take screenshot through SSH
+DISPLAY=:0.0 import -window root /tmp/shot.png
+
+### prevent accidents and test your command with echo
+echo rm *.txt
+
+### direct a single stream of input (ls) to multiple readers (grep & wc) without using temporary files
+ls |tee >(grep xxx |wc >xxx.count) >(grep yyy |wc >yyy.count) |grep zzz |wc >zzz.count
+
+### run a command whenever a file is touched
+ontouchdo(){ while :; do a=$(stat -c%Y "$1"); [ "$b" != "$a" ] && b="$a" && sh -c "$2"; sleep 1; done }
+
+### Trigger a command each time a file is created in a directory (inotify)
+inotifywait -mrq -e CREATE --format %w%f /path/to/dir | while read FILE; do chmod g=u "$FILE"; done
+
+### exclude a column with cut
+cut -f5 --complement
+
+### Find out my Linux distribution name and version
+lsb_release -a
+
+### Broadcast your shell thru port 5000
+mkfifo /tmp/fifo;(nc -q0 -l 5000 < /tmp/fifo &);script -f /tmp/fifo
+
+### View details of network activity, malicious or otherwise within a port range.
+lsof -i :555-7000
+
+### diff files while disregarding indentation and trailing white space
+diff -b $file1 $file2 ### GNU Tools
+
+### Make sudo forget password instantly
+sudo -K
+
+### Send email with curl and gmail
+curl -n --ssl-reqd --mail-from "<user@gmail.com>" --mail-rcpt "<user@server.tld>" --url smtps://smtp.gmail.com:465 -T file.txt
+
+### commandlinefu.com by David Winterbottom
+
+### Google URL shortener
+curl -s -d'&url=URL' http://goo.gl/api/url | sed -e 's/{"short_url":"//' -e 's/","added_to_history":false}/\n/'
+
+### Remove all but one specific file
+rm -f !(survivior.txt)
+
+### resize all JPG images in folder and create new images (w/o overwriting)
+for file in *.jpg; do convert "$file" -resize 800000@ -quality 80 "small.$file"; done
+
+### Compress a series of png pictures to an avi movie.
+mencoder "[[mf://*.png]]" -mf fps=2 -o output.avi -ovc lavc -lavcopts vcodec=mpeg4
+
+### Copy without overwriting
+cp -n <src> <dst>
+
+### Close a hanging ssh session
+~.
+
+### Get all links of a website
+lynx -dump http://www.domain.com | awk '/http/{print $2}'
+
+### translates acronyms for you
+wtf is <acronym>
+
+### run command on a group of nodes in parallel
+echo "uptime" | tee >(ssh host1) >(ssh host2) >(ssh host3)
+
+### run command on a group of nodes in parallel
+echo "uptime" | pee "ssh host1" "ssh host2" "ssh host3"
+
+### Use tee to process a pipe with two or more processes
+echo "tee can split a pipe in two"|tee >(rev) >(tr ' ' '_')
+
+### Random Number Between 1 And X
+echo $[RANDOM%X+1]
+
+### Setting global redirection of STDERR to STDOUT in a script
+exec 2>&1
+
+### Outgoing IP of server
+dig +short @resolver1.opendns.com myip.opendns.com
+
+### tee to a file descriptor
+tee >(cat - >&2)
+
+### Emptying a text file in one shot
+:%d
+
+### Virtual Console lock program
+vlock
+
+### Remove a line in a text file. Useful to fix "ssh host key change" warnings
+sed -i 8d ~/.ssh/known_hosts
+
+### Quick HTML image gallery from folder contents
+find . -iname '*.jpg' -exec echo '<img src="{}">' \; > gallery.html
+
+### Don't spam root. Log your cronjob output to syslog
+*/5 * * * * root    /usr/local/nagios/sbin/nsca_check_disk 2>&1 |/usr/bin/logger -t nsca_check_disk
+
+### See udev at work
+udevadm monitor
+
+### Edit a google doc with vim
+google docs edit --title "To-Do List" --editor vim
+
+### Upload a video to youtube
+google youtube post --title "My\ Video" --category Education ~/myvideo.avi
+
+### merge vob files to mpg
+cat VTS_05_1.VOB VTS_05_2.VOB VTS_05_3.VOB VTS_05_4.VOB > mergedmovie.mpg
+
+### Disassemble some shell code
+echo -ne "<shellcode>" | x86dis -e 0 -s intel
+
+### commandlinefu.com by David Winterbottom
+
+### Advanced LS Output using Find for Formatted/Sortable File Stat info
+find $PWD -maxdepth 1 -printf '%.5m %10M %###9u:%-9g %###5U:%-5G  [%AD | %TD | %CD]  [%Y] %p\n'
+
+### Lists all listening ports together with the PID of the associated process
+lsof -Pan -i tcp -i udp
+
+### List alive hosts in specific subnet
+nmap -sP 192.168.1.0/24
+
+### find out how many days since given date
+echo $((($(date +%s)-$(date +%s -d "march 1"))/86400))
+
+### run complex remote shell cmds over ssh, without escaping quotes
+ssh host -l user $(<cmd.txt)
+
+### make, or run a script, everytime a file in a directory is modified
+while true; do inotifywait -r -e MODIFY dir/ && make; done;
+
+### let a cow tell you your fortune
+fortune | cowsay
+
+### lines in file2 that are not in file1
+grep -Fxv -f file1 file2
+
+### Grep syslog today last hour
+grep -i "$(date +%b\ %d\ %H)" syslog
+
+### Tail -f at your own pace
+tail -fs 1 somefile
+
+### Fetch every font from dafont.com to current folder
+d="www.dafont.com/alpha.php?";for c in {a..z}; do l=`curl -s "${d}lettre=${c}"|sed -n 's/.*ge=\([0-9]\{2\}\).*/\1/p'`;for((p=1;p<=l;p++));do for u in `curl -s "${d}page=${p}&lettre=${c}"|egrep -o "http\S*.com/dl/\?f=\w*"`;do aria2c "${u}";done;done;done
+
+### cleanup /tmp directory
+find /tmp -type f -atime +1 -delete
+
+### List bash functions defined in .bash_profile or .bashrc
+compgen -A function
+
+### processes per user counter
+ps hax -o user | sort | uniq -c
+
+### Quickly share code or text from vim to others.
+:w !curl -F "sprunge=<-" http://sprunge.us | xclip
+
+### Opens vi/vim at pattern in file
+vi +/pattern [file]
+
+### run remote linux desktop
+xterm -display :12.0 -e ssh -X user@server &
+
+### create a .avi with many .jpg
+mencoder "[[mf://*.jpg]]" -mf fps=8 -o ./video.avi -ovc lavc
+
+### Get your external IP address
+curl ifconfig.me
+
+### See why a program can't seem to access a file
+strace php tias.php -e open,access 2>&1 | grep foo.txt
+
+### copy from host1 to host2, through your host
+ssh root@host1 "cd /somedir/tocopy/ && tar -cf - ." | ssh root@host2 "cd /samedir/tocopyto/ && tar -xf -"
+
+### Delete all files in a folder that don't match a certain file extension
+rm !(*.foo|*.bar|*.baz)
+
+
+
+### Convert all Flac in a directory to Mp3 using maximum quality variable bitrate
+for file in *.flac; do flac -cd "$file" | lame -q 0 --vbr-new -V 0 - "${file%.flac}.mp3"; done
+
+### Ping scanning without nmap
+for i in {1..254}; do ping -c 1 -W 1 10.1.1.$i | grep 'from'; done
+
+### Print a row of characters across the terminal
+printf "%`tput cols`s"|tr ' ' '###'
+
+### commandlinefu.com by David Winterbottom
+
+### Get your outgoing IP address
+dig +short myip.opendns.com @resolver1.opendns.com
+
+### Print a row of characters across the terminal
+seq -s'###' 0 $(tput cols) | tr -d '[:digit:]'
+
+### Save the Top 2500 commands from commandlinefu to a single text file
+curl http://www.commandlinefu.com/commands/browse/sort-by-votes/plaintext/[0-2500:25] | grep -v _curl_ > comfu.txt
+
+### Makes the permissions of file2 the same as file1
+chmod --reference file1 file2
+
+### Limit bandwidth usage by any program
+trickle -d 60 wget http://very.big/file
+
+### Create colorized html file from Vim or Vimdiff
+:TOhtml
+
+### Save a file you edited in vim without the needed permissions (no echo)
+:w !sudo tee > /dev/null %
+
+### JSON processing with Python
+curl -s "http://feeds.delicious.com/v2/json?count=5" | python -m json.tool | less -R
+
+### Update zone file Serial numbers
+sed -i 's/20[0-1][0-9]\{7\}/'`date +%Y%m%d%I`'/g' *.db
+
+### Delete all empty lines from a file with vim
+:g/^$/d
+
+### Copy a file using pv and watch its progress
+pv sourcefile > destfile
+
+### Multi-line grep
+perl -ne 'BEGIN{undef $/}; print "$ARGV\t$.\t$1\n" if m/(first line.*\n.*second line)/mg'
+
+### View network activity of any application or user in realtime
+lsof -r 2 -p PID -i -a
+
+### Eavesdrop on your system
+diff <(lsof -p 1234) <(sleep 10; lsof -p 1234)
+
+### Open Remote Desktop (RDP) from command line and connect local resources
+rdesktop -a24 -uAdministrator -pPassword  -r clipboard:CLIPBOARD -r disk:share=~/share -z -g 1280x900 -0 $@ &
+
+### Get all mac address
+ip link show
+
+### grep tab chars
+grep "^V<TAB>" your_file
+
+### send a message to a windows machine in a popup
+echo "message" | smbclient -M NAME_OF_THE_COMPUTER
+
+### a function to create a box of '=' characters around a given string.
+box() { t="$1xxxx";c=${2:-=}; echo ${t//?/$c}; echo "$c $1 $c"; echo ${t//?/$c}; }
+
+### create a temporary file in a command line call
+any_script.sh < <(some command)
+
+### Remote screenshot
+DISPLAY=":0.0" import -window root screenshot.png
+
+### GREP a PDF file.
+pdftotext [file] - | grep 'YourPattern'
+
+### A function to find the newest file in a directory
+newest () { find ${1:-\.} -type f |xargs ls -lrt ; }
+
+### grab all commandlinefu shell functions into a single file, suitable for sourcing.
+export QQ=$(mktemp -d);(cd $QQ; curl -s -O http://www.commandlinefu.com/commands/browse/sort-by-votes/plaintext/[0-2400:25];for i in $(perl -ne 'print "$1\n" if( /^(\w+\(\))/ )' *|sort -u);do grep -h -m1 -B1 $i *; done)|grep -v '^--' > clf.sh;rm -r $QQ
+
+### Do some Perl learning...
+podwebserver& sleep 2; elinks 'http://127.0.0.1:8020'
+
+### commandlinefu.com by David Winterbottom
+
+### Show File System Hierarchy
+man hier
+
+### Do some learning...
+ls /usr/bin | xargs whatis | grep -v nothing | less
+
+### Find unused IPs on a given subnet
+nmap -T4 -sP 192.168.2.0/24 && egrep "00:00:00:00:00:00" /proc/net/arp
+
+### Remove everything except that file
+find . ! -name <FILENAME> -delete
+
+### Change pidgin status
+purple-remote "setstatus?status=away&message=AFK"
+
+### live ssh network throughput test
+pv /dev/zero|ssh $host 'cat > /dev/null'
+
+### Colored diff ( via vim ) on 2 remotes files on your local computer.
+vimdiff [[scp://root@server-foo.com//etc/snmp/snmpd.conf]] [[scp://root@server-bar.com//etc/snmp/snmpd.conf]]
+
+### live ssh network throughput test
+yes | pv | ssh $host "cat > /dev/null"
+
+### Typing the current date ( or any string ) via a shortcut as if the keys had been actually typed with the hardware keyboard in any application.
+xvkbd -xsendevent -text $(date +%Y%m%d)
+
+### Remove duplicate entries in a file without sorting.
+awk '!x[$0]++' <file>
+
+### copy working directory and compress it on-the-fly while showing progress
+tar -cf - . | pv -s $(du -sb . | awk '{print $1}') | gzip > out.tgz
+
+### analyze traffic remotely over ssh w/ wireshark
+ssh root@server.com 'tshark -f "port !22" -w -' | wireshark -k -i -
+
+### Harder, Faster, Stronger SSH clients
+ssh -4 -C -c blowfish-cbc
+
+### Remove security limitations from PDF documents using ghostscript
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=OUTPUT.pdf -c .setpdfwrite -f INPUT.pdf
+
+### Pipe stdout and stderr, etc., to separate commands
+some_command > >(/bin/cmd_for_stdout) 2> >(/bin/cmd_for_stderr)
+
+
+### set your ssd disk as a non-rotating medium
+sudo echo 0 > /sys/block/sdb/queue/rotational
+
+### Use colordiff in side-by-side mode, and with automatic column widths.
+colordiff -yW"`tput cols`" /path/to/file1 /path/to/file2
+
+### Script executes itself on another host with one ssh command
+[ $1 == "client" ] && hostname || cat $0 | ssh $1 /bin/sh -s client
+
+### List all available commands (bash, ksh93)
+printf "%s\n" ${PATH//:/\/* }
+
+### Carriage return for reprinting on the same line
+while true; do echo -ne "$(date)\r"; sleep 1; done
+
+### Find files recursively that were updated in the last hour ignoring SVN files and folders.
+find . -mmin -60 -not -path "*svn*" -print|more
+
+### Remove lines that contain a specific pattern($1) from file($2).
+sed -i '/myexpression/d' /path/to/file.txt
+
+### Press Any Key to Continue
+read -sn 1 -p "Press any key to continue..."
+
+### Unbelievable Shell Colors, Shading, Backgrounds, Effects for Non-X
+for c in `seq 0 255`;do t=5; $c -lt 108 &&t=0;for i in `seq $t 5`;do echo -e "\e[0;48;$i;${c}m|| $i:$c `seq -s+0 $(($COLUMNS/2))|tr -d '[0-9]'`\e[0m";done;done
+
+### commandlinefu.com by David Winterbottom
+
+### Run a file system check on your next boot.
+sudo touch /forcefsck
+
+### enumerate with padding
+echo {001..5}
+
+### Display GCC Predefined Macros
+gcc -dM -E - < /dev/null
+
+### Monitor bandwidth by pid
+nethogs -p eth0
+
+### grep -v with multiple patterns.
+grep 'test' somefile | grep -vE '(error|critical|warning)'
+
+### To print a specific line from a file
+sed -n 5p <file>
+
+### Check a server is up. If it isn't mail me.
+ping -q -c1 -w3 brandx.jp.sme 2&>1 /dev/null || echo brandx.jp.sme ping failed | mail -ne -s'Server unavailable' joker@jp.co.uk
+
+### convert vdi to vmdk (virtualbox hard disk conversion to vmware hard disk format)
+VBoxManage internalcommands converttoraw winxp.vdi winxp.raw && qemu-img convert -O vmdk winxp.raw winxp.vmdk && rm winxp.raw
+
+### autossh + ssh + screen = super rad perma-sessions
+AUTOSSH_POLL=1 autossh -M 21010 hostname -t 'screen -Dr'
+
+### List only the directories
+ls -d */
+
+### Using tput to save, clear and restore the terminal contents
+tput smcup; echo "Doing some things..."; sleep 2; tput rmcup
+
+### More precise BASH debugging
+env PS4=' ${BASH_SOURCE}:${LINENO}(${FUNCNAME[0]}) ' sh -x /etc/profile
+
+### Verify MD5SUMS but only print failures
+md5sum --check MD5SUMS | grep -v ": OK"
+
+### FAST Search and Replace for Strings in all Files in Directory
+sh -c 'S=askapache R=htaccess; find . -mount -type f|xargs -P5 -iFF grep -l -m1 "$S" FF|xargs -P5 -iFF sed -i -e "s%${S}%${R}%g" FF'
+
+### Change newline to space in a file just using echo
+echo $(</tmp/foo)
+
+### backup all your commandlinefu.com favourites to a plaintext file
+clfavs(){ URL="http://www.commandlinefu.com";wget -O - --save-cookies c --post-data "username=$1&password=$2&submit=Let+me+in" $URL/users/signin;for i in `seq 0 25 $3`;do wget -O - --load-cookies c $URL/commands/favourites/plaintext/$i >>$4;done;rm -f c;}
+
+### Clean up poorly named TV shows.
+rename -v 's/.*[s,S](\d{2}).*[e,E](\d{2}).*\.avi/SHOWNAME\ S$1E$2.avi/' poorly.named.file.s01e01.avi
+
+### is today the end of the month?
+[ `date --date='next day' +'%B'` == `date +'%B'` ] || echo 'end of month'
+
+### Change user, assume environment, stay in current dir
+su -- user
+
+### List Network Tools in Linux
+apropos network |more
+
+### Detect if we are running on a VMware virtual machine
+dmidecode | awk '/VMware Virtual Platform/ {print $3,$4,$5}'
+
+### Create/open/use encrypted directory
+encfs ~/.crypt ~/crypt
+
+### Remove blank lines from a file using grep and save output to new file
+grep . filename > newfilename
+
+### convert .bin / .cue into .iso image
+bchunk IMAGE.bin IMAGE.cue IMAGE.iso
+
+### commandlinefu.com by David Winterbottom
+
+### Create a directory and change into it at the same time
+md () { mkdir -p "$@" && cd "$@"; }
+
+### Get the total length of all video / audio in the current dir (and below) in H:m:s
+find -type f -name "*.avi" -print0 | xargs -0  mplayer -vo dummy -ao dummy -identify 2>/dev/null | perl -nle '/ID_LENGTH=([0-9\.]+)/ && ($t +=$1) && printf "%02d:%02d:%02d\n",$t/3600,$t/60%60,$t%60' | tail -n 1
+
+### Execute a command with a timeout
+timeout 10 sleep 11
+
+### Search for a <pattern> string inside all files in the current directory
+grep -RnisI <pattern> *
+
+### Function that outputs dots every second until command completes
+sleeper(){ while `ps -p $1 &>/dev/null`; do echo -n "${2:-.}"; sleep ${3:-1}; done; }; export -f sleeper
+
+### Find Duplicate Files (based on size first, then MD5 hash)
+find -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate
+
+### Show apps that use internet connection at the moment. (Multi-Language)
+ss -p
+
+### Log your internet download speed
+echo $(date +%s) > start-time; URL=http://www.google.com; while true; do echo $(curl -L --w %{speed_download} -o/dev/null -s $URL) >> bps; sleep 10; done &
+
+### Show apps that use internet connection at the moment.
+lsof -P -i -n | cut -f 1 -d " "| uniq | tail -n +2
+
+### redirect stdout and stderr each to separate files and print both to the screen
+(some_command 2>&1 1>&3 | tee /path/to/errorlog ) 3>&1 1>&2 | tee /path/to/stdoutlog
+
+### send echo to socket network
+echo "foo" > /dev/tcp/192.168.1.2/25
+
+### Identify differences between directories (possibly on different servers)
+diff <(ssh server01 'cd config; find . -type f -exec md5sum {} \;| sort -k 2') <(ssh server02 'cd config;find . -type f -exec md5sum {} \;| sort -k 2')
+
+### Print text string vertically, one character per line.
+echo "vertical text" | grep -o '.'
+
+### Check your unread Gmail from the command line
+curl -u username --silent "https://mail.google.com/mail/feed/atom" | perl -ne 'print "\t" if /<name>/; print "$2\n" if /<(title|name)>(.*)<\/\1>/;'
+
+### Send data securly over the net.
+cat /etc/passwd | openssl aes-256-cbc -a -e -pass pass:password | netcat -l -p 8080
+
+### When was your OS installed?
+ls -lct /etc | tail -1 | awk '{print $6, $7}'
+
+### Find files that were modified by a given command
+touch /tmp/file ; $EXECUTECOMMAND ; find /path -newer /tmp/file
+
+### Parallel file downloading with wget
+#wget -nv http://en.wikipedia.org/wiki/Linux -O- | egrep -o "http://[^[:space:]]*.jpg" | xargs -P 10 -r -n 1 wget -nv
+
+### find all active IP addresses in a network
+nmap -sP 192.168.0.*
+
+### Terminal - Show directories in the PATH, one per line with sed and bash3.X `here string'
+tr : '\n' <<<$PATH
+
+### How fast is the connexion to a URL, some stats from curl
+URL="http://www.google.com";curl -L --w "$URL\nDNS %{time_namelookup}s  conn %{time_connect}s  time %{time_total}s\nSpeed %{speed_download}bps Size %{size_download}bytes\n" -o/dev/null -s $URL
+
+### directly ssh to host B that is only accessible through host A
+ssh -t hostA ssh hostB
+
+### Show directories in the PATH, one per line
+echo "${PATH//:/$'\n'}"
+
+### log your PC's motherboard and CPU temperature along with the current date
+echo `date +%m/%d/%y%X |awk '{print $1;}' `" => "` cat /proc/acpi/thermal_zone/THRM/temperature | awk '{print $2, $3;}'` >> datetmp.log
+
+### print file without duplicated lines using awk
+awk '!a[$0]++' file
+
+### commandlinefu.com by David Winterbottom
+
+### Verbosely delete files matching specific name pattern, older than 15 days.
+find /backup/directory -name "FILENAME_*" -mtime +15 | xargs rm -vf
+
+### check open ports
+lsof -Pni4 | grep LISTEN
+
+### Check availability of Websites based on HTTP_CODE
+urls=('www.ubuntu.com' 'google.com'); for i in ${urls[@]}; do http_code=$(curl -I -s $i -w %{http_code}); echo $i status: ${http_code:9:3}; done
+
+### insert ip range using vim
+:for i in range(1,255) | .put='192.168.0.'.i | endfor
+
+### Extract dd-image from VirtualBox VDI container and mount it
+vditool COPYDD my.vdi my.dd ; sudo mount -t ntfs -o ro,noatime,noexex,loop,offset=32256 my.dd ./my_dir
+
+### use vim to get colorful diff output
+svn diff | view -
+
+### Download file with multiple simultaneous connections
+aria2c -s 4 http://my/url
+
+### Sum columns from CSV column $COL
+awk -F ',' '{ x = x + $4 } END { print x }' test.csv
+
+### benchmark web server with apache benchmarking tool
+ab -n 9000 -c 900 localhost:8080/index.php
+
+### Backup all MySQL Databases to individual files
+for I in $(mysql -e 'show databases' -s --skip-column-names); do mysqldump $I | gzip > "$I.sql.gz"; done
+
+### sed : using colons as separators instead of forward slashes
+sed "s:/old/direcory/:/new/directory/:" <file>
+
+### Release memory used by the Linux kernel on caches
+free && sync && echo 3 > /proc/sys/vm/drop_caches && free
+
+### Use all the cores or CPUs when compiling
+make -j 4
+
+### find and delete empty dirs, start in current working dir
+find . -empty -type d -exec rmdir {} +
+
+### Find Duplicate Files (based on MD5 hash)
+find -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 33 | cut -c 35-
+
+### concat multiple videos into one (and add an audio track)
+cat frame/*.mpeg | ffmpeg -i $ID.mp3 -i - -f dvd -y track/$ID.mpg 2>/dev/null
+
+### Triple monitoring in screen
+tmpfile=$(mktemp) && echo -e 'startup_message off\nscreen -t top htop\nsplit\nfocus\nscreen -t nethogs nethogs wlan0\nsplit\nfocus\nscreen -t iotop iotop' > $tmpfile && sudo screen -c $tmpfile
+
+### Quickly (soft-)reboot skipping hardware checks
+/sbin/kexec -l /boot/$KERNEL --append="$KERNELPARAMTERS" --initrd=/boot/$INITRD; sync; /sbin/kexec -e
+
+### How many files in the current directory ?
+find . -maxdepth 1 -type f | wc -l
+
+### Get all IPs via ifconfig
+ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'
+
+### Get Futurama quotations from slashdot.org servers
+echo -e "HEAD / HTTP/1.1\nHost: slashdot.org\n\n" | nc slashdot.org 80 | egrep "Bender|Fry" | sed "s/X-//"
+
+### Have an ssh session open forever
+autossh -M50000 -t server.example.com 'screen -raAd mysession'
+
+### uncomment the lines where the word DEBUG is found
+sed '/^###.*DEBUG.*/ s/^###//' $FILE
+
+### put all lines in comment where de word DEBUG is found
+sed -i 's/^.*DEBUG.*/###&/'  $file
+
+### Save man pages to pdf
+man -t man | ps2pdf - > man.pdf
+
+### commandlinefu.com by David Winterbottom
+
+### Port Knocking!
+knock <host> 3000 4000 5000 && ssh -p <port> user@host && knock <host> 5000 4000 3000
+
+### create directory and set owner/group/mode in one shot
+install -o user -g group -m 0700 -d /path/to/newdir
+
+### Show me a histogram of the busiest minutes in a log file:
+cat /var/log/secure.log | awk '{print substr($0,0,12)}' | uniq -c | sort -nr | awk '{printf("\n%s ",$0) ; for (i = 0; i<$1 ; i++) {printf("*")};}'
+
+### Get all these commands in a text file with description.
+for x in `jot - 0 2400 25`; do curl "http://www.commandlinefu.com/commands/browse/sort-by-votes/plaintext/$x"  ; done > commandlinefu.txt
+
+### Analyze awk fields
+awk '{print NR": "$0; for(i=1;i<=NF;++i)print "\t"i": "$i}'
+
+### Attach screen over ssh
+ssh -t remote_host screen -r
+
+### vmstat/iostat with timestamp
+vmstat 1 | awk '{now=strftime("%Y-%m-%d %T "); print now $0}'
+
+### Resets your MAC to a random MAC address to make you harder to find.
+ran=$(head /dev/urandom | md5sum); MAC=00:07:${ran:0:2}:${ran:3:2}:${ran:5:2}:${ran:7:2}; sudo ifconfig wlan0 down hw ether $MAC; sudo ifconfig wlan0 up; echo ifconfig wlan0:0
+
+### Diff on two variables
+diff <(echo "$a") <(echo "$b")
+
+### Use a decoy while scanning ports to avoid getting caught by the sys admin :9
+sudo nmap -sS 192.168.0.10 -D 192.168.0.2
+
+### pipe output of a command to your clipboard
+some command|xsel --clipboard
+
+### Cracking a password protected .rar file
+for i in $(cat dict.txt);do unrar e -p$i protected.rar; if [ $? = 0 ];then echo "Passwd Found: $i";break;fi;done
+
+### Show a 4-way scrollable process tree with full details.
+ps awwfux | less -S
+
+### Display ncurses based network monitor
+nload -u m eth0
+
+### replace spaces in filenames with underscores
+rename 'y/ /_/' *
+
+### Scan Network for Rogue APs.
+nmap -A -p1-85,113,443,8080-8100 -T4 --min-hostgroup 50 --max-rtt-timeout 2000 --initial-rtt-timeout 300 --max-retries 3 --host-timeout 20m --max-scan-delay 1000 -oA wapscan 10.0.0.0/8
+
+### Check if network cable is plugged in and working correctly
+mii-tool eth0
+
+### Migrate existing Ext3 filesystems to Ext4
+tune2fs -O extents,uninit_bg,dir_index /dev/yourpartition
+
+### find the 10 latest (modified) files
+ls -1t | head -n10
+
+### Create a system overview dashboard on F12 key
+bind '"\e[24~"':"\"ps -elF;df -h;free -mt;netstat -lnpt;who -a\C-m"""
+
+### Redirect incoming traffic to SSH, from a port of your choosing
+iptables -t nat -A PREROUTING -p tcp --dport [port of your choosing] -j REDIRECT --to-ports 22
+
+### Get all possible problems from any log files
+grep -2 -iIr "err\|warn\|fail\|crit" /var/log/*
+
+### Colored SVN diff
+svn diff <file> | vim -R -
+
+### Apply substitution only on the line following a marker
+sed '/MARKER/{N;s/THIS/THAT/}'
+
+### LDAP search to query an ActiveDirectory server
+ldapsearch -LLL -H ldap://activedirectory.example.com:389 -b 'dc=example,dc=com' -D 'DOMAIN\Joe.Bloggs' -w 'p@ssw0rd' '(sAMAccountName=joe.bloggs)'
+
+### commandlinefu.com by David Winterbottom
+
+### Recursively compare two directories and output their differences on a readable format
+diff -urp /originaldirectory /modifieddirectory
+
+### Find broken symlinks and delete them
+find -L /path/to/check -type l -delete
+
+### Connect to google talk through ssh by setting your IM client to use the localhost 5432 port
+ssh -f -N -L 5432:talk.google.com:5222 user@home.network.com
+
+### Setup an ssh tunnel
+ssf -f -N -L 4321:home.network.com:25 user@home.network.com
+
+### Record a screencast and convert it to an mpeg
+ffmpeg -f x11grab -r 25 -s 800x600 -i :0.0 /tmp/outputFile.mpg
+
+### remote diff with side-by-side ordering.
+ssh $HOST -l$USER cat /REMOTE/FILE | sdiff /LOCAL/FILE -
+
+### Create a nifty overview of the hardware in your computer
+lshw -html > hardware.html
+
+### Get line number of all matches in a file
+awk '/match/{print NR}' file
+
+### coloured tail
+tail -f FILE | perl -pe 's/KEYWORD/\e[1;31;43m$&\e[0m/g'
+
+### Shutdown a Windows machine from Linux
+net rpc shutdown -I ipAddressOfWindowsPC -U username%password
+
+### Backup sda5 partition to ftp ( using pipes and gziped backup )
+dd if=/dev/sda5 bs=2048 conv=noerror,sync | gzip -fc | lftp -u user,passwd domain.tld -e "put /dev/stdin -o backup-$(date +%Y%m%d%H%M).gz; quit"
+
+### create an emergency swapfile when the existing swap space is getting tight
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=1024000;sudo mkswap /swapfile; sudo swapon /swapfile
+
+### urldecoding
+sed -e's/%\([0-9A-F][0-9A-F]\)/\\\\\x\1/g' | xargs echo -e
+
+### Compare two directory trees.
+diff <(cd dir1 && find | sort) <(cd dir2 && find | sort)
+
+### find files containing text
+grep -lir "some text" *
+
+### disable history for current shell session
+unset HISTFILE
+
+### Go to the previous sibling directory in alphabetical order
+cd ../"$(ls -F ..|grep '/'|grep -B1 `basename $PWD`|head -n 1)"
+
+### Add timestamp to history
+export HISTTIMEFORMAT="%F %T "
+
+### Show a config file without comments
+egrep -v "^$|^:space:*###" /etc/some/file
+
+### Consolle based network interface monitor
+ethstatus -i eth0
+
+### Create several copies of a file
+for i in {1..5}; do cp test{,$i};done
+
+### Search recursively to find a word or phrase in certain file types, such as C code
+find . -name "*.[ch]" -exec grep -i -H "search pharse" {} \;
+
+### Delete all files found in directory A from directory B
+for file in <directory A>/*; do rm <directory B>/`basename $file`; done
+
+### Interactively build regular expressions
+txt2regex
+
+### Smart renaming
+ls | sed -n -r 's/banana_(.*)_([0-9]*).asc/mv & banana_\2_\1.asc/gp' | sh
+
+### commandlinefu.com by David Winterbottom
+
+### Releases Firefox of a still running message
+rm ~/.mozilla/firefox/<profile_dir>/.parentlock
+
+### Graph ### of connections for each hosts.
+netstat -an | grep ESTABLISHED | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | awk '{ printf("%s\t%s\t",$2,$1) ; for (i = 0; i < $1; i++) {printf("*")}; print "" }'
+
+### Recursively change permissions on files, leave directories alone.
+find ./ -type f -exec chmod 644 {} \;
+
+### Terminal redirection
+script /dev/null | tee /dev/pts/3
+
+### List all files opened by a particular command
+lsof -c dhcpd
+
+### view the system console remotely
+sudo cat /dev/vcs1 | fold -w 80
+
+### Monitor dynamic changes in the dmesg log.
+watch "dmesg |tail -15"
+
+### List recorded formular fields of Firefox
+cd ~/.mozilla/firefox/ && sqlite3 `cat profiles.ini | grep Path | awk -F= '{print $2}'`/formhistory.sqlite "select * from moz_formhistory" && cd - > /dev/null
+
+### Convert seconds to human-readable format
+date -d@1234567890
+
+### Nicely display permissions in octal format with filename
+stat -c '%A %a %n' *
+
+### Execute a command on logout
+trap cmd 0
+
+### Diff files on two remote hosts.
+diff <(ssh alice cat /etc/apt/sources.list) <(ssh bob cat /etc/apt/sources.list)
+
+### dstat - a mix of vmstat, iostat, netstat, ps, sar...
+dstat -ta
+
+### Perform a branching conditional
+true && { echo success;} || { echo failed; }
+
+### How to run X without any graphics hardware
+startx -- `which Xvfb` :1 -screen 0 800x600x24 && DISPLAY=:1 x11vnc
+
+### backup and synchronize entire remote folder locally (curlftpfs and rsync over FTP using FUSE FS)
+curlftpfs ftp://YourUsername:YourPassword@YourFTPServerURL /tmp/remote-website/ && rsync -av /tmp/remote-website/* /usr/local/data_latest && umount /tmp/remote-website
+
+### Number of open connections per ip.
+netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n
+
+### Display a block of text with AWK
+awk '/start_pattern/,/stop_pattern/' file.txt
+
+### Use a Gmail virtual disk (GmailFS) on Ubuntu
+mount.gmailfs none /mount/path/ [-o username=USERNAME[,password=PASSWORD][,fsname=VOLUME]] [-p]
+
+### Download from Rapidshare Premium using wget - Part 2
+wget -c -t 1 --load-cookies ~/.cookies/rapidshare <URL>
+
+### from within vi, pipe a chunk of lines to a command line and replace the chunk with the result
+!}sort
+
+### exit without saving history
+kill -9 $$
+
+### Measures download speed on eth0
+while true; do X=$Y; sleep 1; Y=$(ifconfig eth0|grep RX\ bytes|awk '{ print $2 }'|cut -d : -f 2); echo "$(( Y-X )) bps"; done
+
+### Share a terminal screen with others
+% screen -r someuser/
+
+### Clean swap area after using a memory hogging application
+swapoff -a ; swapon -a
+
+### commandlinefu.com by David Winterbottom
+
+### run php code inline from the command line
+php -r 'echo strtotime("2009/02/13 15:31:30")."\n";'
+
+### Gets a random Futurama quote from /.
+curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2
+
+### find the process that is using a certain port e.g. port 3000
+lsof -P | grep ':3000'
+
+### Create a favicon
+convert -colors 256 -resize 16x16 face.jpg face.ppm && ppmtowinicon -output favicon.ico face.ppm
+
+### Brute force discover
+sudo zcat /var/log/auth.log.*.gz | awk '/Failed password/&&!/for invalid user/{a[$9]++}/Failed password for invalid user/{a["*" $11]++}END{for (i in a) printf "%6s\t%s\n", a[i], i|"sort -n"}'
+
+### currently mounted filesystems in nice layout
+mount | column -t
+
+### Quickly generate an MD5 hash for a text string using OpenSSL
+echo -n 'text to be encrypted' | openssl md5
+
+### Show webcam output
+mplayer tv:// -tv driver=v4l:width=352:height=288
+
+### Use lynx to run repeating website actions
+lynx -accept_all_cookies -cmd_script=/your/keystroke-file
+
+### Quickly add user accounts to the system and force a password change on first login
+for name in larry moe schemp; do useradd $name; echo 'password' | passwd --stdin $name; chage -d 0 $name; done
+
+### Merge *.pdf files
+gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=out.pdf `ls *.pdf`
+
+### Remind yourself to leave in 15 minutes
+leave +15
+
+### Check Ram Speed and Type in Linux
+sudo dmidecode --type 17 | more
+
+### Run any GUI program remotely
+ssh -fX <user>@<host> <program>
+
+### prevents replace an existing file by mistake
+set -o noclobber
+
+### Download an entire ftp directory using wget
+wget -r ftp://user:pass@ftp.example.com
+
+### Create a bunch of dummy files for testing
+touch {1..10}.txt
+
+### [re]verify a disc with very friendly output
+dd if=/dev/cdrom | pv -s 700m | md5sum | tee test.md5
+
+### Traceroute w/TCP to get through firewalls.
+tcptraceroute www.google.com
+
+### Quickly analyze apache logs for top 25 most common IP addresses.
+cat $(ls -tr | tail -1) | awk '{ a[$1] += 1; } END { for(i in a) printf("%d, %s\n", a[i], i ); }' | sort -n  | tail -25
+
+### Append stdout and stderr to a file, and print stderr to the screen [bash]
+somecommand 2>&1 >> logfile | tee -a logfile
+
+### Set audible alarm when an IP address comes online
+ping -i 60 -a IP_address
+
+### SSH connection through host in the middle
+ssh -t reachable_host ssh unreachable_host
+
+### recursive search and replace old with new string, inside files
+$ grep -rl oldstring . |xargs sed -i -e 's/oldstring/newstring/'
+
+### quickly change all .html extensions on files in folder to .htm
+for i in *.html ; do mv $i ${i%.html}.htm ; done
+
+### commandlinefu.com by David Winterbottom
+
+### awk using multiple field separators
+awk -F "=| "
+
+### Find files that have been modified on your system in the past 60 minutes
+sudo find / -mmin 60 -type f
+
+### Create a single-use TCP (or UDP) proxy
+nc -l -p 2000 -c "nc example.org 3000"
+
+### Sort dotted quads
+sort -nt . -k 1,1 -k 2,2 -k 3,3 -k 4,4
+
+### Create a persistent connection to a machine
+ssh -MNf <user>@<host>
+
+### Find distro name and/or version/release
+cat /etc/*-release
+
+### Wrap text files on the command-line for easy reading
+fold -s <filename>
+
+### Re-read partition table on specified device without rebooting system (here /dev/sda).
+blockdev --rereadpt /dev/sda
+
+### runs a bash script in debugging mode
+bash -x ./post_to_commandlinefu.sh
+
+### find geographical location of an ip address
+lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|country'|awk '{print $3,$4,$5,$6,$7,$8}'|sed 's\ip address flag \\'|sed 's\My\\'
+
+### Save a file you edited in vim without the needed permissions
+:w !sudo tee %
+
+### Pipe STDOUT to vim
+tail -1000 /some/file | vim -
+
+### find .txt files inside a directory and replace every occurrance of a word inside them via sed
+find . -name '*.txt' -exec sed -ir 's/this/that/g' {} \;
+
+### Show biggest files/directories, biggest first with 'k,m,g' eyecandy
+du --max-depth=1 | sort -r -n | awk '{split("k m g",v); s=1; while($1>1024){$1/=1024; s++} print int($1)" "v[s]"\t"$2}'
+
+### Terminate a frozen SSH-session
+RETURN~.
+
+### split a string (2)
+read VAR1 VAR2 VAR3 < <(echo aa bb cc); echo $VAR2
+
+### Grep for word in directory (recursive)
+grep --color=auto -iRnH "$search_word" $directory
+
+### ssh -A user@somehost
+ssh -A user@somehost
+
+### Instead of writing a multiline if/then/else/fi construct you can do that by one line
+ test_condition  && if_true_do_this || otherwise_do_that
+
+### Get Cisco network information
+tcpdump -nn -v -i eth0 -s 1500 -c 1 'ether[20:2] == 0x2000'
+
+### Intercept, monitor and manipulate a TCP connection.
+mkfifo /tmp/fifo; cat /tmp/fifo | nc -l -p 1234 | tee -a to.log | nc machine port | tee -a from.log > /tmp/fifo
+
+### Create an SSH SOCKS proxy server on localhost:8000 that will re-start itself if something breaks the connection temporarily
+autossh -f -M 20000 -D 8000 somehost -N
+
+### Use /dev/full to test language I/O-failsafety
+perl -e 'print 1, 2, 3' > /dev/full
+
+### Backup a remote database to your local filesystem
+ssh user@host 'mysqldump dbname | gzip' > /path/to/backups/db-backup-`date +%Y-%m-%d`.sql.gz
+
+### Quick glance at who's been using your system recently
+last  | grep -v "^$" | awk '{ print $1 }' | sort -nr | uniq -c
+
+### commandlinefu.com by David Winterbottom
+
+### Block known dirty hosts from reaching your machine
+wget -qO - http://infiltrated.net/blacklisted|awk '!/###|[a-z]/&&/./{print "iptables -A INPUT -s "$1" -j DROP"}'
+
+### Edit a file on a remote host using vim
+vim scp://username@host//path/to/somefile
+
+### Generate a graph of package dependencies
+apt-cache dotty apache2 | dot -T png | display
+
+### List your sudo rights
+sudo -l
+
+### Get info about remote host ports and OS detection
+nmap -sS -P0 -sV -O <target>
+
+### Download an entire website
+wget --random-wait -r -p -e robots=off -U mozilla http://www.example.com
+
+### Copy a MySQL Database to a new Server via SSH with one command
+mysqldump --add-drop-table --extended-insert --force --log-error=error.log -uUSER -pPASS OLD_DB_NAME | ssh -C user@newhost "mysql -uUSER -pPASS NEW_DB_NAME"
+
+### make directory tree
+mkdir -p work/{d1,d2}/{src,bin,bak}
+
+### Sharing file through http 80 port
+nc -v -l 80 < file.ext
+
+### Display IPs accessing your Apache webserver.
+egrep -o '\b[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\b' access.log | sort -u
+
+### Use tee + process substitution to split STDOUT to multiple commands
+some_command | tee >(command1) >(command2) >(command3) ... | command4
+
+### Parse a quoted .csv file
+awk -F'^"|", "|"$' '{ print $2,$3,$4 }' file.csv
+
+### Show all programs on UDP and TCP ports with timer information
+netstat -putona
+
+### Check the age of the filesystem
+df / | awk '{print $1}' | grep dev | xargs tune2fs -l | grep create
+
+### Push your present working directory to a stack that you can pop later
+pushd /tmp
+
+### Get contents from hosts, passwd, groups even if they're in DB/LDAP/other
+getent [group|hosts|networks|passwd|protocols|services] [keyword]
+
+### Copy your SSH public key on a remote machine for passwordless login - the easy way
+ssh-copy-id username@hostname
+
+### Monitor the queries being run by MySQL
+watch -n 1 mysqladmin --user=<user> --password=<password> processlist
+
+### print indepth hardware info
+sudo dmidecode | more
+
+### Change string in many files at once and more.
+find . -type f -exec grep -l XXX {} \;|tee /tmp/fileschanged|xargs perl -pi.bak -e 's/XXX/YYY/g'
+
+### Copy something to multiple SSH hosts with a Bash loop
+for h in host1 host2 host3 host4 ; { scp file user@$h:/destination_path/ ; }
+
+### Generate a random password 30 characters long
+strings /dev/urandom | grep -o ':alnum:' | head -n 30 | tr -d '\n'; echo
+
+### Convert PDF to JPG
+for file in `ls *.pdf`; do convert -verbose -colorspace RGB -resize 800 -interlace none -density 300 -quality 80 $file `echo $file | sed 's/\.pdf$/\.jpg/'`; done
+
+### Lists all listening ports together with the PID of the associated process
+netstat -tlnp
+
+### Get a quick list of all user and group owners of files and dirs under the cwd.
+find -printf '%u %g\n' | sort | uniq
+
+### commandlinefu.com by David Winterbottom
+
+### Tells which group you DON'T belong to (opposite of command "groups") --- uses sed
+sed -e "/$USER/d;s/:.*//g" /etc/group | sed -e :a -e '/$/N;s/\n/ /;ta'
+
+### recurisvely md5 all files in a tree
+find ./backup -type f -print0 | xargs -0 md5sum > /checksums_backup.md5
+
+### Batch convert files to utf-8
+find . -name "*.php" -exec iconv -f ISO-8859-1 -t UTF-8 {} -o ../newdir_utf8/{} \;
+
+### Get list of servers with a specific port open
+nmap -sT -p 80 -oG - 192.168.1.* | grep open
+
+### List of commands you use most often
+history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+
+### Runs previous command replacing foo by bar every time that foo appears
+!!:gs/foo/bar
+
+### Watch for when your web server returns
+watch -n 15 curl -s --connect-timeout 10 http://www.google.com/
+
+### make a log of a terminal session
+script
+
+### A fun thing to do with ram is actually open it up and take a peek. This command will show you all the string (plain text) values in ram
+sudo dd if=/dev/mem | cat | strings
+
+### Print all the lines between 10 and 20 of a file
+sed -n '10,20p' <filename>
+
+### ssh tunnel with auto reconnect ability
+while [ ! -f /tmp/stop ]; do ssh -o ExitOnForwardFailure=yes -R 2222:localhost:22 target "while nc -zv localhost 2222; do sleep 5; done"; sleep 5;done
+
+### Extract tarball from internet without local saving
+wget -qO - "http://www.tarball.com/tarball.gz" | tar zxvf -
+
+### Speed up launch of firefox
+find ~ -name '*.sqlite' -exec sqlite3 '{}' 'VACUUM;' \;
+
+### Monitor progress of a command
+pv access.log | gzip > access.log.gz
+
+### Quick way to sum every numbers in a file written line by line
+(sed 's/^/x+=/' [yourfile] ; echo x) | bc
+
+### Show which programs are listening on TCP and UDP ports
+netstat -plunt
+
+### Mount a temporary ram partition
+mount -t tmpfs tmpfs /mnt -o size=1024m
+
+### Prettify an XML file
+tidy -xml -i -m [file]
+
+### Mount folder/filesystem through SSH
+sshfs name@server:/path/to/folder /path/to/mount/point
+
+### Copy your ssh public key to a server from a machine that doesn't have ssh-copy-id
+cat ~/.ssh/id_rsa.pub | ssh user@machine "mkdir ~/.ssh; cat >> ~/.ssh/authorized_keys"
+
+### List the number and type of active network connections
+netstat -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c
+
+### Display any tcp connections to apache
+for i in `ps aux | grep httpd | awk '{print $2}'`; do lsof -n -p $i | grep ESTABLISHED; done;
+
+### Capture video of a linux desktop
+ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
+
+### quickly backup or copy a file with bash
+cp filename{,.bak}
+
+### Get the 10 biggest files/folders for the current direcotry
+du -s * | sort -n | tail
+
+### commandlinefu.com by David Winterbottom
+
+### start a tunnel from some machine's port 80 to your local post 2001
+ssh -N -L2001:localhost:80 somemachine
+
+### diff two unsorted files without creating temporary files
+diff <(sort file1) <(sort file2)
+
+### Download all images from a site
+wget -r -l1 --no-parent -nH -nd -P/tmp -A".gif,.jpg" http://example.com/images
+
+### Jump to a directory, execute a command and jump back to current dir
+(cd /tmp && ls)
+
+### Efficiently print a line deep in a huge log file
+sed '1000000!d;q' < massive-log-file.log
+
+### Optimal way of deleting huge numbers of files
+find /path/to/dir -type f -print0 | xargs -0 rm
+
+### Outputs a sorted list of disk usage to a text file
+du | sort -gr > file_sizes
+
+### Analyse an Apache access log for the most common IP addresses
+tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | tail
+
+### Display the top ten running processes - sorted by memory usage
+ps aux | sort -nk +4 | tail
+
+### find files of a certain size in a loop style command
+for name in `find *{png,jpg} -size +8M -print`
+do
+	echo file $name is bigger than 8MB
+done

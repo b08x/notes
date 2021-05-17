@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-06-26T20:20:06-04:00
+
+====== pihole ======
+Created Tuesday 26 June 2018
+
+docker create --name=musicbrainz \
+-v /storage/musicbrainz/config:/config \
+-v /storage/musicbrainz/data:/data \
+-e PGID=1041 -e PUID=1041 \
+-e BRAINZCODE=nlz4cluVnYByiExewt5Yras8FN0lz9BHzTuehJkg \
+-e TZ=America/New_York \
+-e WEBADDRESS=192.168.0.27 \
+--memory="2g" --memory-swap="2g" \
+-p 5000:5000 \
+linuxserver/musicbrainz
+
+
+
+sudo docker create --name=pihole \
+-v /storage/docker/pihole/config:/config \
+--memory="1g" --memory-swap="1g" \
+-e TZ=America/New_York \
+-p 53:53 -p 53:53/udp \
+-p 80:80 \
+-p 9010:9010 \
+jervine/docker-centos-pihole

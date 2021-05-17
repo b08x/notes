@@ -1,0 +1,120 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-03-24T00:48:20-04:00
+
+====== mono mixin ======
+Created Sunday 24 March 2019
+
+https://theproaudiofiles.com/mono-in-a-stereo-mix/
+
+
+Today the great majority of commercially available music is mixed in stereo.
+
+There are some exceptions — like The Red Hot Chili Peppers’ Californication which was mostly mixed in mono — but being an audio engineer today requires the skill of knowing when to make use of either mono or stereo information in a mix.
+
+One of the key concepts here is contrast.
+
+Having certain elements in mono can make other elements seem wider, and making good use of the stereo field can add more punch and presence to the tracks in the middle. The latter is important since the elements panned center are usually really important parts like the bass, kick, snare and lead vocals.
+
+There are other key aspects here as well, such as being aware of potential phase problems and making sure you don’t use up more space than you have to in your mix.
+
+Let’s begin.
+
+Phase
+When soundwaves are (partially or totally) out of phase with each other, some frequencies can disappear. A word of caution here is that stereo sounds that have a lot of phase problems between the left and the right channel can sound really wide when played back in stereo, but lose some frequency content when combined to mono.
+
+A good practice is to occasionally listen to your mix in mono, using either a mono button on your mixer/audio interface or a plugin with a mono button on your master bus in your DAW.
+
+You should mostly be listening for sounds that seem to disappear or sounds that lose a lot of treble. Mixes that sound good in mono will usually sound great in stereo; listen to some of your favorite mixes (and mixes you don’t like too much) in mono and get used to how they sound. Then compare with your own mixes.
+
+Don’t Let Your Bass Eat Up Your Space
+Back in the days when most music ended up on vinyl, the low bass had to be in mono since stereo information down in the lower frequencies would make the needle jump out of the groove.
+
+In the digital age (disregarding the recent vinyl revival for now) there are still reasons to keep your bass in mono:
+
+Bass frequencies have a lot of energy (they move lots of air) and will take up more space in a mix than mid or high frequencies. Keeping the bass mono will limit the amount of space used.
+Most subwoofers are mono anyway so you’ll have more control over the sound being played back on different systems if you keep the bass in mono.
+Stereo information might very well mean phase problems when the left and right channels combine (in a mono speaker or in the phantom center between two speakers). Bass frequencies are sensitive to phase problems and can easily lose punch and definition.
+What if you like the sound of bass in stereo? Don’t worry, the human brain can’t localize sound at frequencies lower than about 80 Hz.
+
+This means that there’s no real benefit of having frequencies down there panned out in stereo anyway, so you can concentrate on higher frequencies giving your bass that stereo spread. A couple of ways to do this:
+
+If the bass you’re using contains stereo information, duplicate the track and put an EQ/filter on each track. On the first track, put a low pass filter at 80 Hz. Use your best quality EQ for this to avoid excessive phase distortion. Now make this track mono; you can sum the left and right channel to mono and you can separate the channels into two mono tracks. This will give you three tracks to compare; choose the one that sounds the best to you in terms of punch, clarity etc. On the duplicated track, use a high pass filter starting at 80 Hz. Go higher with the filter and find the sweet spot where you get rid of some mud but still feel that the bass sound is perceived as one sound.
+When the sound source is in mono you have to create the stereo width. Do exactly as in the previous example but instead of “monoizing” the low part, you make the higher frequencies stereo by adding chorus or delaying the left or right channel and adding a subtle pitch shift to either side. Make sure it sounds alright in mono too!
+Send a mono bass sound to a short reverb, filter out everything below 200 Hz on the reverb send.
+Delay
+If you want a track to seem bigger, you can use a stereo delay (usually short delay times).
+
+When the desire is to add depth or move something back in the mix, a mono delay with longer delay times will do it.
+
+Reverb
+Most digital reverbs are in stereo by default, so unless you’re using a plate reverb, spring reverb or a real chamber you probably don’t have to worry about having to make your reverb returns stereo.
+
+There are, nonetheless, some great applications for mono reverbs in a mix.
+
+The first question you should ask yourself is “am I trying to simulate an instrument being played in a real space?”
+
+If the answer is yes, the logical choice is to use a stereo reverb since that’s how (most) humans hear real spaces.
+
+For mono sources such as vocals, guitars and sometimes drums, using a mono reverb such as a plate or a spring reverb can be a great way to get a lot of depth and at the same time limiting the amount of space your reverb takes up in the mix.
+
+Here are two ways to add width to a sound using either mono or stereo reverb:
+
+Use a mono reverb and pan the dry signal and the reverb return to opposite sides.
+If the sound you’re going to process needs to be panned center or close to it, use a stereo reverb with a reverb time shorter than one second.
+Another cool application is using a mono reverb on a wide stereo source. This will give the impression of the sound going from the sides to deep down the middle, kind of like the sound going through a funnel.
+
+
+
+In part one I talked about the importance of listening to your mix (or elements of your mix) in mono, as well as the value of contrast.
+
+Something to keep in mind when listening to your mix in mono is the listening position.
+
+In a stereo setup, there is usually no center speaker (compared to a surround system where there is a mono speaker in-between the left and right front speakers). When listening to two nearfield speakers, you’ll hear the sound that is identical in both the left and right channels — and therefore the left and right speakers — in the phantom center.
+
+So what exactly is this “phantom center”? The phantom center is something our brains create when both our ears pick up the same information, thus localizing the sound source straight ahead of us (or alternatively above/behind us, but let’s not go there now).
+
+The problem is that your room and listening position in all likeliness isn’t perfect. You’ll have sound reflections from one speaker that are different from the sound reflections coming from the other speaker, etc.
+
+Your own distance from each speaker will also be different, causing small timing differences with possible phase problems as a result. This is also relevant because people who hear your mix in mono will generally hear it through one speaker, and you can’t really do much about speaker placement in people’s listening environments anyway.
+
+Next time you listen to your music in mono, try summing to mono and turning off one of your speakers. See if you can hear things more clearly.
+
+Getting a Wider Mix with Mono Tracks
+A lot of synth presets are stereo only due to chorusing or other effects. Unless these effects are a vital part of the sound you’re after, chances are there isn’t a whole lot of important stereo information present.
+
+Having a lot of these types of sounds can result in a bit of a hazy mix instead of a wide and focused one.
+
+Turning off the stereo-izing effects and panning your synths to opposite sides can make your mix wider and at the same time leave more room in the center where your kick, bass and vocals need room to live.
+
+To make your hard-panned synths sit better in the mix, try sending a little bit of it via aux/send to a reverb or short delay (less than 100 ms) with zero feedback and then pan the aux track to the opposite side.
+
+If you don’t have a lot of synths in your mix, maybe only one, you can try copying the MIDI to a new track and choosing a different synth sound and panning that to the opposite side.
+
+Insight Into Your Favorite Mixes
+Using a mid-side matrix such as Waves S1 lets you convert the channels of a stereo track from left and right into middle and side.
+
+Listening to the side channel will let you hear only the information that is different in the right and left channel. This means you’ll hear what is panned to the sides but not present in the center.
+
+If you listen to a commercial mix this way, you can hear interesting things about the choices made in the production and mix that might otherwise be hard to discern.
+
+For instance, is the kick drum and bass totally mono (i.e. not present in the side channel) or do you hear a slight reverb, chorus etc.? Are the vocals double tracked?
+
+Listen to the effects used on background vocals, they can sometimes be quite extreme but hard to spot in a full mix.
+
+Middle Ground
+Mono or stereo, it doesn’t have to be such absolutes — there are in-betweens: more stereo or less stereo.
+
+If you like to keep a sound stereo, but don’t want it to take up too much space in the mix, there are some alternatives.
+
+Some plugins, like the utility plugin in Ableton, let you adjust the stereo width by percentage. Sometimes it’s enough to have 40% stereo width, or even less, and still get the sound you desire but with a smaller footprint in the stereo field.
+
+Another way is to use an EQ that lets you adjust the mid and side channels independently (FabFilter Pro-Q, Ableton’s EQ8 etc).
+
+You can also use a shelving or low cut filter to attenuate the bass information in just the side channel, thereby keeping the most energy-heavy part of the sound in the center.
+
+You can also try boosting the treble in the side channel to make the stereo image seem wider.
+
+While you’re at it, try using different compression or other effects on the mid and side channels.
+
+For sound design, the possibilities are (as usual) endless.

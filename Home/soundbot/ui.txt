@@ -1,9 +1,22 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
-Creation-Date: 2020-12-26T23:02:54-05:00
+Creation-Date: 2018-02-20T05:36:17-05:00
 
 ====== ui ======
-Created Saturday 26 December 2020
+Created Tuesday 20 February 2018
 
-## 
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/michael/.i3/workspace-1.json'; exec termite; exec termite"
 
+
+
+https://in-thread.sonic-pi.net/t/sonic-pi-for-standalone-installations/225/4
+
+
+
+
+
+@surfraw
+
+
+@dwm @window-manager
+[ ] https://dwm.suckless.org/

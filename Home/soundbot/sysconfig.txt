@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-10-27T03:53:49-04:00
+
+====== sysconfig ======
+admin/configuration stuff specifically related to soundbot
+
+
+[*] create .desktop for timemachine and configure for using a mic

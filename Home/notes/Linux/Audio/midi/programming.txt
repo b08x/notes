@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-10-30T02:02:28-04:00
+
+====== programming ======
+Created Wednesday 30 October 2019
+
+==== midi events to shell commands ====
+https://github.com/zawwz/zmidimap/blob/master/example.mim
+
+https://github.com/gbevin/SendMIDI

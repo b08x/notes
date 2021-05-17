@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+Thank you for applying for the role of Support Engineer at GitLab.
+To get an idea of how you approach support engineering, I would like to ask you some questions. These questions cover the topics that Support Engineering touches on, being Development, Sysadmin, knowledge of git, and of course customer support. The questions are open-ended on purpose, and there isn't necessarily a right or wrong answer, we are looking for the way you reason and also your ability to communicate your reasoning.
+
+### Question 1
+If you are going to install something on Linux, what are the different ways that could be done?
+
+Ideally using a system package (eg dnf/rpm,apt-get/deb,etc) as typically any dependencies would automatically be installed. If a package isn't available, compile from source (make,cmake,waf,etc).
+
+
+### Question 2
+What are the advantages and disadvantages of using a Web framework such as Rails?
+
+A core advantage of Rails and other MVC designs, is that they simplify a implementing a complex design practice when creating a webapp. Using scaffolds, somewhat tedious aspects of the process can be automated so developers don't have to start from scratch. Rails has built in security methods (such as 'sanatize') to help with building a secure application. Another advantage is reusable code. Multiple views can rely on the same model. When testing, the data migration feature in Rails is quite useful when working with different datasets.
+
+One disadvantage, is that Rails can be a bit much for smaller projects (single page sites or apps that share only one host). A decent amount of resources needs to be allocated for optimal performance. In terms of troubleshooting, Rails or any other framework present the same challenges.
+
+### Question 3
+What would you do if you found a bug in your software and wanted to use git to help identify when this problem started?
+
+Using clues from the stacktrace, I'd search git to see if there have been any recent commits on the file being referenced. I would then cross-reference the dates from those commits with any system logs (rails,docker,jourald,syslog,etc).
+
+Another way would be to use git `bisect` to search commits between the current bad commit and the last known good commit, then compiling each commit found to see if the issues within.
+
+### Question 4
+Describe the resources or steps you may use to resolve a customer’s problem when you don’t know the answer. (Make assumptions wherever you need to about how the GitLab team works).
+
+I'd let the customer know we're working on a answer and that I'll ping them as soon possible. I'll do a bit of research using google/stackoverflow/github as well as referring to any internal knowledge base resources available. After initial research, I may ask the customer further questions and perhaps ask them to send along some logs. If it isn't a time sensitive issue, I may fire up a VM in an attempt to replicate the issue.  If the answer still wasn't apparent, type up a quick review with what was found so far, then query the team chat room to see if anyone is available to assist. While waiting for a reply, continuing recon and testing.
+
+
+### Question 5
+If you have them, please provide links to what you consider some of your best answers on forums such as Stack Overflow, Reddit, or in projects on GitLab, GitHub, etc.
+
+I don't do much posting these days as I do most of my answering on IRC. If you'd like to send back a couple of example questions I would be expected to answer as a Support Engineer, I'd be more than happy to answer.
+
+Please take your time to formulate your responses, and send them back via email when you are done. If you will take longer than 10 days, please let us know; otherwise, we will assume you are no longer interested in the position and decline your application. If possible, please reply to this email with an attached .pdf or .doc with your answers.
+
+Thank you!

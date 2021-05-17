@@ -1,0 +1,164 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2017-09-08T13:35:59-04:00
+
+====== mediabot ======
+Created Friday 08 September 2017
+
+
+
+
+====== nzebot ======
+
+# docker-compose build throws an error about the docker_host variable
+
+https://github.com/docker/compose/issues/88
+
+----
+
+docker assigns a dynamic ip every time these things are restarted. that sucks. make it not suck. 
+
+Tuesday 20/02/2018 17:46
+actually, possibly solved by setting DB_SOCKET var in config.php ?
+(configuration/config.php in nzedb folder)
+
+
+
+
+--------------------
+
+
+Usenet username/password:
+
+NEWS.USENETSERVER.COM
+purplestuff/Btcs404!
+
+====== musicbrainz ======
+Created Monday 17 July 2017
+
+docker create --name=musicbrainz \
+-v /storage/musicbrainz/config:/config \
+-v /storage/musicbrainz/data:/data \
+-e PGID=1041 -e PUID=1041 \
+-e BRAINZCODE=nlz4cluVnYByiExewt5Yras8FN0lz9BHzTuehJkg \
+-e TZ=America/New_York \
+-e WEBADDRESS=192.168.41.4 \
+--memory="2g" --memory-swap="2g" \
+-p 5000:5000 \
+linuxserver/musicbrainz
+
+====== metabrainz login ======
+
+https://metabrainz.org/profile
+
+userid: b08x
+pass: Btcs404!
+
+
+
+~~subsonic~~
+
+~~docker create \~~
+~~--name="subsonic" \~~
+~~-v /backups/Music:/opt/music:ro \~~
+~~-e PGID=1041 -e PUID=1041 \~~
+~~-e TZ=America/New_York \~~
+~~--memory="2g" --memory-swap="2g" \~~
+~~-p 8080:8080 \~~
+~~docker.io/cyrilix/subsonic:latest~~
+
+~~Email: warehos@gmail.com~~
+~~License: b2844ab7945e53fdea8066632e6df91c~~
+
+====== couchpotato ======
+
+docker create \
+--name="couchpotato" \
+-v /storage/nzb/couchpotato/config:/config \
+-v /storage/nzb/downloads/completed/movies:/downloads \
+-v /storage/media/movies:/movies \
+-e PGID=1041 -e PUID=1041 \
+-e TZ=America/New_York \
+-p 5050:5050 \
+docker.io/linuxserver/couchpotato
+
+====== nzbget ======
+
+docker create \
+--name nzbget \
+-p 6789:6789 \
+-e PGID=1041 -e PUID=1041 \
+-e TZ=America/New_York \
+-v /storage/nzb/nzbget/config:/config \
+-v /storage/nzb/downloads:/downloads \
+docker.io/linuxserver/nzbget
+
+
+====== headphones ======
+
+docker create \
+--name="headphones" \
+-v /storage/nzb/headphones/config:/config \
+-v /storage/nzb/downloads/completed/music:/downloads \
+-v /storage/media/audio:/music \
+-e PGID=1041 -e PUID=1041 \
+-e TZ=America/New_York \
+-p 8181:8181 \
+docker.io/linuxserver/headphones
+
+~~docker create \~~
+~~--name="hydra" \~~
+~~-v /storage/nzb/hydra/config:/config \~~
+~~-v /storage/nzb/downloads:/downloads \~~
+~~-e PGID=1041 -e PUID=1041 \~~
+~~-e TZ=America/New_York \~~
+~~-p 5075:5075 \~~
+~~docker.io/linuxserver/hydra~~
+
+====== sonarr ======
+
+sudo docker create \
+--name="sonarr" \
+--memory="1g" --memory-swap="1g" \
+-p 8989:8989 \
+-e PUID=1041 -e PGID=1041 \
+-e TZ=America/New_York \
+-v /etc/localtime:/etc/localtime:ro \
+-v /storage/nzb/sonarr/config:/config \
+-v /storage/media/tv:/tv \
+-v /storage/nzb/downloads/completed/tv:/downloads \
+docker.io/linuxserver/sonarr
+
+
+@plex @docker
+
+docker create \
+--name=plex \
+--net=host \
+-e VERSION=latest \
+-e PUID=1041 -e PGID=1041 \
+-e TZ=America/New_York \
+-v /opt/docker/plex/config:/config \
+-v /storage/media/tv:/data/tvshows \
+-v /storage/media/movies:/data/movies \
+-v /storage/media/Music:/data/music \
+-v /opt/docker/plex/transcode:/transcode \
+linuxserver/plex
+
+@minidlna
+https://wiki.archlinux.org/index.php/ReadyMedia
+docker run -d \
+--net="host" \
+--name=minidlna \
+-v /storage/media/movies:/media/movies \
+-v /storage/media/tv:/media/tv \
+-v /storage/media/music:/media/music \
+-v /opt/docker/minidlna:/config \
+-v /etc/localtime:/etc/localtime:ro \
+-e SCHEDULE_SCAN_DAYS=06 \
+-e SCHEDULE_SCAN_HOURS=02 \
+-e SCAN_ON_BOOT=no \
+-e UMASK=000 \
+-e PUID=1041 \
+-e PGID=1041 \
+binhex/arch-minidlna

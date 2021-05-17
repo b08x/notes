@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-15T10:00:36-04:00
+
+====== open source synth challenge ======
+Created Saturday 15 September 2018
+
+https://fmchallenge.osamc.de/
+

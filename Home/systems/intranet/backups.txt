@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-29T08:45:59-04:00
+
+====== backups ======
+Created Saturday 29 September 2018
+
+@rsync @backups
+rsync -r -t -p -o -g -v --progress -u --numeric-ids -i -s --exclude=*.cache --exclude=*.git --exclude=source/ --exclude=Downloads/ --exclude=.rvm/ --exclude=.local/ --exclude=.* /home/b08x /mnt/something/backups

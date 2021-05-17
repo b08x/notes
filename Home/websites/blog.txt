@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-14T10:21:38-04:00
+
+====== blog ======
+Created Friday 14 September 2018
+
+[ ] when exporting zim notebook, update internal links so they reference .html not .markdown
+
+[ ] screen shot img files aren't being exported or at least not linked so jekyll sees it
+	* ERROR `/notes/notepad/2018/08/26/26/screenshot_2018-08-26-104616.png' not found.
+
+[ ] spacing...
+
+[ ] turn @ tags into links to tag pages..

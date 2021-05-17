@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-23T09:25:55-05:00
+
+====== xfce polkitagent ======
+Created Tuesday 23 January 2018
+
+XFCE PolicyKit Agent
+
+Bypass password prompt
+To achieve something similar to the sudo NOPASSWD option and get authorized solely based on user/group identity, you can create custom rules in /etc/polkit-1/rules.d/. This allows you to override password authentication either only for specific actions or globally. See [1] for an example rule set.
+
+Globally
+Create the following file as root:
+
+/etc/polkit-1/rules.d/49-nopasswd_global.rules
+/* Allow members of the wheel group to execute any actions
+ * without password authentication, similar to "sudo NOPASSWD:"
+ */
+polkit.addRule(function(action, subject) {
+	if (subject.isInGroup("wheel")) {
+		return polkit.Result.YES;
+	}
+});

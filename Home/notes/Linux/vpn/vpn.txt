@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== vpn ======
+Created Sunday 09 July 2017
+
+openvpn setup notes
+
+
+https://github.com/Anonymouslemming/jumpbox
+
+https://www.savjee.be/2014/04/Running-OpenVPN-on-a-cheap-RamNode-VPS/
+
+
+
+get tun0 interface uuid added automatically to [[/usr/local/etc/trusted_networks]]
+
+figure out the whole trusted networks thing
+
+the problem seems to be when running ff in firejail, as when we run midori through the vpn it works
+
+
+https://wiki.archlinux.org/index.php/NetworkManager#Use_dispatcher_to_connect_to_a_VPN_after_a_network_connection_is_established
