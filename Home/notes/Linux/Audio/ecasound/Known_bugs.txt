@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-17T23:57:54-04:00
+
+
+# Known "bugs":
+#  - if ecasound's internal sample rate doesn't match audio file's
+#    sample rate, signal will get resampled twice
+

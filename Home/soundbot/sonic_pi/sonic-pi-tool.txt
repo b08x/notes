@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2018-10-23T17:39:55-04:00
 
 ====== sonic-pi-tool ======
@@ -9,3 +9,8 @@ Created Tuesday 23 October 2018
 # installing rust and cargo on debian;
 curl -sSf https://static.rust-lang.org/rustup.sh | sh
 
+when using sonic-pi-tool, it looks in 4 places
+
+https://github.com/lpil/sonic-pi-tool/blob/master/src/lib.rs
+
+either install to [[/opt/sonic-pi]] or edit this file. 

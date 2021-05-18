@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-18T01:56:10-04:00
+
+====== no rule to make target ======
+can't find libogg.a
+
+it's set to look in vendor/lib 
+with fedora, this needs to be set to vendor/lib64
+
+[ 95%] Built target aubio-5
+Scanning dependencies of target aubio_onset
+[ 96%] Building C object CMakeFiles/aubio_onset.dir/examples/aubioonset.c.o
+[ 98%] Building C object CMakeFiles/aubio_onset.dir/examples/utils.c.o
+gmake[6]: *** No rule to make target '/opt/sonic-pi/app/external/build/ogg-package/lib/libogg.a', needed by 'aubio_onset'.  Stop.
+gmake[5]: *** [CMakeFiles/Makefile2:97: CMakeFiles/aubio_onset.dir/all] Error 2
+gmake[4]: *** [Makefile:103: all] Error 2
+gmake[3]: *** [CMakeFiles/aubio.dir/build.make:131: aubio-prefix/src/aubio-stamp/aubio-build] Error 2
+gmake[2]: *** [CMakeFiles/Makefile2:136: CMakeFiles/aubio.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/aubio.dir/rule] Error 2
+

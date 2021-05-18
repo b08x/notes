@@ -1,0 +1,426 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-17T23:58:37-04:00
+
+====== ecasound ======
+Created Monday 17 May 2021
+
+
+Implementing Loudspeaker Crossovers using Ecasound and ACDf LADSPA plugins
+document version 1.0
+Charlie Laub, June 2016
+
+===============================================================================
+
+ABOUT ECASOUND:
+
+Ecasound is a linux audio processing application. Ecasound is a LADSPA host with
+flexible channel routing, making it an excellent choice for implementing
+loudspeaker crossovers under Linux. ACDf and mTAP are LADSPA plugins written by
+Charlie Laub that implement filters (ACDf) and multi-channel fractional digital
+delay (mTAP).
+
+AUDIO SIGNAL ROUTING IN ECASOUND:
+
+Basic audio flow inside an Ecasound chainsetup is as follows: Audio data is
+routed from input audio objects to a group of chains. In the chains audio data
+is processed using chain operators. After processing data is routed to output
+objects.
+
+Using internal loop devices, it's also possible to route signals from one chain
+to another. Looping causes extra latency of one engine cycle.
+
+Routing of signals is based on the ability to assign inputs and outputs to
+multiple chains. Assigning an input object to multiple chains divides the audio
+signal generating multiple copies of the original input data. Similarly with an
+output object, data from multiple chains is mixed together to one output object.
+ 
+ONLINE RESOURCES AND HELPFUL HINTS:
+
+There is a body of information about ecasound on the internet. This includes a
+manual page and examples. These do not help you understand how to use ecasound
+to implement loudspeaker crossovers except for one fantastic tutorial by
+Richard Taylor, which should be required reading for the ecasound novice. See:
+http://rtaylor.sites.tru.ca/2013/06/25/digital-crossovereq-with-open-source-software-howto/
+The ecasound man page is, however, a good technical resource:
+http://eca.cx/ecasound/Documentation/ecasound_manpage.html
+
+Ecasound is invoked from the command line, and sometimes the string of ecasound
+commands can grow quite large. The backslash character "\" is used in Ecasound
+to continue the command string past the end of the line and allows for a more
+readable presentation. The ecasound command string can be placed in an
+executable shell script and then invoked from the command line using the script
+file name. See the section entitled "Using a Shell Script for Ecasound" later in
+this document for information on how to create and use a shell script for a
+crossover.
+
+LIMITATIONS:
+
+The main limitation of ecasound for audio processing is that it must be able to
+discover, or must by explicitly told, the format of the audio - the bit depth,
+the number of channels, and the sample rate. For more details about the format
+speficier "-f:x,x,x" please see the section entitled "Using the Ecasound Format
+Specifier" later in this document. If the format cannot be discerned from the
+input itself and the user does not state the format explicitly ecasound uses the
+default format defines in its configuration file. If the default format and the
+format of the input do not agree, white digital noise at max volume, or other
+incorrect playback behavior, may be produced. When the input is a filetype that
+has format information encoded in a header such as MP3 or WAV ecasoudn will
+discover the format when the file is opened as input. Note that ecasound may or
+may not correctly discover the format of FLAC files. 
+
+To permit uninterrupted playback of a wide range of formats, one option is to
+use another program to resample all audio to a format of the user's choosing
+before passing the audio to ecasound. One avenue for this is to use MPD as the
+player software and include resampling as part of its output configuration.
+Audio could also be sent or piped to Sox for resampling and then to ecasound. A
+custom ALSA plugin could also be created that includes resampling and the audio
+routed through that first.
+
+ABOUT LADSPA PLUGINS:
+
+LADSPA is an acronym for Linux Audio Developer's Simple Plugin API. It is an
+application programming interface (API) standard for handling audio filters and
+audio signal processing effects, licensed under the GNU Lesser General Public
+License (LGPL). LADSPA "plugins" must be called from a host program. A list of
+LADSPA hosts (including ecasound) can be found here:
+http://wiki.linuxaudio.org/apps/categories/ladspa
+Before use, plugins must be compiled for the operating system under which the
+LADSPA host is running. Because of the difficulty of compiling LADSPA plugins
+for Windows they are most commonly employed within a Linux OS.
+
+The ACDf LADSPA plugin can implement a wide variety of first and second order
+filters and EQ. ACD refers to the Active Crossover Designer, a set of Excel
+based tools for designing active crossovers for loudspeakers using acoustic
+measurements of the system. ACD can be found on the web at:
+http://audio.claub.net/software/ACD/ACD.html
+For more information on how to use ACDf please see the ACDf usage notes.
+
+mTAP is a companion LADSPA plugin to ACDf for simultaneously implementing a
+number of fractional delay lines. Example usage of mTAP is give as part of the
+examples, below.
+
+
+
+LOUDSPEAKER CROSSOVERS USING LADSPA + ECASOUND: 
+===============================================================================
+A crossover is implemented using one or more filters or EQ stages, and delay.
+These signal processing units are implemented with LADSPA plugins under
+ecasound. While plugins can be called directly as part of the ecasound command
+string, it is convenient to place the LADSPA filter specifiers in their own text
+files having the '.ecp' extension (ECP = Ecasound Chain Preset). See Richard
+Taylor's web page for more details on this. The use of ecp files for ACDf
+filtering is assumed for the remainder of this document. The exception to this
+rule is for the mTAP delay plugin, which will be called explicity and not thru
+an ecp file.
+
+Several examples of how ecasound can be used to implement loudspeaker crossovers
+are provided below. 
+
+--------------------
+
+EXAMPLE 1: EQ only, no crossover.
+Full-range enthusiasts or those users who just want to EQ the response a bit can
+use this simplified approach:
+ecasound -B:rt -f:bits,channels,rate -i:[input] -pf:EQ.ecp -o:alsa,front:DAC
+EXPLANATION:
+   -B:rt sets the buffering_mode to real-time processing
+   -f:x,x,x describes the audio format of the input
+   -i:[input] specifies an input. This could be a file like mysong.wav
+   -pf: this tells ecasound to apply all the plugins in the EQ.ecp file
+   -o:... this sends the processed audio to a device called "DAC" via alsa
+
+--------------------
+
+EXAMPLE 2: Basic 2-way crossover with a multi-channel DAC
+ecasound -B:rt -z:mixmode,sum \
+   -a:pre -i:mysong.mp3 -pf:pre.ecp -o:loop,1 \
+   -a:woofer,tweeter -i:loop,1 \
+   -a:woofer -pf:woofer.ecp -chorder:1,2,0,0 \
+   -a:tweeter -pf:tweeter.ecp -chorder:0,0,1,2 \
+   -a:woofer,tweeter -f:16,4,44100 -o:alsa,surround51:Device
+EXPLANATION:
+In this example loops and named chains are used. Because this is a crossover the
+audio must be split into two chains, one for the woofer and one for the tweeter,
+specific filters applied to each chain (e.g. highpass or lowpass), and then the
+chains are merged before sending the audio to a multichannel DAC.
+line 1: The real-time buffering mode is used as before. 'mixmode,sum' tells
+ecasound to sum channels when combining chains
+line 2: Input is taken from an mp3 file - it has a format header, so we do not
+need to specify the format. Apply the LADSPA filter(s) found in the file
+'pre.ecp' and then pass the audio into a loop with a loop ID of '1'
+line 3: Create two new audio chains called woofer and tweeter and connect them
+to the output of loop '1'.
+line 4: For the woofer chain, apply the LADSPA filters found in the file
+woofer.ecp. Then re-organize the channels into four new channels. The previous
+channel 1 and 2 remain in the same spots and two new channels (3 and 4)are
+created and left empty.
+line 5: For the tweeter chain, apply the LADSPA filters found in the file
+tweeter.ecp. Then re-organize the channels into four new channels. The previous
+channel 1 and 2 are moved to the new channels 3 and 4 and new channels 1 and 2
+are created and left empty.
+line 6: The woofer and tweeter chains are combined. Because the mixmode was set
+to 'sum' the channels of one chain was summed with the corresponding channel of
+the other chain. For example, the new channel 1 is the sum of woofer chain
+channel 1 and tweeter chain channel 1, and so on. Because of how the input
+channels were mapped to the new four channels on lines 4 and 5 for the woofer
+and tweeter, a channel with audio data for the woofer corresponds to an empty
+channel for the tweeter, and vice versa. The result is four channels: woofer1,
+woofer2, tweeter1, and tweeter2. A new format specifier indicates four channels
+of audio. As a result, all four channels are sent (output) to an alsa device
+called Device, using its "surround51" subdevice. 
+
+--------------------
+ 
+EXAMPLE 3: a 2-way crossover with digital delay (using the mTAP delay plugin)
+implemented using two stereo DACs (NOTE the DACS must use USB adaptive mode. Do
+not use asynchronous DACs with this example)
+
+As mentioned in example 2, processing for woofer, tweeter and other drivers is
+done by defining "chains" and applying processing such as LADSPA filters to each
+chain as needed. To integrate mTAP into this scheme, all the chains are mixed
+together into a new chain called 'delay' to which mTAP is then applied. The
+resulting audio is broken up into two new chains, one for each DAC.
+
+Assuming the LADSPA filters are listed in 'ecp' text files, a 2-way stereo
+crossover with delay could be implemented using the following commands:
+ecasound -z:mixmode,sum -B:rt -b:512  \
+   -a:pre -f:16,2,44100 -i:alsahw,2,0 -pf:pre.ecp -o:loop,1 \
+   -a:woofer,tweeter -i:loop,1         \
+   -a:woofer -pf:woofer.ecp -chorder:1,0,2,0 \
+   -a:tweeter -pf:tweeter.ecp -chorder:0,1,0,2 \
+   -a:woofer,tweeter -f:16,4,44100 -o:loop,2 \
+   -a:delay -i:loop,2 -el:mTAP,d1,d2,d3,d4 -o:loop,3 \
+   -a:DAC1,DAC2 -i:loop,3 \
+   -a:DAC1 -chorder:1,2 -f:16,2,44100 -o:alsa,front:DAC \
+   -a:DAC2 -chorder:3,4 -f:16,2,44100 -o:alsa,front:DAC_1
+EXPLANATION:
+line 1: specifies that channels should be combined by summing them, that real
+time buffering mode shall be used, and sets a buffer size of 512 samples (NOTE:
+the buffer size must be a power of 2)
+line 2: specifies the input. The format specifier states that the input format
+is 16bit stereo audio at 44.1kHz. Then an alsa source is connected as input.
+LADSPA filters in the pre.ecp file are then applied to the audio stream. The
+resulting audio is output to loop #1.
+line 3: two new chains called woofer and tweeter are created and their input is
+connected to the audio stream sent to loop #1.
+line 4: LADSPA filters are applied to the woofer chain. Next, the stream is re-
+organized into four channels, mapping the previous channel #1 to the new channel
+1, the previous channel #2 to the new channel 3, and leaving the other two
+channels empty (channels 2 and 4)
+line 5: LADSPA filters are applied to the tweeter chain. Next, the stream is re-
+organized into four channels, mapping the previous channel #1 to the new channel
+2, the previous channel #2 to the new channel 4, and leaving the other two
+channels empty (channels 1 and 3)
+line 6: The woofer and tweeter chains are mixed together. The format (-f:)
+specifier is used to signal that the total number of channels should be limited
+to four when the next audio object specifier is encountered. Because channels in
+woofer that have audio data correspond to channels in tweeter that are empty (
+and vice versa) the result is the four channels: woofer1, tweeter1, woofer2,
+tweeter2. This four channel stream is then passed to loop #2
+line 7: A new chain called 'delay' is created and its input connected to the
+audio data in loop #2. The mTAP LADSPA plugin is then applied, where d1, d2, d3,
+and d4 are the delays for channel 1-4. The resulting audio is passed to loop #3 
+line 8: Two new chains called DAC1 and DAC2 are created and the input for both
+chains is connected to the audio stream in loop #3
+line 8: Re-organize the channels of chain DAC1 by assigning channel 1 from the
+input to the first of two new channels and channel 2 to the second of the two
+new channels. The third and fourth channels remain unchanged. The format
+specifier (-f:) indicates 2 channels - this will cause the third and fourth
+channels to be discarded from the chain when it is send to the output. Finally,
+send the output to an alsa device called "DAC"
+line 9: Re-organize the channels of chain DAC2 by assigning channel 3 from the
+input to the first of two new channels and channel 4 to the second of the two
+new channels. The third and fourth channels remain unchanged. The format
+specifier (-f:) indicates 2 channels - this will cause the third and fourth
+channels to be discarded from the chain when it is send to the output. Finally,
+send the output to an alsa device called "DAC_1"
+
+Assuming the input channel 1 = "left" and 2 = "right, the audio output from the
+ecasound commands shown above produces:
+DAC left channel: left-woofer
+DAC right channel: left-tweeter
+DAC_1 left channel: right-woofer
+DAC_1 right channel: right-tweeter  
+
+--------------------
+
+EXAMPLE 4: Extending the previous example to a 3-way loudspeaker
+It is relatively straightforward to extend example 3 from a 2-way to a 3-way
+system. We will add or change the following lines:
+a. add a midrange channel by changing this line:
+   -a:woofer,tweeter -i:loop,1 \
+to this:
+   -a:woofer,midrange,tweeter -i:loop,1 \
+b. add the midrange processing and two more channels by changing these lines:
+   -a:woofer -pf:woofer.ecp -chorder:1,0,2,0 \
+   -a:tweeter -pf:tweeter.ecp -chorder:0,1,0,2 \
+to these lines:
+   -a:woofer -pf:woofer.ecp -chorder:1,2,0,0,0,0 \
+   -a:midrange -pf:mid.ecp -chorder:0,0,1,2,0,0 \
+   -a:tweeter -pf:tweeter.ecp -chorder:0,0,0,0,1,2 \
+c. change this line:
+   -a:woofer,tweeter -f:16,4,44100 -o:loop,2 \
+to this:
+   -a:woofer,midrange,tweeter -f:16,6,44100 -o:loop,2 \
+d. add to more channels to the delay plugin by changing this:
+   -a:delay -i:loop,2 -el:mTAP,d1,d2,d3,d4 -o:loop,3 \
+to this:
+   -a:delay -i:loop,2 -el:mTAP,d1,d2,d3,d4,d5,d6 -o:loop,3 \
+e. to accomodate the 6 channels of the 3-way stereo crossover we need to use
+another DAC for output. Check this line:
+   -a:DAC1,DAC2 -i:loop,3 \
+to this:
+   -a:DAC1,DAC2,DAC3 -i:loop,3 \
+f. Finally, add a line for the additional DAC:
+   -a:DAC3 -chorder:5,6 -f:16,2,44100 -o:alsa,front:DAC_2
+at the end and add a backslash at the end of the line above it.
+
+The channel assignments have been changed compared to example 3. These were done
+in step (b) above. The DAC output are now:
+DAC left channel: left-woofer
+DAC right channel: right-woofer
+DAC_1 left channel: left-midrange
+DAC_1 right channel: right-midrange 
+DAC_2 left channel: left-tweeter 
+DAC_2 right channel: right-tweeter  
+These channel assignments are completely arbitrary and are determined by the 
+"-chorder:..." statements shown under step (b), above.
+
+Note in this example the three DACs have the name DAC, DAC_1, and DAC_2. When
+multiple identical devices are connected to the system (e.g. multiple USB DACs)
+ALSA appends first "_1" to the name of the second device, appends "_2" to the
+third device, and so on. The base device name could be anything, e.g. DAC,
+CODEC, MySpiffyDAC, or whatever label text the manufacturer decided to use. 
+
+--------------------
+
+EXAMPLE 5: A Monophonic Multi-way Crossover
+In the case that the computing hardware is used to only process one channel,
+e.g. for implementing the crossover for the left channel only, there will be a
+couple of modifications. Consider again the 2-way crossover from example 2.
+Assuming "left" is channel 1 in the input stream, we need to remove all of the
+references to channel 2 and we need to drop channel 2 from the input itself.
+Thus, we obtain the following:
+ecasound -B:rt -z:mixmode,sum \
+   -a:input2mono -i:mysong.mp3 -chorder:1,0 -f:16,1,44100 -o:loop,1 \
+   -a:pre -i:loop,1 -pf:pre.ecp -o:loop,2
+   -a:woofer,tweeter -i:loop,2 \
+   -a:woofer -pf:woofer.ecp -chorder:1,0 \
+   -a:tweeter -pf:tweeter.ecp -chorder:0,1 \
+   -a:woofer,tweeter -f:16,2,44100 -o:alsa,front:Device
+EXPLANATION of changes made from example 2:
+a. On line 2 we use a new chain called 'input2mono to convert the input to a
+single channel. -chorder:1,0 reorganizes the channels, with the first channel of
+the input put into channel 1 and channel 2 muted/empty. The sample format
+specifier with only one channel at 16/44.1 causes the second (empty) channel to
+be dropped when audio is passed to loop '1', resulting in monophonic audio.
+b. Line 3 is the now familiar "pre" chain
+c. As before we create new chains for woofer and tweeteron line 4 
+d. On Line 5 and 6 the -chorder statements function as before but have been
+adjusted here to a total of two channels
+e. As before, line 7 combines the channels from woofer and tweeter. The format
+specifier has changed to reflect that there are only 2 total channels. The
+output is sent to the front (2-channel) output subdevice of the ALSA device
+called 'Device'.
+ 
+If the above was repeated for the right channel, the only required change is in
+the second line where -chorder:1,0 would be changed to -chorder:2,0 so that
+channel one contains the "right channel" (channel 2 of the input) audio data.
+
+
+
+===============================================================================
+
+INVOKING ECASOUND USING A SHELL SCRIPT: 
+
+A convenient way to implement the ecasound command string is via a shell script.
+A shell script is much like a Windows batch file - it contains commands that the
+user could type at the command line. In Linux, first line of the shell script
+typically is used for text that identifies the file as a shell script to the
+operating system and tells it which command interpreter to use. I use the bash
+shell, but others are possible. 
+
+To create a shell script for ecasound follow these instructions:
+
+1. create a new text file with an editor. On the first line enter the following:
+#!/bin/bash
+2.Paste your ecasound command string into the file below the first line, just
+like you would run it from the command line. You can use the backslash character
+at the end of each line (as usual) to make it more readable. Save the file as
+'crossover.sh' or whatever name makes sense - the ".sh" extension indicates that
+this is a shell script. Exit the editor. 
+3.At the command prompt, type:
+sudo chmod +x crossover.sh
+This changes the permissions on the file so that the operating system treats it
+as an executable file. 
+4. Now when you type
+./crossover.sh
+the ecasound command string within the shell script will be executed and its
+output will appear on the screen.
+
+Since crossover.sh is a text file, it's a simple matter to make changes by
+opening the file in your editor (feel free to leave it open in the editor).
+Saving the file and restarting ecasound is all that is needed to implement any
+changes that are made to the ecasound command string.
+
+
+
+===============================================================================
+
+USING THE ECASOUND FORMAT SPECIFIER:
+
+Audio format (the bit depth, number of channels, and sample rate) information is
+described using the format specifier in Ecasound. This has the following form:
+-f:bit_depth,num_channels,sample_rate
+After a format has been specified that format remains in effect until another
+format specifier is given. The ecasound man page states that the format "sets
+the audio stream parameters for subsequent audio objects", meaning when
+subsequent audio objects are created. Note that ecasound loops and chains are
+both audio objects, as are outputs and inputs.
+
+Ecasound can discover the format for some input file types like WAV and MP3.
+This sets the audio format for subsequent audio objects even though the format
+specifier "-f:x,x,x" has not been explicity provided in the ecasound command
+string. 
+
+Use the format specifier BEFORE an audio object is created to ensure that the
+object is created with the correct format, e.g. a sufficient number of channels,
+or that extraneous channels are truncated when the existing chain is passed to
+the new object. This includes before the input specifier "-i:...".
+
+This concept is used in example 3 in line 6:
+-a:woofer,tweeter -f:16,4,44100 -o:loop,2 \
+The existing two 4-channel chains, woofer and tweeter, are being mixed and then
+sent to the new audio object "loop" having an ID of '2'. The previous format
+specifier in the ecasound command string specified 2 channels of audio. To
+ensure that channels 3 and 4 from woofer and tweeter are not truncated as audio
+is passed into loop,2 the new format specifier indicating 4 channels is placed
+just before the loop object declaration. 
+
+
+
+TROUBLESHOOTING AND TERMINATING ECASOUND
+===============================================================================
+If ecasound encounters a problem it will typically terminate on its own. You can
+force a running, interactive ecasound instance to terminate by typing control-C.
+If ecasound is running in the background use the linux "kill -9" command
+followed by the process ID number (PID) for ecasound. Get the PID using the
+linux OS program "top" and looking for the ecasound entry.
+
+To troubleshoot the source of the problem when things go wrong it is helpful to
+have debug output produced by ecasound. There are three levels of debug info
+verbosity that are turned on using the "-d" (least amount of debug into), "-dd",
+or "-ddd" (greatest amount of debug info) options. Add one of these debug
+switches to the first line of the ecasound command string, e.g.:
+ecasound -ddd -B:rt -z:mixmode,sum \
+
+The debug info can be sent to stderr instead of stdout using the -D switch. 
+===============================================================================
+
+
+Bug reports and Other Feedback
+~~~~~~~~~~~
+Please send suggestions for improvements, bug reports, or comments to:
+ACD@claub.net
+

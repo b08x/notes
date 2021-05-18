@@ -8,3 +8,31 @@ Created Tuesday 27 October 2020
 atom sonic-pi auto-complete:
 add options to sample/fx/synth auto completes
 add samples
+
+https://mxs.sbrk.org/aerodynamic-something-that-rings-a-bell-en.html
+
+http://www-b.uec.tmu.ac.jp/shakuhachi/SonicPi/
+
+https://github.com/mojoD/hack-spi
+
+
+
+http://www.sonicpiliveandcoding.com/
+
+https://atom.io/packages/sonic-pi-autocomplete
+
+https://gist.github.com/jwinder/e59be201082cca694df9
+
+
+in util.rb
+
+	def num_buffers_for_current_os
+	  #4096
+	  1024
+	end
+
+
+
+
+----
+http://www.rubydoc.info/github/samaaron/sonic-pi/SonicPi/OSC/UDPClient

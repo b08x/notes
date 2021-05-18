@@ -1,16 +1,9 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2018-01-27T04:40:56-05:00
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-18T01:58:54-04:00
 
-====== sonic-pi ======
-Created Saturday 27 January 2018
-
-when using sonic-pi-tool, it looks in 4 places
-
-https://github.com/lpil/sonic-pi-tool/blob/master/src/lib.rs
-
-either install to [[/opt/sonic-pi]] or edit this file. 
-
+====== gvfs ======
+Created Tuesday 18 May 2021
 
 ---
 
@@ -50,39 +43,3 @@ Created symlink /home/b08x/.config/systemd/user/gvfs-daemon.service → /dev/nul
 Created symlink /home/b08x/.config/systemd/user/gvfs-udisks2-volume-monitor.service → /dev/null.
 [b08x@jambot ~] $ systemctl --user mask gvfs-metadata.service 
 Created symlink /home/b08x/.config/systemd/user/gvfs-metadata.service → [[/dev/null.]]
-
-
---------
-
-
-====== sonicpi ======
-Created Wednesday 06 September 2017
-
-https://mxs.sbrk.org/aerodynamic-something-that-rings-a-bell-en.html
-
-http://www-b.uec.tmu.ac.jp/shakuhachi/SonicPi/
-
-https://github.com/mojoD/hack-spi
-
-
-
-http://www.sonicpiliveandcoding.com/
-
-https://atom.io/packages/sonic-pi-autocomplete
-
-https://gist.github.com/jwinder/e59be201082cca694df9
-
-
-in util.rb
-
-	def num_buffers_for_current_os
-	  #4096
-	  1024
-	end
-
-
-
-
-----
-http://www.rubydoc.info/github/samaaron/sonic-pi/SonicPi/OSC/UDPClient
-

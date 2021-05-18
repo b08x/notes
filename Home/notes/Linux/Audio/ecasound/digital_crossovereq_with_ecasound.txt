@@ -1,0 +1,216 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-18T00:04:59-04:00
+
+====== digital crossovereq with ecasound ======
+Created Tuesday 18 May 2021
+
+One could use this system to implement the xover/eq for the Linkwitz Labs Pluto 2.1 or LX521.  For those interested, I’ll post specific configuration files in the Owners’ area of the Orion/Pluto/LX521 Forum: together with this how-to, those files can be used to build a DSP version of the Analog Signal Processor (ASP) for those loudspeakers.  I’ve written a long article detailing my development of the LX521 implementation; my Pluto implementation is similar.
+
+Overview
+Schematically the setup looks like this:
+
+The input can be an analog (line-level) or digital (S/PDIF) feed to a sound card, or else a digital audio file stored on disk and decoded by the PC.  The crossover/eq are performed (in real time) in software on the PC, with output (4- or 6-channel, digital or analog) to a multi-channel sound card.  In practice a single sound card can handle both inputs and outputs.
+
+Volume control can be upstream (in digital) or downstream (analog), depending on how you want to configure things.  The PC can also act as a media server, programmed so that all output goes through the crossover/eq.
+
+Prerequisites
+Hardware:
+
+You’ll need a PC equipped with multi-channel audio output.  For a stand-alone unit as in the photo above, you’ll want a small, fanless PC (no fan noise) with a solid state drive (SSD; even less noise and faster startup time).  The minimum hardware specs are modest: I’ve built LX521 implementations on a Shuttle XS35v2, a Zotac zbox, and even a Raspberry Pi.
+
+For the audio interface you’ll need a sound card with at least 6 output channels.  Any card capable of 5.1 or 7.1 surround sound will suffice.  It’s best if the card supports a sample rate of 44.1kHz (the standard for CD audio) since re-sampling to anything else takes a lot of extra cpu cycles to do properly.  Make sure the card has a S/PDIF input if you want to use that as your audio source.  I’ve had success with a Diamond Xtreme 7.1 usb, a Creative XFi Surround 5.1 usb, and the built-in Intel AC97 audio codec in my desktop PC.
+
+Alternatively one can send the crossover outputs over hdmi, which supports up to 8 digital channels.  In this case you’ll need an additional device for multi-channel digital-to-analog conversion: in my own LX521 setup I run the hdmi from my Zotac zbox to an hdmi audio de-embedder, whose analog outputs go to an AT6012 amplifier.
+
+Software:
+
+You need to have linux installed.  Any distro should work, but for a standalone “embedded” unit as pictured above you’ll want a minimalist install that doesn’t run an X server.  I use Ubuntu server edition because it’s what I know and it’s easy to install.
+
+Make sure the ALSA sound drivers and utilities are installed:  sudo apt-get install alsa alsa-base alsa-utils alsa-tools libasound2-plugins should work on any Debian-based distro (e.g. Ubuntu).
+
+The main tool we’ll use for running the DSP is ecasound, so make sure it’s installed (sudo apt-get install ecasound).
+
+Download and install rt-plugins, a collection of IIR digital filters (implemented as LADSPA plugins) that I wrote for doing loudspeaker xover/eq.  You probably want additional plugins from the Computer Music Toolkit (sudo apt-get install cmt).  Steve Harris’s plugins collection also has some useful filters (sudo apt-get install swh-plugins).
+
+Identifying Audio Inputs/Outputs
+Do a cat /proc/asound/cards to see the sound cards identified by ALSA.  On one of my systems the output looks like this:
+
+0 [Intel  ]: HDA-Intel - HDA Intel
+			 HDA Intel at 0xff9f4000 irq 46
+1 [UA25EX ]: USB-Audio - UA-25EX EDIROL
+			 UA-25EX at usb-0000:00:1d.0-2, full speed
+2 [Device ]: USB-Audio - USB Sound Device
+			 USB Sound Device at usb-0000:00:1d.2-1, full speed
+Here card 2, named Device, is the 7.1 channel usb interface that I’ll use in the examples.  Take note of the device name of the card you want to use.  Run alsamixer and unmute the front, surround, and center/LFE channels on your sound card, and set their levels to 100% (0dB).
+
+Run aplay -L to list the available output pcms.  Here’s the relevant part of the output on my system:
+
+...
+surround51:CARD=Device,DEV=0
+	USB Sound Device, USB Audio
+	5.1 Surround output to Front, Center, Rear and Subwoofer speakers
+surround71:CARD=Device,DEV=0
+	USB Sound Device, USB Audio
+	7.1 Surround output to Front, Center, Side, Rear and Woofer speakers
+...
+You should have something similar.  Here surround51 is the pcm to use for 6-channel output.  The labels “Front, Center, etc” are intended for surround sound use; for our purposes it’s better to think of these as Channel 1, Channel 2, etc.  To test the output, plug some cheap powered multimedia speakers into one of the analog output jacks on the sound card and run
+
+speaker-test -D surround51:Device -c 6 -t wav
+(replacing Device with the device name for your sound card).  For 4-channel output use -c 4.  Depending on your hardware you may need to experiment with different pcm names and/or analog outputs to get this working.  The mapping of software to hardware channels can vary between devices; try all the output jacks so you know which ones have a signal on them.
+
+Finally, to test output from ecasound, download chan_labels_6.wav and run
+
+ecasound -tl -i chan_labels_6.wav -f:16,6,44100 -eadb:-24 -o alsa,surround51:Device
+(replacing surround51:Device with the pcm and device names you determined above).  This will play a continuous loop of a 6-channel voice recording of “…left woofer … right woofer … left mid … right mid … left tweeter … right tweeter…” identifying each output channel by name.  Take note of which label plays on which analog output, since the same channel assignment is used in the 3-way crossover implementation below.
+
+For a 2-way crossover you’ll need only 4 output channels, in which case download chan_labels_4.wav and run the following command instead.
+
+ecasound -tl -i chan_labels_4.wav -f:16,4,44100 -eadb:-24 -o alsa,surround51:Device
+This plays a loop of “…left woofer … right woofer … left tweeter … right tweeter…”  Again, take note of which hardware outputs the various labels appear on.
+
+Crossover/EQ Specification
+2-Way Crossover:
+
+The block diagram for a general 2-way crossover (including equalization and/or other filters) looks like this:
+
+The filters are grouped into three chains named “pre”, “tweeter” and “woofer”.  The following ecasound command line will implement this crossover:
+
+ecasound -z:mixmode,sum -x \
+		 -a:pre -i:mysong.mp3 -pf:pre.ecp -o:loop,1 \
+		 -a:woofer,tweeter -i:loop,1 \
+		 -a:woofer -pf:woofer.ecp -chorder:1,2,0,0 \
+		 -a:tweeter -pf:tweeter.ecp -chorder:0,0,1,2 \
+		 -a:woofer,tweeter -f:16,4,44100 -o:alsa,surround51:Device
+This takes input from the (stereo) audio file mysong.mp3, applies the crossover and other filters, and outputs the resulting 4-channel, 16-bit raw PCM directly to the sound card.  The woofer L/R outputs appear on channels 1 & 2; the tweeter L/R outputs are on channels 3 & 4 (the test you ran above will help determine which physical outputs these correspond to).
+
+Various aspects of this command can be changed to handle specific use cases: e.g. you can change the input and output bit-depth or sample rate (provided your hardware is compatible) or you might want to process audio from a digital or analog hardware input instead of an audio file.  Changing the -o:alsa,... to -o:myoutput.wav will send the 4-channel output to a file instead, which can be useful for testing.
+
+Update (14/09/2015): Q: What does the -x in the ecasound command do?  A: Nothing.  But I leave it there for when I want to redirect the audio output to a file for testing.  The -x tells ecasound to truncate the output file (if it already exists) before writing.  If you never use file output then you can safely leave this out.
+
+The files pre.ecp, tweeter.ecp and woofer.ecp define the actual filter chains using ecasound syntax (see the man page).  Each chain can have any number of filters, of any type, limited only by the filters available as LADSPA plugins or built into ecasound.
+
+For example, here are the filter chain definitions for a typical 2-way crossover, using IIR digital filters from rt-plugins and a pure delay from cmt:
+
+# pre.ecp
+pre = -el:RTparaeq,-8.5,82,2.6
+
+# woofer.ecp
+woofer = -el:RTlr4lowpass,1500 -el:RTlowshelf,4.0,150,0.71
+
+# tweeter.ecp
+tweeter = -el:RTlr4hipass,1500 -el:delay_0.01s,0.0019,1 -eadb:-4.5
+Here the “pre” chain contains only one filter: a -8.5dB notch at 82Hz with Q=2.6 (e.g. to suppress a room mode).  The “woofer” chain consists of a Linkwitz-Riley 4th-order low-pass at 1500Hz, followed by a shelving filter with a gain of 4dB at low frequencies, centered at 150Hz, Q=0.71.  The “tweeter” chain consists of a Linkwitz-Riley high-pass at 1500Hz, a 1.9ms delay (for phase/time alignment of drivers) and 4.5dB of attenuation (to match driver sensitivities).
+
+3-Way Crossover:
+
+The topology of a general 3-way crossover looks like this:
+
+Now we have five filter chains and a correspondingly more complex ecasound implementation:
+
+ ecasound -z:mixmode,sum -x \
+		  -a:pre1 -i:mysong.mp3 -pf:pre1.ecp -o:loop,1 \
+		  -a:pre2,woofer -i:loop,1 \
+		  -a:mid,tweeter -i:loop,2 \
+		  -a:pre2 -pf:pre2.ecp -o loop,2 \
+		  -a:woofer -pf:woofer.ecp -chorder:1,2,0,0,0,0 \
+		  -a:mid -pf:mid.ecp -chorder:0,0,1,2,0,0 \
+		  -a:tweeter -pf:tweeter.ecp -chorder:0,0,0,0,1,2 \
+		  -a:woofer,mid,tweeter -f:16,6,44100 -o:alsa,surround51:Device
+This takes input from mysong.mp3 and outputs 6-channel, 16-bit raw PCM to the sound card, with the woofer L/R output on channels 1 & 2, mid on 3 & 4, and tweeter on 5 & 6. The files pre1.ecp, pre2.ecp, woofer.ecp, mid.ecp and tweeter.ecp define the corresponding filter chains, just as in the 2-way crossover example above.
+
+Digital Clipping
+The signal path within ecasound is 32-bit floating point.  This provides practically unlimited headroom, so clipping between filter stages is not a concern.  Only at the final output stage do samples get clipped to the interval [-1.0,1.0].  The easiest way to adjust overall gain to prevent clipping at the output is to put a level adjustment in the “pre1” filter chain; e.g. putting -eadb:-6.0 in pre1.ecp will reduce the overall gain by 6dB, on all channels.
+
+Dither
+Depending on how the LADSPA plugins are configured on your system, the DSP commands above will run in either 32- or 64-bit floating point (my rt-plugins collection defaults to 64-bit, i.e. double precision).  The audio gets re-quantized at the final output stage; if your sound card is only 16-bit, the resulting quantization noise might be audible in some circumstances.  The standard remedy is to dither before re-quantizing.  Unfortunately ecasound doesn’t do this, but sox does, so one approach is to pipe the audio through sox.  In the examples above, simply replace the -f:16,6,44100 -o:alsa,surround51:Device with the following:
+
+-f:f32_le,6,44100 -o:stdout | \
+  sox -q -c 6 -r 44100 -b 32 -e float -L -t raw - \
+  -e signed -c 6 -b 16 -t alsa surround51:Device dither -s
+which causes ecasound to output 6-channel, raw PCM in 32-bit floating point.  This gets piped to sox, which does dithered re-quantization to 16-bit (with noise shaping) on all 6 channels and sends the output to the sound card.  (Most of this command is about specifying the format of the input and output streams; these need to be given explicitly when running raw PCM through a pipe.  Changing every 6 to a 4 will make this work for a 2-way crossover.)
+
+Analog Input
+
+To process an analog line-level input, simply change the -i:mysong.mp3 in the examples above to -i:alsa,hw:Device (or whatever ALSA device name corresponds to your hardware).  Use alsamixer to ensure the “line” input is unmuted and set as the default capture device.
+
+You’ll need to take care in setting the input level gain in alsamixer.  Finding the optimal setting is a delicate matter; it depends on both the output level of your analog source and the sensitivity of your sound card’s line-level input.  Too much gain will result in digital clipping; too little will sacrifice signal-to-noise ratio and dynamic range.  You could just listen for evidence of clipping and adjust levels accordingly, but the best approach is probably to make a digital recording while you feed the sound card’s input with a full-scale test tone, like this:
+
+ecasound -i:alsa,hw:Device -o:output.wav
+Inspect output.wav for evidence of clipping, adjust the input gain and/or your analog output, and repeat until the digital recording is just shy of clipping.
+
+S/PDIF Input
+
+To process a digital stereo S/PDIF input, simply change the -i:mysong.mp3 in the examples above to -i:alsa,iec958:Device (or whatever ALSA pcm corresponds to the S/PDIF input on your hardware).  Use alsamixer to ensure the S/PDIF input is enabled.
+
+warning: your S/PDIF hardware probably expects a 16-bit/44.1kHz input, the ecasound default (if not, you need to precede the first -i: with a suitable -f: switch to specify the format of the digital input stream).  In any case, you must ensure the output sample rate of your digital source will always match the specified input sample rate.  Mismatching sample rates at the S/PDIF interface could result in outputting digital noise at high output volume — which could be disastrous to your loudspeaker drivers and/or ears.  The Squeezebox Touch, for example, will output 96kHz if the source material has this sample rate: don’t do this unless your S/PDIF input supports it and you’ve configured ecasound appropriately; instead, you should configure squeezeboxserver to force re-sampling everything to 44.1kHz, or just use the analog outs.  I’m working on a more elegant solution to this problem.
+
+HDMI Output
+
+If your PC has hdmi out, this offers an attractive way to get the crossover outputs out of the PC in digital form: hdmi supports up to 8 channels of raw uncompressed PCM at 24-bit resolution.  A separate device is then needed to convert all channels to analog: an hdmi audio de-embedder is one option; or use an hdmi receiver, which adds the convenience of down-stream volume control.
+
+If your PC’s hdmi supports PCM audio, the output of aplay -L will look something like this:
+
+...
+hw:CARD=NVidia,DEV=3
+   HDA NVidia, NVIDIA HDMI
+   Direct hardware device without any conversions
+hw:CARD=NVidia,DEV=7
+   HDA NVidia, NVIDIA HDMI
+   Direct hardware device without any conversions
+hw:CARD=NVidia,DEV=8
+   HDA NVidia, NVIDIA HDMI
+   Direct hardware device without any conversions
+hw:CARD=NVidia,DEV=9
+   HDA NVidia, NVIDIA HDMI
+   Direct hardware device without any conversions
+...
+Use alsamixer to unmute all output channels on the card.  You’ll need to experiment to determine which of the devices above will accept a multichannel PCM stream.  See this page for detailed instructions, especially Section 8 (that document pertains to NVidia devices, but much of it applies generally).  In my own case, on a Zotac zbox, the NVidia card has index 1 (look at /proc/asound/cards to check) so I ran each of the following:
+
+speaker-test -c 6 -r 48000 -D hw:1,3 -t wav
+speaker-test -c 6 -r 48000 -D hw:1,7 -t wav
+speaker-test -c 6 -r 48000 -D hw:1,8 -t wav
+speaker-test -c 6 -r 48000 -D hw:1,9 -t wav
+Only hw:1,3 worked, so this is the device to use.  In ecasound, using -f:s24_le,6,44100 -o:alsahw,1,3 gives 24-bit, 6-channel output over hdmi.  (This is using the open-source nouveau driver; with the proprietary NVidia driver, audio over hdmi only works if an X server is running.)
+
+update (20/6/2016): I’ve found a major problem with hdmi output to an Atlona HD570 “audio de-embedder”.  When driven with signals above -15dBFS this combo can generate subsonic distortion that pushes the LX521 drivers past their excursion limits, with ensuing unpleasant noise and/or damage to the drivers.  I don’t know the cause yet, or even whether the problem is in the pc or the Atlona device.  Please use caution, and see this post if you’re considering this approach.
+
+MPD Integration
+MPD is a viable and highly configurable replacement for the squeezebox and other network media players.  The xover/eq described here can be built into mpd quite easily.  For example, to have mpd send its output through the 2-way crossover example above, you could put the following definition in your mpd.conf:
+
+audio_output {
+		type    "pipe"
+		name    "DSP crossover/eq"
+		format  "44100:32:2"
+		mixer_type  "software"
+		command "ecasound -q -z:nodb -z:mixmode,sum
+		 -a:pre -f:s32_le,2,44100 -i:stdin -pf:/etc/pre.ecp -o:loop,1
+		 -a:woofer,tweeter -i:loop,1
+		 -a:woofer -pf:/etc/woofer.ecp -chorder:1,2,0,0
+		 -a:tweeter -pf:/etc/tweeter.ecp -chorder:0,0,1,2
+		 -a:woofer,tweeter -f:16,4,44100 -o:alsa,surround51:Device
+}
+This creates an mpd output that pipes 32-bit stereo PCM to ecasound, which then applies the crossover and sends all 4 output channels to the soundcard.  For this to work you’ll need to build mpd from source with --enable-pipe-output.  The reason we pass data in 32-bit is to avoid adding the quantization noise that would result if mpd truncated its output to 16 bits after applying its volume control.
+
+“Bit Perfect” Playback (Update 9/9/2015):
+Some have expressed concern that the mpd config above re-samples everything to 44.1kHz, preventing “bit perfect” playback of hi-res audio files.  Unfortunately mpd’s pipe plugin outputs raw (headerless) pcm data: currently there is no provision for passing the stream format variables (sampling frequency, bit depth) to ecasound so that it knows how to interpret the raw data.  The easy solution is to hammer the data into one fixed format before passing it to ecasound.  My current soundcard only does 44.1kHz so that’s a good choice for me; if you prefer to re-sample to 96kHz (and have a compatible soundcard) you just need to change every occurence of 44100 to 96000 in the mpd config above.
+
+Alternatively, it should be possible to avoid re-sampling by having mpd output directly to a virtual alsa device (instead of piping to ecasound) defined via a custom asound.conf that sets up the xover/eq ladspa filters.  Others have worked on this approach (see e.g. this thread) but I haven’t tried it myself.  Personally I view hi-res formats and the pursuit of “bit perfect” playback as distractions from the real issues in audio quality (everyone should read Monty’s excellent 24/192 article).  Provided you have enough cpu power to use the best quality sample rate conversion in real time, the resampling will be acoustically transparent.
+
+Refinements
+In the case of hardware (analog or digital) input you probably want the DSP to start running immediately on boot.  You just need to put the appropriate ecasound command line in your /etc/rc.local or similar.
+To prevent unpleasant pops and thumps when powering the PC on or off, first mute all input and output channels and store the ALSA mixer settings where they will be loaded on boot (doing alsactl store should work).  Then put appropriate amixer commands in /etc/rc.local so the outputs you want get unmuted only after the system has booted.
+Running the DSP in software introduces a small latency (on the order of 100ms) in the audio stream, which might be noticeable when starting, stopping or switching audio tracks.  This can be minimized by reducing the buffer size that ecasound uses.  I find that adding -z:nodb -b:256 to the ecasound command makes the latency imperceptible on my system.  Clicks and pops in the output are probably a sign of buffer under/overruns, which can usually be fixed by increasing the buffer size, e.g. with -b:1024.
+To adjust the left/right balance for a particular crossover output (e.g. to correct for variability in driver sensitivity, like the Pluto ASP does) you can use the ecasound syntax -eadb:gain,channel.  E.g. to boost the signal to the right-hand tweeter by 0.8dB you would put -eadb:0.8,2 in tweeter.ecp .
+Discussion
+All of my audio sources (a Logitech Squeezebox and an mpd server) are actually small linux PCs.  So I figured why not use that cpu for digital signal processing as well?  The squeezebox lacks both the cpu power and multi-channel output, but integrating a crossover into mpd turns out to be easy.
+
+In terms of audio quality, software DSP has no benefits over more specialized hardware (e.g. the miniDSP or Behringer DCX2496).  But computers do enjoy enormous economies of scale (witness the $25 Raspberry Pi) so a software approach can be less costly.  Computers will keep getting smaller and cheaper, whereas hardware DSP units will likely never benefit from such economies of scale.
+
+But I specifically wanted a software solution because of its benefits for the DIY audio enthusiast (i.e. me):
+
+One can integrate it with a media server (e.g. mpd) within a single device, which could be used for other things as well.
+It makes available a larger palette of filters and algorithms.  I can write my own to provide anything that’s missing, and I can be certain of what the filters are actually doing.
+It’s much easier to program: with a laptop I can do this from the listening position.
+Through an ssh connection to the PC running the DSP one can, from the listening position, switch between alternative xover/eq configurations on the fly.  This makes level-matched listening tests/comparisons much easier and more reliable to set up and carry out.
+Because the software and configuration are open-source, others can take what I’ve done and make it better.
