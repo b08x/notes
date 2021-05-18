@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-17T15:45:31-04:00
+
+====== restore selinux ======
+
+```
+1. Disable and Remove SELinux
+# setenforce 0
+# yum remove selinux-policy\*
+# rm -rf /etc/selinux/targeted /etc/selinux/config
+2. Install SELinux
+# yum install selinux-policy-targeted
+# yum install selinux-policy-devel policycoreutils
+# touch /.autorelabel; reboot
+SELinux will detect the /.autorelabel file on reboot, and then relabel all files with the correct SELinux contexts. If you have many files, the instance may be unavailable for a long time. You can monitor the instance from the Vultr Web console.
+```
+
+https://www.vultr.com/docs/how-to-enable-or-reinstall-selinux-on-centos

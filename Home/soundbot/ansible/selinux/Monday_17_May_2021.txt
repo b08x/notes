@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-17T19:47:24-04:00
+
+====== fun with selinux ======
+
+May 17 19:46:45 bender setroubleshoot[1858]: SELinux is preventing polkitd from read access on the file 49-nopasswd_global.rules. For complete SELinux messages run: sealert -l d4a17a18-1a3e-4e20-bc48-14de5dac16ff
+May 17 19:46:45 bender rsyslogd[607]: imjournal: journal files changed, reloading...  [v8.2102.0-2.fc34 try https://www.rsyslog.com/e/0 ]
+May 17 19:46:45 bender setroubleshoot[1858]: SELinux is preventing polkitd from read access on the file 49-nopasswd_global.rules.
+                                             
+											 *****  Plugin catchall (100. confidence) suggests   **************************
+                                             
+											 If you believe that polkitd should be allowed read access on the 49-nopasswd_global.rules file by default.
+											 Then you should report this as a bug.
+											 You can generate a local policy module to allow this access.
+											 Do
+											 allow this access for now by executing:
+											 # ausearch -c 'polkitd' --raw | audit2allow -M my-polkitd
+											 # semodule -X 300 -i my-polkitd.pp
+
+
+--------------------
+
