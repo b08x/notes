@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
 Creation-Date: 2021-03-06T21:48:50-05:00
 
-====== 2141 vim coc ======
+====== vim coc ======
 @vim @solargraph @ruby 
 
 https://github.com/neoclide/coc.nvim
