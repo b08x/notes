@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-28T08:19:53-04:00
+
+====== spacemacs ======
+Created Friday 28 May 2021
+
+https://github.com/b08x/spacemacs
