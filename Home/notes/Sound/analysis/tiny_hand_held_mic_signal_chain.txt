@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-19T03:30:29-04:00
+
+====== tiny hand held mic signal chain ======
+Created Wednesday 19 May 2021
+
+c* noisegate → aux -> 4band para eq -> gain
+				 |
+					-> C* CabinetIV -> A-law compressor -> gain
+
+{{./screenshot_2021-05-19-033247.png}}

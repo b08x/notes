@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-18T13:49:53-04:00
+
+rate too slow
+
+//Tuesday 18 May 2021//
+
+May 18 13:49:15 ninjabot pipewire[6399]: 219203 events suppressed
+May 18 13:49:15 ninjabot pipewire[6399]: (midi-monitor-73) client too slow! rate:1024/48000 pos:59045397504 status:triggered
+May 18 13:49:16 ninjabot pipewire[6399]: 93 events suppressed
+May 18 13:49:16 ninjabot pipewire[6399]: (baudline-53) client too slow! rate:1024/48000 pos:4992000 status:triggered
+May 18 13:49:17 ninjabot pipewire[6399]: 257607 events suppressed
+May 18 13:49:17 ninjabot pipewire[6399]: (midi-monitor-73) client too slow! rate:1024/48000 pos:59309188096 status:triggered
+May 18 13:49:18 ninjabot pipewire[6399]: 93 events suppressed
+May 18 13:49:18 ninjabot pipewire[6399]: (baudline-53) client too slow! rate:1024/48000 pos:5088256 status:triggered
+May 18 13:49:19 ninjabot pipewire[6399]: 264230 events suppressed
+May 18 13:49:19 ninjabot pipewire[6399]: (midi-monitor-73) client too slow! rate:1024/48000 pos:59579760640 status:triggered
+May 18 13:49:20 ninjabot pipewire[6399]: 93 events suppressed
+May 18 13:49:20 ninjabot pipewire[6399]: (baudline-53) client too slow! rate:1024/48000 pos:5184512 status:triggered
+May 18 13:49:21 ninjabot pipewire[6399]: 263056 events suppressed
+May 18 13:49:21 ninjabot pipewire[6399]: (midi-monitor-73) client too slow! rate:1024/48000 pos:59849131008 status:triggered
+

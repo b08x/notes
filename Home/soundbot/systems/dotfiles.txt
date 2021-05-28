@@ -10,14 +10,12 @@ https://www.atlassian.com/git/tutorials/dotfiles
 git init --bare $HOME/.dotfiles
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dots config --local status.showUntrackedFiles no
-echo "alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.aliases
-
 
 
 
 git init --bare $HOME/.dotfiles
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   
-dotfiles config --local status.showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
 

@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-19T01:43:27-04:00
+
+====== "alsa-pcm hw:0,2: snd_pcm_mmap_commit error: Broken pipe" ======
+@pipewire
+
+{{{code: lang="sh" linenumbers="False"
+May 19 01:41:56 ninjabot rtkit-daemon[832]: Supervising 8 threads of 4 processes of 1 users.
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: follower delay:104 target:256 resync 0.000000 0.000000 0.000000
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: follower resync 104 256 256
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: snd_pcm_mmap_commit error: Broken pipe
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: follower delay:536 target:256 resync 0.000017 0.000001 0.000000
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: follower resync 536 256 256
+May 19 01:41:56 ninjabot pipewire[30488]: alsa-pcm hw:0,2: snd_pcm_mmap_commit error: Broken pipe
+
+}}}

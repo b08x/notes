@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-19T00:10:05-04:00
+
+====== testing pipewire configs ======
+@pipewire
+
+https://forum.manjaro.org/t/pipewire-configuration-to-lower-the-volume/59380
+
+{{{code: lang="sh" linenumbers="False"
+Solved.
+Create file /usr/share/alsa-card-profile/mixer/paths/analog-output-fixed.conf with contents
+
+[Element PCM]
+switch = mute
+volume = ignore
+volume-limit = 0.01
+override-map.1 = all 
+override-map.2 = all-left,all-right
+Copy /usr/share/alsa-card-profile/mixer/profile-sets/default.conf
+to /usr/share/alsa-card-profile/mixer/profile-sets/profile-for-bad-soundcards.conf
+And change this (we change only the last line)
+
+[Mapping analog-stereo]
+device-strings = front:%f
+channel-map = left,right
+paths-output = analog-output analog-output-lineout analog-output-speaker analog-output-headphones analog-output-headphones-2
+to this
+
+[Mapping analog-stereo]
+device-strings = front:%f
+channel-map = left,right
+paths-output = analog-output-fixed
+Lastly create udev rule for your sound card.
+Create file /usr/lib/udev/rules.d/89-pipewire-sound-card-fix.rules (IDK maybe you should use 91, because pipewire config is 90). Change idVendor and idProduct to your values.
+
+ATTRS{idVendor}=="8086", ATTRS{idProduct}=="0808", ENV{ACP_PROFILE_SET}="profile-for-bad-soundcards.conf"
+Reboot
+}}}

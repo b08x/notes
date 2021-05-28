@@ -1,8 +1,9 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-28T02:31:36-04:00
 
-====== git ======
-Created Sunday 16 July 2017
+====== Git ======
+Created Friday 28 May 2021
 
 @git
 
@@ -21,7 +22,7 @@ http://tednaleid.github.io/understanding-git/#2
 - hosts: production
   vars:
 	base_vhost_dir: /usr/share/nginx/html
-	#git_repo_url: git@bitbucket.org:syncopatedtech/main_site.git
+	#git_repo_url: [[git@bitbucket.org:syncopatedtech/main_site.git]]
 
   tasks:
 

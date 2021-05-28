@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-19T02:35:54-04:00
+
+====== fun with mounting nfs ======
+@nfs @selinux
+{{{code: lang="sh" linenumbers="False"
+https://www.systutorials.com/docs/linux/man/8-nfsd_selinux/
+}}}

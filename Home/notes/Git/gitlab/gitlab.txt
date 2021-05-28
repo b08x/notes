@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2017-07-24T00:12:01-04:00
 
 ====== gitlab ======
@@ -7,7 +7,7 @@ Created Monday 24 July 2017
 
 ~~sudo docker run \~~
 ~~--hostname gitlab.syncopatedtech.org \~~
-~~--env GITLAB_OMNIBUS_CONFIG="external_url 'https://gitlab.syncopatedtech.org'; gitlab_rails['lfs_enabled'] = true;" \~~
+~~--env GITLAB_OMNIBUS_CONFIG="external_url 'https://gitlab.syncopatedtech.org'; gitlab_rails['lfs_enabled'] = true;" \~~~~~~
 ~~--env TZ=America/New_York \~~
 ~~--publish 443:443 \~~
 ~~--publish 80:80 \~~
@@ -32,13 +32,13 @@ Created Monday 24 July 2017
 ~~gitlab/gitlab-ce:latest~~
 
 docker create --name=gitlab \
---hostname lab.loaf.org \
+--hostname gitlab.syncopatedstudios.net \
 -e TZ=America/New_York \
 -p 443:443 -p 80:80 -p 2222:22 \
 --memory="4g" --memory-swap="4g" \
--v /storage/docker/gitlab/config:/etc/gitlab \
--v /storage/docker/gitlab/logs:/var/log/gitlab \
--v /storage/docker/gitlab/data:/var/opt/gitlab \
+-v /srv/share/gitlab/config:/etc/gitlab \
+-v /srv/share/gitlab/logs:/var/log/gitlab \
+-v /srv/share/gitlab/data:/var/opt/gitlab \
 --restart always \
 gitlab/gitlab-ce:latest
 
@@ -72,3 +72,18 @@ make sure when creating the gitlab container that the time zone is set correct. 
 alias glabb="docker exec -t gitlab gitlab-rake gitlab:backup:create STRATEGY=copy \
 		&& mv /backup/gitlab/data/backups/*.tar /backup/gitlab_backups/"
 
+====== changing the main storage dir and selinux ======
+
+semanage fcontext -a -e /var/lib/containers /srv/share/containers/storage
+restorecon -R -v /srv/share/containers/storage
+
+
+semanage fcontext -a -t container_file_t '/srv/share/gitlab/data'
+restorecon -v '/srv/share/gitlab/data'
+
+
+semanage fcontext -a -t container_file_t '/srv/share/gitlab/config'
+restorecon -v '/srv/share/gitlab/config'
+
+semanage fcontext -a -t container_file_t '/srv/share/gitlab/logs'
+restorecon -v '/srv/share/gitlab/logs'
