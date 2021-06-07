@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-29T19:34:40-04:00
+
+====== 0529:1933 ======
+@qutebrowser
+
+:bind <left> back
+:bind <right> forward
+
+you have to put left and right in between careets or else it won't work...or least it didn't for me until I appended the careets. 

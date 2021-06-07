@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2021-05-29T01:50:27-04:00
+
+====== 0529:0150 ======
+put tags here
+begin text here
+
+{{{code: lang="sh" linenumbers="False"
+
+}}}
+
+
+{{./screenshot_2021-05-29-015044.png}}
+
+s 
