@@ -7,15 +7,19 @@ Created Wednesday 24 March 2021
 
 https://www.atlassian.com/git/tutorials/dotfiles
 
-git init --bare $HOME/.dotfiles
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+git init --bare $HOME/.dots
+alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 dots config --local status.showUntrackedFiles no
 
 
 
-git init --bare $HOME/.dotfiles
 
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-  
+
+====== on new host ======
+
+alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+echo ".dots" » .gitignore
+git clone --bare $GITREPO $HOME/.dots
+dots checkout $HOSTNAME
+(delete duplicates)
 dots config --local status.showUntrackedFiles no
-
