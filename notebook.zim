@@ -21,7 +21,7 @@ tag_by_page=False
 use_workweek=False
 
 [SpellPlugin]
-language=
+language=en-US
 
 [JournalPlugin]
 namespace=Journal
