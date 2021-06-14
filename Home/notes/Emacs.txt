@@ -5,3 +5,42 @@ Creation-Date: 2021-05-28T07:37:09-04:00
 ====== Emacs ======
 Created Friday 28 May 2021
 
+# setting up emacs on a new machine...
+
+https://stackoverflow.com/questions/55038594/setting-up-emacs-on-new-machine-with-init-el-and-package-installation/55058934
+
+for example in .emacs, list the packages that need installing
+
+```
+;; first, declare repositories
+(setq package-archives
+	  '(("gnu" . "http://elpa.gnu.org/packages/")
+		("marmalade" . "http://marmalade-repo.org/packages/")
+		("melpa" . "http://melpa.org/packages/")))
+
+;; Init the package facility
+(require 'package)
+(package-initialize)
+;; (package-refresh-contents) ;; this line is commented 
+;; since refreshing packages is time-consuming and should be done on demand
+
+;; Declare packages
+(setq my-packages
+	  '(cider
+		projectile
+		clojure-mode
+		expand-region
+		helm
+		jinja2-mode
+		magit
+		markdown-mode
+		paredit
+		wrap-region
+		yaml-mode
+		json-mode))
+
+;; Iterate on packages and install missing ones
+(dolist (pkg my-packages)
+  (unless (package-installed-p pkg)
+	(package-install pkg)))
+```
