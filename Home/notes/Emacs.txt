@@ -8,3 +8,10 @@ Created Friday 28 May 2021
 # synosaurus ( a theasaurus for emacs)
 https://github.com/hpdeifel/synosaurus
 
+=======
+# setting up emacs on a new machine...
+
+https://stackoverflow.com/questions/55038594/setting-up-emacs-on-new-machine-with-init-el-and-package-installation/55058934
+
+for example in .emacs, list the packages that need installing
+
