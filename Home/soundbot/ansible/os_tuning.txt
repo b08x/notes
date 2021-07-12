@@ -1,9 +1,12 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2018-01-27T03:26:49-05:00
 
 ====== os tuning ======
 Created Saturday 27 January 2018
+
+/home/b08x/.cache/yay/linux-zen-git/src/build
+
 
 
 

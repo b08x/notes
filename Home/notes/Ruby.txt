@@ -1,5 +1,5 @@
 Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
+Wiki-Format: zim 0.6
 Creation-Date: 2021-03-24T03:40:58-04:00
 
 ====== Ruby ======
@@ -28,4 +28,4 @@ In the example above, you can observe that .find_all gives an array even though 
 
 
 ----
-[[https://speakerdeck.com/bkuhlmann/ruby-pattern-matching?slide=38|ruby pattern matching]]
+[[https://speakerdeck.com/bkuhlmann/ruby-pattern-matching?slide=38|ruby pattern matvim ching]]
